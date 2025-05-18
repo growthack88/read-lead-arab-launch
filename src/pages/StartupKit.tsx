@@ -33,7 +33,7 @@ const StartupKit = () => {
 
       {/* Main Content */}
       <main>
-        {/* Hero Section */}
+        {/* Hero Section - UPDATED with kit description moved here */}
         <section className="bg-gradient-to-br from-white to-gray-50 py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -45,6 +45,20 @@ const StartupKit = () => {
                   <p className="text-lg md:text-xl text-gray-600 mb-8 text-right">
                     كل أدوات التخطيط والتنفيذ اللي محتاجها علشان تبدأ شركتك الناشئة صح — من الفكرة لحد التنفيذ.
                   </p>
+                  
+                  {/* NEW: Kit description content moved from separate section to hero */}
+                  <div dir="rtl" className="space-y-2 pr-4 text-base text-[#1A1F2C] mb-8">
+                    <p>📦 <strong>Startup Builder Kit</strong> هي باكج ذكية بتجمع بين:</p>
+                    <ul className="list-none space-y-1">
+                      <li>• أدوات عملية تساعدك تطبّق خططك</li>
+                      <li>• محتوى تعليمي موجّه لريادة الأعمال</li>
+                      <li>• جورنال تفاعلي توثق فيه رحلتك الريادية</li>
+                    </ul>
+                    <p className="bg-rtl-teal/10 p-4 rounded-lg border border-rtl-teal/20">
+                      بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
+                    </p>
+                  </div>
+                  
                   <div className="text-center md:text-right">
                     <Button
                       variant="yellow"
@@ -75,35 +89,7 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* What is this kit section - UPDATED with RTL */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div dir="rtl" className="rtl text-right space-y-3">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
-                  💼 إيه هي المجموعة دي؟
-                </h2>
-                <p className="text-xl">
-                  <span className="ml-2">📦</span>
-                  <strong>Startup Builder Kit</strong> هي باكج ذكية بتجمع بين:
-                </p>
-                <ul className="list-none space-y-2 pr-4">
-                  <li>• أدوات عملية تساعدك تطبّق خططك</li>
-                  <li>• محتوى تعليمي موجّه لريادة الأعمال</li>
-                  <li>• جورنال تفاعلي توثق فيه رحلتك الريادية</li>
-                </ul>
-                <p className="text-xl bg-rtl-teal/10 p-4 rounded-lg border border-rtl-teal/20">
-                  بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
+        {/* REMOVED: "What is this kit" section since we moved its content to the hero */}
 
         {/* COMBINED SECTION: Benefits and Target Audience */}
         <section className="py-12 bg-white">
