@@ -7,54 +7,25 @@ import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FinalCTASection from "@/components/FinalCTASection";
 
 const Index = () => {
-  // Featured products - limited to 5 as requested
-  const featuredProducts = [
-    {
-      title: "Startup Builder Kit",
-      link: "/startup-kit",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة"
-    },
-    {
-      title: "كتاب القيادة والإدارة الفعالة",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
-      description: "تعلم مهارات القيادة الفعالة والادارة الناجحة"
-    },
-    {
-      title: "سلسلة التسويق الحديث",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "استراتيجيات تسويق رقمي فعالة للمبتدئين"
-    },
-    {
-      title: "كتاب التطوير الذاتي",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
-      description: "خطوات عملية لتطوير مهاراتك الشخصية"
-    },
-    {
-      title: "قواعد النجاح المؤسسي",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "أساسيات بناء مؤسسة ناجحة ومستدامة"
-    }
-  ];
-  
-  // New kits section data
+  // New kits section data - UPDATED with specific kits and startup kit image
   const newKits = [
     {
-      title: "حزمة المسوق الرقمي",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "أدوات تساعدك على إنشاء حملات تسويقية ناجحة",
-      buttonText: "اكتشف الآن"
+      title: "Startup Kit",
+      imageSrc: "/lovable-uploads/2bcb0011-1478-4447-a8aa-cf255f4c7aa1.png",
+      description: "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة بنجاح",
+      buttonText: "اكتشف الآن",
+      link: "/startup-kit"
     },
     {
-      title: "كيت تخطيط المشاريع",
+      title: "Productivity Kit",
       imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
-      description: "نماذج وأدوات لتخطيط مشاريعك بطريقة احترافية",
+      description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
       buttonText: "اكتشف الآن"
     },
     {
-      title: "حزمة المدير المحترف",
+      title: "Sales & Marketing Kit",
       imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "أدوات تساعدك على إدارة فريقك بكفاءة",
+      description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
       buttonText: "اكتشف الآن"
     },
   ];
@@ -81,7 +52,7 @@ const Index = () => {
     },
   ];
   
-  // Updated New books section data with the uploaded book covers
+  // New books section data with the uploaded book covers
   const newBooks = [
     {
       title: "سلسلة إدارة حياتك المهنية",
@@ -114,7 +85,7 @@ const Index = () => {
       buttonText: "اكتشف الآن"
     },
     {
-      title: "سلسلة فن البيع و��لشراء",
+      title: "سلسلة فن البيع والشراء",
       imageSrc: "/lovable-uploads/1522fafc-8928-4f3e-9cf7-4d6f2c0617df.png",
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
       buttonText: "اكتشف الآن"
@@ -130,50 +101,6 @@ const Index = () => {
       imageSrc: "/lovable-uploads/8376e2d7-8776-42f1-a5dd-e4e3b2d93df8.png",
       description: "بناء ثقافة مؤسسية ناجحة وبيئة عمل محفزة",
       buttonText: "اكتشف الآن"
-    },
-  ];
-  
-  // All products - kept for reference but not displaying these in the featured section
-  const products = [
-    {
-      title: "Startup Journal",
-      tagline: "حوّل فكرتك لمشروع حقيقي بخطوات عملية",
-      link: "/startup-kit"
-    },
-    {
-      title: "قواعد النجاح المؤسسي",
-      tagline: "ابنِ ثقافة نجاح مستدامة في شركتك",
-    },
-    {
-      title: "سلسلة التسويق الحديث",
-      tagline: "تعلّم التسويق العصري بشكل عملي",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
-    },
-    {
-      title: "فن البيع والشراء",
-      tagline: "زود مبيعاتك بأساليب بيع فعّالة ومجربة",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png"
-    },
-    {
-      title: "فن ريادة الأعمال",
-      tagline: "تعلّم أسرار الريادة والنجاح في البيزنس",
-    },
-    {
-      title: "إدارة حياتك المهنية",
-      tagline: "خطّط لمستقبلك المهني بخطوات واضحة",
-    },
-    {
-      title: "كتاب التطوير الذاتي",
-      tagline: "اكتشف أفضل نسخة من نفسك",
-    },
-    {
-      title: "إنتاجية بلا حدود",
-      tagline: "ضاعف إنتاجيتك وحقق أهدافك أسرع",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
-    },
-    {
-      title: "كتاب القيادة والإدارة الفعالة",
-      tagline: "كن قائد مُلهم ومدير مؤثر",
     },
   ];
 
@@ -207,7 +134,7 @@ const Index = () => {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* New Kits Section */}
+        {/* New Kits Section - UPDATED */}
         <section id="new-kits" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
@@ -219,6 +146,7 @@ const Index = () => {
                   key={index}
                   title={kit.title}
                   index={index}
+                  link={kit.link}
                   imageSrc={kit.imageSrc}
                   description={kit.description}
                   buttonText={kit.buttonText}
