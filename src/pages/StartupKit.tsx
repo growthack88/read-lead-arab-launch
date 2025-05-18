@@ -70,19 +70,34 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* What is this kit section */}
+        {/* What is this kit section - IMPROVED VERSION */}
         <section className="py-12 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
-                💼 إيه هي المجموعة دي؟
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark flex items-center justify-end gap-3">
+                <span>💼 إيه هي المجموعة دي؟</span>
               </h2>
-              <div className="bg-gray-50 rounded-xl p-8">
-                <p className="text-xl mb-6">
-                  📦 Startup Builder Kit هي باكج ذكية بتجمع بين أدوات عملية، محتوى تعليمي، وجورنال تفاعلي.
+              <div className="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100">
+                <p className="text-xl mb-6 text-right flex items-center justify-end gap-3">
+                  <span>Startup Builder Kit هي باكج ذكية بتجمع بين:</span>
+                  <span className="text-3xl">📦</span>
                 </p>
-                <p className="text-xl">
-                  بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
+                <ul className="space-y-3 mb-6 text-lg">
+                  <li className="flex items-center justify-end gap-3">
+                    <span>أدوات عملية تساعدك تطبّق خططك</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-3">
+                    <span>محتوى تعليمي موجّه لريادة الأعمال</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-3">
+                    <span>جورنال تفاعلي توثق فيه رحلتك الريادية</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                </ul>
+                <p className="text-xl text-right bg-rtl-teal/10 p-4 rounded-lg border border-rtl-teal/20">
+                  ببساطة، بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
                 </p>
               </div>
             </div>
@@ -98,40 +113,40 @@ const StartupKit = () => {
         <section className="py-12 bg-white rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
-                ✨ إيه اللي بيميز الكيت دي عن أي حاجة تانية؟
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark flex items-center justify-end gap-3">
+                <span>✨ إيه اللي بيميز الكيت دي عن أي حاجة تانية؟</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <span className="text-3xl">🔧</span>
-                      <div>
+                    <div className="flex items-start gap-4 justify-end">
+                      <div className="text-right">
                         <h3 className="font-bold text-xl mb-2">Toolkit عملي</h3>
                         <p>أكتر من 20 نموذج استراتيجي زي نموذج العمل، SWOT، خطة تسويق، تحليل السوق، وتمويل</p>
                       </div>
+                      <span className="text-3xl flex-shrink-0">🔧</span>
                     </div>
                   </CardContent>
                 </Card>
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <span className="text-3xl">📘</span>
-                      <div>
+                    <div className="flex items-start gap-4 justify-end">
+                      <div className="text-right">
                         <h3 className="font-bold text-xl mb-2">كتاب شامل</h3>
                         <p>"فن ريادة الأعمال" بيوجهك خطوة بخطوة من توليد الفكرة لإطلاق المشروع</p>
                       </div>
+                      <span className="text-3xl flex-shrink-0">📘</span>
                     </div>
                   </CardContent>
                 </Card>
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <span className="text-3xl">📓</span>
-                      <div>
+                    <div className="flex items-start gap-4 justify-end">
+                      <div className="text-right">
                         <h3 className="font-bold text-xl mb-2">Startup Journal</h3>
                         <p>كتاب تفاعلي تكتب فيه تخطيطك ومراحل تقدمك وتطور شغلك بنفسك</p>
                       </div>
+                      <span className="text-3xl flex-shrink-0">📓</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -145,7 +160,7 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* Book List Section */}
+        {/* Book List Section - TWO COLUMNS */}
         <section className="py-12 bg-gray-50 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -153,29 +168,40 @@ const StartupKit = () => {
                 <span>📚 الكتب العشرون المتضمنة في الكيت:</span>
                 <Book className="h-6 w-6 text-rtl-teal" />
               </h2>
-              <div className="bg-white rounded-xl p-6 shadow-md">
-                <ul className="space-y-3 text-right">
-                  <li className="border-b pb-2">Zero to One - من الصفر إلى الواحد by Peter Thiel & Blake Masters - بيتر ثيل وبليك ماسترز</li>
-                  <li className="border-b pb-2">Built to Last - البناء للتشيد والاستدامة by Jim Collins - جيمس س. كولينز</li>
-                  <li className="border-b pb-2">Growth IQ - معدلات الذكاء للنمو by Tiffani Bova - تيفاني بوفا</li>
-                  <li className="border-b pb-2">The Worst Business Model in the World - أسوأ نموذج عمل في العالم by Danny Schuman - داني شومان</li>
-                  <li className="border-b pb-2">Write Your Business Plan - اكتب خطة عملك by The Staff of Entrepreneur Media, Inc - طاقم عمل Entrepreneur Media، Inc</li>
-                  <li className="border-b pb-2">The Entrepreneurial Bible to Venture Capital - الكتاب المقدس لريادة الأعمال لرأس المال الاستثماري by Andrew Romans - أندرو رومانس</li>
-                  <li className="border-b pb-2">The Dragonfly Effect - تأثير اليعسوب by Jennifer Aaker, Andy Smith with Carlye Adler - جينيفر آكر وآندي سميث مع كارلي أدلر</li>
-                  <li className="border-b pb-2">Company of One - شركات الفرد الواحد by Paul Jarvis - بول جارفيس</li>
-                  <li className="border-b pb-2">Rapid Growth, Done Right - النمو السريع بالشكل الصحيح by Val Wright - فال رايت</li>
-                  <li className="border-b pb-2">Cooking Up a Business - مرحلة تحضير الأعمال by Rachel Hofstetter - راشيل هوفستيتر</li>
-                  <li className="border-b pb-2">Crazy is a Compliment - الجنون مجاملة by Linda Rottenberg - ليندا روتنبرغ</li>
-                  <li className="border-b pb-2">Think Like an Entrepreneur, Act Like a CEO - فكر كرائد أعمال تصرف كمدير تنفيذي by Beverly E. Jones - بيفرلي إي جونز</li>
-                  <li className="border-b pb-2">Never Split the Difference - لا تقسم الفرق أبداً by Christopher Voss & Tahl Raz - تال راس وكريستوفر فوس</li>
-                  <li className="border-b pb-2">Startup Growth Engines - محركات نمو الشركات الناشئة by Sean Ellis & Morgan Brown - شون إليز ومورغان براون</li>
-                  <li className="border-b pb-2">Scaling Up - التوسع by Verne Harnish - فيرن هارنيش</li>
-                  <li className="border-b pb-2">Moore's Law - قانون مور by Arnold Thackray, David Brock and Rachel Jones - أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
-                  <li className="border-b pb-2">Lost and Founder - ضائع ومؤسس by Rand Fishkin - راند فيشكن</li>
-                  <li className="border-b pb-2">Beyond Entrepreneurship 2.0 - ما وراء ريادة الأعمال 2.0 by Jim Collins and Bill Lazier - جيم كولينز وبيل ليزير</li>
-                  <li className="border-b pb-2">Blitzscaling - النمو الخاطف والسريع by Reid Hoffman and Chris Yeh - ريد هوفمان وكريس ييه</li>
-                  <li>Good to Great - من جيد إلى عظيم by James C. Collins - جيمس كولينز</li>
-                </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* First Column */}
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-bold mb-4 text-right text-rtl-teal">العمود الأول</h3>
+                  <ol className="space-y-3 text-right list-decimal list-inside rtl">
+                    <li className="border-b pb-2">من الصفر إلى الواحد – بيتر ثيل وبليك ماسترز</li>
+                    <li className="border-b pb-2">البناء للتشيد والاستدامة – جيمس س. كولينز</li>
+                    <li className="border-b pb-2">معدلات الذكاء للنمو – تيفاني بوفا</li>
+                    <li className="border-b pb-2">أسوأ نموذج عمل في العالم – داني شومان</li>
+                    <li className="border-b pb-2">اكتب خطة عملك – طاقم عمل Entrepreneur Media، Inc</li>
+                    <li className="border-b pb-2">الكتاب المقدس لريادة الأعمال لرأس المال الاستثماري – أندرو رومانس</li>
+                    <li className="border-b pb-2">تأثير اليعسوب – جينيفر آكر وآندي سميث مع كارلي أدلر</li>
+                    <li className="border-b pb-2">شركات الفرد الواحد – بول جارفيس</li>
+                    <li className="border-b pb-2">النمو السريع بالشكل الصحيح – فال رايت</li>
+                    <li>مرحلة تحضير الأعمال – راشيل هوفستيتر</li>
+                  </ol>
+                </div>
+                
+                {/* Second Column */}
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-xl font-bold mb-4 text-right text-rtl-teal">العمود الثاني</h3>
+                  <ol className="space-y-3 text-right list-decimal list-inside rtl" start={11}>
+                    <li className="border-b pb-2">الجنون مجاملة – ليندا روتنبرغ</li>
+                    <li className="border-b pb-2">فكر كرائد أعمال تصرف كمدير تنفيذي – بيفرلي إي جونز</li>
+                    <li className="border-b pb-2">لا تقسم الفرق أبداً – كريستوفر فوس وتال راس</li>
+                    <li className="border-b pb-2">محركات نمو الشركات الناشئة – شون إليز ومورغان براون</li>
+                    <li className="border-b pb-2">التوسع – فيرن هارنيش</li>
+                    <li className="border-b pb-2">قانون مور – أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
+                    <li className="border-b pb-2">ضائع ومؤسس – راند فيشكن</li>
+                    <li className="border-b pb-2">ما وراء ريادة الأعمال 2.0 – جيم كولينز وبيل ليزير</li>
+                    <li className="border-b pb-2">النمو الخاطف والسريع – ريد هوفمان وكريس ييه</li>
+                    <li>من جيد إلى عظيم – جيمس كولينز</li>
+                  </ol>
+                </div>
               </div>
             </div>
           </div>
@@ -190,25 +216,25 @@ const StartupKit = () => {
         <section className="py-12 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right">
                 🧠 إزاي هتساعدك في الواقع؟
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex items-start gap-4">
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                <div className="flex items-start gap-4 justify-end">
                   <p className="text-lg">بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</p>
-                </div>
-                <div className="flex items-start gap-4">
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                </div>
+                <div className="flex items-start gap-4 justify-end">
                   <p className="text-lg">توفر عليك وقت التجريب والغلط</p>
-                </div>
-                <div className="flex items-start gap-4">
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                </div>
+                <div className="flex items-start gap-4 justify-end">
                   <p className="text-lg">تساعدك تفكر زي رائد أعمال، مش هاوي</p>
-                </div>
-                <div className="flex items-start gap-4">
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                </div>
+                <div className="flex items-start gap-4 justify-end">
                   <p className="text-lg">توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</p>
+                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
                 </div>
               </div>
             </div>
@@ -224,7 +250,7 @@ const StartupKit = () => {
         <section className="py-12 bg-gray-50 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right">
                 🎯 المجموعة دي مناسبة لمين؟
               </h2>
               <div className="bg-white rounded-xl p-6 shadow-md">
@@ -272,22 +298,34 @@ const StartupKit = () => {
         <section className="py-12 bg-gray-50 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right">
                 ❤️ بيقولوا عنها إيه؟
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="hover-scale shadow-md">
                   <CardContent className="p-6">
-                    <p className="text-lg mb-4">"كنت حيران أبدأ منين… الكيت رتبتلي كل حاجة، حسيت فعلاً إني بدأت صح."</p>
+                    <p className="text-lg mb-4 text-right">"كنت حيران أبدأ منين… الكيت رتبتلي كل حاجة، حسيت فعلاً إني بدأت صح."</p>
                     <p className="font-bold text-right">– أحمد</p>
                   </CardContent>
                 </Card>
                 <Card className="hover-scale shadow-md">
                   <CardContent className="p-6">
-                    <p className="text-lg mb-4">"النماذج والكتاب مع بعض خلوني أفهم السوق وأكتب خطة لأول مرة في حياتي!"</p>
+                    <p className="text-lg mb-4 text-right">"النماذج والكتاب مع بعض خلوني أفهم السوق وأكتب خطة لأول مرة في حياتي!"</p>
                     <p className="font-bold text-right">– رنا</p>
                   </CardContent>
                 </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Questions Section */}
+        <section className="py-12 rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-rtl-yellow/20 rounded-xl p-8 text-center">
+                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">❓ أسئلة؟</h2>
+                <p className="text-xl">كلمنا واتساب على [رابط/رقم الدعم] — هنرد عليك فورًا!</p>
               </div>
             </div>
           </div>
@@ -310,74 +348,9 @@ const StartupKit = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-rtl-dark text-white py-10 rtl">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">Read to Lead</h3>
-              <p className="text-gray-300">
-                مجموعة مختارة من أقوى الكتب والكيتس التعليمية لنجاحك الشخصي والمهني
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">روابط مهمة</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/" className="text-gray-300 hover:text-white">
-                    الرئيسية
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    المنتجات
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    من نحن
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">خدمة العملاء</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    الأسئلة الشائعة
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    سياسة الشحن
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    تواصل معنا
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">تواصل معنا</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center justify-end gap-2">
-                  <span>info@readtolead.com</span>
-                  <span>✉️</span>
-                </li>
-                <li className="flex items-center justify-end gap-2">
-                  <span>+123456789</span>
-                  <span>📱</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-6 text-center">
-            <p className="text-gray-400">© 2024 جميع الحقوق محفوظة Read to Lead</p>
-          </div>
-        </div>
+      {/* Simple Footer */}
+      <footer className="py-6 text-center border-t">
+        <p className="text-gray-600">© جميع الحقوق محفوظة</p>
       </footer>
     </div>
   );
