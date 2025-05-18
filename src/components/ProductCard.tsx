@@ -11,6 +11,7 @@ interface ProductCardProps {
   link?: string;
   imageSrc?: string;
   description?: string;
+  buttonText?: string;
 }
 
 const ProductCard = ({ 
@@ -20,7 +21,8 @@ const ProductCard = ({
   index, 
   link, 
   imageSrc,
-  description = "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة"
+  description = "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة",
+  buttonText = "احصل عليه الآن"
 }: ProductCardProps) => {
   // Card content with fixed title and bottom description box
   const cardContent = (
@@ -56,7 +58,7 @@ const ProductCard = ({
             size="sm" 
             className="hover:bg-rtl-teal/80 transition-colors"
           >
-            احصل عليه الآن
+            {buttonText}
           </Button>
         </div>
       </div>

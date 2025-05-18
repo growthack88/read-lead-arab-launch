@@ -38,6 +38,72 @@ const Index = () => {
     }
   ];
   
+  // New kits section data
+  const newKits = [
+    {
+      title: "حزمة المسوق الرقمي",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "أدوات تساعدك على إنشاء حملات تسويقية ناجحة",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "كيت تخطيط المشاريع",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      description: "نماذج وأدوات لتخطيط مشاريعك بطريقة احترافية",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "حزمة المدير المحترف",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "أدوات تساعدك على إدارة فريقك بكفاءة",
+      buttonText: "اكتشف الآن"
+    },
+  ];
+  
+  // New packages section data
+  const newPackages = [
+    {
+      title: "باقة المبتدئ",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      description: "كل ما تحتاجه لبدء رحلتك في عالم الأعمال",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "باقة المحترف",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "أدوات متقدمة لتطوير مهاراتك المهنية",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "باقة الشركات",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      description: "حلول متكاملة للشركات الصغيرة والمتوسطة",
+      buttonText: "اكتشف الآن"
+    },
+  ];
+  
+  // New books section data
+  const newBooks = [
+    {
+      title: "قوة العادات",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "كيف تبني عادات إيجابية تغير حياتك",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "فن الإقناع",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      description: "أساليب متقدمة في الإقناع والتأثير",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "الذكاء المالي",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "استراتيجيات لبناء ثروتك والاستثمار بذكاء",
+      buttonText: "اكتشف الآن"
+    },
+  ];
+  
   // All products - kept for reference but not displaying these in the featured section
   const products = [
     {
@@ -112,6 +178,69 @@ const Index = () => {
         {/* Hero Section */}
         <HeroSection />
 
+        {/* New Kits Section */}
+        <section id="new-kits" className="py-16 bg-white" dir="rtl">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+              🟢 الكيتس الجديدة
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {newKits.map((kit, index) => (
+                <ProductCard
+                  key={index}
+                  title={kit.title}
+                  index={index}
+                  imageSrc={kit.imageSrc}
+                  description={kit.description}
+                  buttonText={kit.buttonText}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* New Packages Section */}
+        <section id="new-packages" className="py-16 bg-gray-50" dir="rtl">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+              📦 الباقات الجديدة
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {newPackages.map((pack, index) => (
+                <ProductCard
+                  key={index}
+                  title={pack.title}
+                  index={index}
+                  imageSrc={pack.imageSrc}
+                  description={pack.description}
+                  buttonText={pack.buttonText}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* New Books Section */}
+        <section id="new-books" className="py-16 bg-white" dir="rtl">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+              📚 الكتب الجديدة
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {newBooks.map((book, index) => (
+                <ProductCard
+                  key={index}
+                  title={book.title}
+                  index={index}
+                  imageSrc={book.imageSrc}
+                  description={book.description}
+                  buttonText={book.buttonText}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Featured Products Section */}
         <section id="featured-products" className="py-16 bg-gray-50" dir="rtl">
           <div className="container mx-auto px-4">
@@ -127,28 +256,6 @@ const Index = () => {
                   link={product.link}
                   imageSrc={product.imageSrc}
                   description={product.description}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Product Grid - Original Product Section */}
-        <section id="products" className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 rtl">
-              منتجاتنا المميزة
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {products.map((product, index) => (
-                <ProductCard
-                  key={index}
-                  title={product.title}
-                  tagline={product.tagline}
-                  color="bg-rtl-teal"
-                  index={index}
-                  link={product.link}
-                  imageSrc={product.imageSrc}
                 />
               ))}
             </div>
