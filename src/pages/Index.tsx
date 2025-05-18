@@ -8,6 +8,32 @@ import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FinalCTASection from "@/components/FinalCTASection";
 
 const Index = () => {
+  // Featured products - limited to 5 as requested
+  const featuredProducts = [
+    {
+      title: "Startup Builder Kit",
+      link: "/startup-kit",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
+    },
+    {
+      title: "كتاب القيادة والإدارة الفعالة",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png"
+    },
+    {
+      title: "سلسلة التسويق الحديث",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
+    },
+    {
+      title: "كتاب التطوير الذاتي",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png"
+    },
+    {
+      title: "قواعد النجاح المؤسسي",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
+    }
+  ];
+  
+  // All products - kept for reference but not displaying these in the featured section
   const products = [
     {
       title: "Startup Journal",
@@ -81,7 +107,27 @@ const Index = () => {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* Product Grid */}
+        {/* Featured Products Section */}
+        <section id="featured-products" className="py-16 bg-gray-50" dir="rtl">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+              منتجاتنا المميزة
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredProducts.map((product, index) => (
+                <ProductCard
+                  key={index}
+                  title={product.title}
+                  index={index}
+                  link={product.link}
+                  imageSrc={product.imageSrc}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Product Grid - Original Product Section */}
         <section id="products" className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 rtl">

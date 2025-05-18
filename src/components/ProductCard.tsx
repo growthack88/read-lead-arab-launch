@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   title: string;
-  tagline: string;
+  tagline?: string;
   color?: string;
   index: number;
   link?: string;
@@ -12,25 +12,32 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ title, tagline, color = "bg-rtl-teal", index, link, imageSrc }: ProductCardProps) => {
+  // Card content with hover effect
   const cardContent = (
-    <div className="h-full flex flex-col">
-      {imageSrc && (
-        <div className="w-full aspect-[4/3] overflow-hidden">
+    <div className="relative w-full h-full group">
+      {/* Image with proper aspect ratio */}
+      <div className="w-full aspect-[2/1] overflow-hidden">
+        {imageSrc ? (
           <img 
             src={imageSrc} 
             alt={title} 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
-        </div>
-      )}
-      <div className={`p-6 flex-1 flex flex-col justify-between ${imageSrc ? 'bg-white' : ''}`}>
-        <h3 className="font-bold text-xl mb-2 text-right">{title}</h3>
-        <p className="text-gray-600 text-right">{tagline}</p>
+        ) : (
+          <div className={`w-full h-full ${color}`}></div>
+        )}
+      </div>
+      
+      {/* Title overlay that shows on hover */}
+      <div className="absolute top-0 right-0 p-3 bg-black bg-opacity-60 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 className="font-bold text-lg text-white text-right">
+          {title}
+        </h3>
       </div>
     </div>
   );
 
-  const cardClassName = `rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 ${!imageSrc ? color : ''}`;
+  const cardClassName = "rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg";
 
   // Conditionally render Link or div
   if (link) {
