@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
 
 interface ProductCardProps {
   title: string;
@@ -9,10 +10,19 @@ interface ProductCardProps {
   index: number;
   link?: string;
   imageSrc?: string;
+  description?: string;
 }
 
-const ProductCard = ({ title, tagline, color = "bg-rtl-teal", index, link, imageSrc }: ProductCardProps) => {
-  // Card content with hover effect
+const ProductCard = ({ 
+  title, 
+  tagline, 
+  color = "bg-rtl-teal", 
+  index, 
+  link, 
+  imageSrc,
+  description = "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة"
+}: ProductCardProps) => {
+  // Card content with fixed title and bottom description box
   const cardContent = (
     <div className="relative w-full h-full group">
       {/* Image with proper aspect ratio */}
@@ -26,20 +36,36 @@ const ProductCard = ({ title, tagline, color = "bg-rtl-teal", index, link, image
         ) : (
           <div className={`w-full h-full ${color}`}></div>
         )}
+        
+        {/* Title overlay that is always visible */}
+        <div className="absolute top-0 right-0 px-3 py-2 bg-black bg-opacity-60 rounded-bl-md">
+          <h3 className="font-bold text-lg text-white text-right">
+            {title}
+          </h3>
+        </div>
       </div>
       
-      {/* Title overlay that shows on hover */}
-      <div className="absolute top-0 right-0 p-3 bg-black bg-opacity-60 rounded-bl-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <h3 className="font-bold text-lg text-white text-right">
-          {title}
-        </h3>
+      {/* Bottom description box */}
+      <div className="bg-white p-4 rounded-b-xl shadow-sm">
+        <p className="text-rtl-dark mb-3 text-right text-sm">
+          {description}
+        </p>
+        <div className="flex justify-end">
+          <Button 
+            variant="teal" 
+            size="sm" 
+            className="hover:bg-rtl-teal/80 transition-colors"
+          >
+            احصل عليه الآن
+          </Button>
+        </div>
       </div>
     </div>
   );
 
-  const cardClassName = "rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg";
+  const cardClassName = "rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg";
 
-  // Conditionally render Link or div
+  // If we have a link, wrap the card in a Link component
   if (link) {
     return (
       <Link to={link} className={cardClassName}>

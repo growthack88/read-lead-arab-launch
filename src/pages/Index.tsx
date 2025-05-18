@@ -13,23 +13,28 @@ const Index = () => {
     {
       title: "Startup Builder Kit",
       link: "/startup-kit",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة"
     },
     {
       title: "كتاب القيادة والإدارة الفعالة",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png"
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      description: "تعلم مهارات القيادة الفعالة والادارة الناجحة"
     },
     {
       title: "سلسلة التسويق الحديث",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "استراتيجيات تسويق رقمي فعالة للمبتدئين"
     },
     {
       title: "كتاب التطوير الذاتي",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png"
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      description: "خطوات عملية لتطوير مهاراتك الشخصية"
     },
     {
       title: "قواعد النجاح المؤسسي",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      description: "أساسيات بناء مؤسسة ناجحة ومستدامة"
     }
   ];
   
@@ -121,6 +126,7 @@ const Index = () => {
                   index={index}
                   link={product.link}
                   imageSrc={product.imageSrc}
+                  description={product.description}
                 />
               ))}
             </div>
