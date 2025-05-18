@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ShoppingCart, Book, ClipboardCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const StartupKit = () => {
   return (
@@ -56,10 +57,14 @@ const StartupKit = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-rtl-yellow bg-opacity-20 rounded-2xl p-6 flex items-center justify-center">
-                    <div className="w-full h-64 bg-rtl-teal/10 rounded-xl flex items-center justify-center border-2 border-dashed border-rtl-teal">
-                      <p className="text-rtl-teal font-bold">صورة المنتج الرئيسية</p>
-                    </div>
+                  <div className="w-full max-w-4xl mx-auto">
+                    <AspectRatio ratio={2/1} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <img 
+                        src="/lovable-uploads/490e51b9-80e9-4446-8503-53b301967b9f.png" 
+                        alt="Startup Builder Kit صورة المنتج" 
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
                   </div>
                 </div>
               </div>
@@ -230,7 +235,7 @@ const StartupKit = () => {
                     <li className="border-b pb-2">ضائع ومؤسس – راند فيشكن</li>
                     <li className="border-b pb-2">ما وراء ريادة الأعمال 2.0 – جيم كولينز وبيل ليزير</li>
                     <li className="border-b pb-2">النمو الخاطف والسريع – ريد هوفمان وكريس ييه</li>
-                    <li>من جيد إلى عظيم – جيمس كولينز</li>
+                    <li>من جيد إلى عظ��م – جيمس كولينز</li>
                   </ol>
                 </div>
               </div>
