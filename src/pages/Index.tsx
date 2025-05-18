@@ -5,6 +5,8 @@ import ProductCard from "@/components/ProductCard";
 import SocialProofSection from "@/components/SocialProofSection";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FinalCTASection from "@/components/FinalCTASection";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   // New kits section data - UPDATED with specific kits and startup kit image
@@ -106,25 +108,30 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
+      {/* Enhanced Header with better navigation */}
+      <header className="py-4 border-b sticky top-0 bg-white/95 backdrop-blur-sm z-10 shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <Logo />
-            <nav className="space-x-6 rtl">
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
-                الرئيسية
-              </a>
-              <a href="#products" className="text-rtl-dark hover:text-rtl-teal">
-                المنتجات
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
-                من نحن
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
-                تواصل معنا
-              </a>
-            </nav>
+            
+            {/* Enhanced navigation with NavigationMenu component */}
+            <NavigationMenu className="rtl">
+              <NavigationMenuList className="flex space-x-1 space-x-reverse">
+                {["الرئيسية", "المنتجات", "من نحن", "تواصل معنا"].map((item, index) => (
+                  <NavigationMenuItem key={index}>
+                    <NavigationMenuLink
+                      href={item === "المنتجات" ? "#products" : "#"}
+                      className={cn(
+                        "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium transition-colors",
+                        "hover:bg-rtl-teal/10 hover:text-rtl-teal focus:bg-rtl-teal/10 focus:text-rtl-teal focus:outline-none"
+                      )}
+                    >
+                      {item}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
         </div>
       </header>
