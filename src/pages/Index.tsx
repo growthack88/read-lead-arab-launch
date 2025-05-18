@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
@@ -82,24 +81,54 @@ const Index = () => {
     },
   ];
   
-  // New books section data
+  // Updated New books section data with the uploaded book covers
   const newBooks = [
     {
-      title: "قوة العادات",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "كيف تبني عادات إيجابية تغير حياتك",
+      title: "سلسلة إدارة حياتك المهنية",
+      imageSrc: "/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png",
+      description: "تخطيط وتطوير مسارك الوظيفي باحترافية",
       buttonText: "اكتشف الآن"
     },
     {
-      title: "فن الإقناع",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
-      description: "أساليب متقدمة في الإقناع والتأثير",
+      title: "سلسلة التسويق الحديث",
+      imageSrc: "/lovable-uploads/e02202fa-1c1f-4c69-9eeb-d8a406d41e9a.png",
+      description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
       buttonText: "اكتشف الآن"
     },
     {
-      title: "الذكاء المالي",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "استراتيجيات لبناء ثروتك والاستثمار بذكاء",
+      title: "سلسلة القيادة وإدارة الفعالة",
+      imageSrc: "/lovable-uploads/7b271e77-fc40-4b05-a14f-f093c1f9cdb4.png",
+      description: "استراتيجيات فعالة للقيادة وإدارة الناجحة",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "سلسلة النتاجية بلا حدود",
+      imageSrc: "/lovable-uploads/167ced76-30d4-4269-a2d7-3f25b31cbe18.png",
+      description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "سلسلة تطوير الذات والنمو الشخصي",
+      imageSrc: "/lovable-uploads/247722eb-0ea5-4d90-bf5b-52a81145490e.png",
+      description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "سلسلة فن البيع و��لشراء",
+      imageSrc: "/lovable-uploads/1522fafc-8928-4f3e-9cf7-4d6f2c0617df.png",
+      description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "سلسلة فن ريادة الأعمال",
+      imageSrc: "/lovable-uploads/8b7decb8-2edd-41e2-acb7-f8ca9ffd7014.png",
+      description: "مهارات وأدوات بناء المشاريع الناجحة",
+      buttonText: "اكتشف الآن"
+    },
+    {
+      title: "سلسلة قواعد النجاح المؤسسي",
+      imageSrc: "/lovable-uploads/8376e2d7-8776-42f1-a5dd-e4e3b2d93df8.png",
+      description: "بناء ثقافة مؤسسية ناجحة وبيئة عمل محفزة",
       buttonText: "اكتشف الآن"
     },
   ];
@@ -220,13 +249,13 @@ const Index = () => {
           </div>
         </section>
 
-        {/* New Books Section */}
+        {/* New Books Section - Updated with more books */}
         <section id="new-books" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               📚 الكتب الجديدة
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {newBooks.map((book, index) => (
                 <ProductCard
                   key={index}
@@ -235,27 +264,6 @@ const Index = () => {
                   imageSrc={book.imageSrc}
                   description={book.description}
                   buttonText={book.buttonText}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Products Section */}
-        <section id="featured-products" className="py-16 bg-gray-50" dir="rtl">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              منتجاتنا المميزة
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredProducts.map((product, index) => (
-                <ProductCard
-                  key={index}
-                  title={product.title}
-                  index={index}
-                  link={product.link}
-                  imageSrc={product.imageSrc}
-                  description={product.description}
                 />
               ))}
             </div>
