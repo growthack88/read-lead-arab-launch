@@ -3,7 +3,8 @@ import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, ShoppingCart } from "lucide-react";
+import { ArrowRight, ShoppingCart, Check, Book, ClipboardCheck } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const StartupKit = () => {
   return (
@@ -43,7 +44,7 @@ const StartupKit = () => {
                     🟢 Startup Builder Kit | مجموعة بناء الشركات الناشئة
                   </h1>
                   <p className="text-lg md:text-xl text-gray-600 mb-8">
-                    كل الأدوات اللي تحتاجها لتأسيس شركتك الناشئة من الفكرة للتنفيذ
+                    كل أدوات التخطيط والتنفيذ اللي محتاجها علشان تبدأ شركتك الناشئة صح — من الفكرة لحد التنفيذ.
                   </p>
                   <Button
                     className="bg-rtl-teal hover:bg-rtl-teal/90 text-white px-8 py-6 rounded-lg text-lg"
@@ -64,19 +65,51 @@ const StartupKit = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 rtl">
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* What is this kit section */}
+        <section className="py-12 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
-                إيش هتستفيد من المجموعة؟
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+                💼 إيه هي المجموعة دي؟
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 rounded-xl p-8">
+                <p className="text-xl mb-6">
+                  📦 Startup Builder Kit هي باكج ذكية بتجمع بين أدوات عملية، محتوى تعليمي، وجورنال تفاعلي.
+                </p>
+                <p className="text-xl">
+                  بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* What makes this kit special section */}
+        <section className="py-12 bg-white rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+                ✨ إيه اللي بيميز الكيت دي عن أي حاجة تانية؟
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <span className="text-3xl">🧠</span>
-                      <p className="text-lg">تفهم بيئة السوق وتحللها بطريقة احترافية</p>
+                      <span className="text-3xl">🔧</span>
+                      <div>
+                        <h3 className="font-bold text-xl mb-2">Toolkit عملي</h3>
+                        <p>أكتر من 20 نموذج استراتيجي زي نموذج العمل، SWOT، خطة تسويق، تحليل السوق، وتمويل</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -84,109 +117,177 @@ const StartupKit = () => {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <span className="text-3xl">📘</span>
-                      <p className="text-lg">تنشئ نموذج عمل فعّال ومتكامل</p>
+                      <div>
+                        <h3 className="font-bold text-xl mb-2">كتاب شامل</h3>
+                        <p>"فن ريادة الأعمال" بيوجهك خطوة بخطوة من توليد الفكرة لإطلاق المشروع</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <span className="text-3xl">🧾</span>
-                      <p className="text-lg">تخطط مالياً وتسوق لمشروعك بذكاء</p>
+                      <span className="text-3xl">📓</span>
+                      <div>
+                        <h3 className="font-bold text-xl mb-2">Startup Journal</h3>
+                        <p>كتاب تفاعلي تكتب فيه تخطيطك ومراحل تقدمك وتطور شغلك بنفسك</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
-                <Card className="hover-scale shadow-md border-rtl-teal/10">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <span className="text-3xl">📝</span>
-                      <p className="text-lg">توثق خطوات التأسيس وتتابع تقدمك</p>
-                    </div>
-                  </CardContent>
-                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* Book List Section */}
+        <section className="py-12 bg-gray-50 rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark flex items-center justify-end gap-3">
+                <span>📚 الكتب العشرون المتضمنة في الكيت:</span>
+                <Book className="h-6 w-6 text-rtl-teal" />
+              </h2>
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <ul className="space-y-3 text-right">
+                  <li className="border-b pb-2">Zero to One - من الصفر إلى الواحد by Peter Thiel & Blake Masters - بيتر ثيل وبليك ماسترز</li>
+                  <li className="border-b pb-2">Built to Last - البناء للتشيد والاستدامة by Jim Collins - جيمس س. كولينز</li>
+                  <li className="border-b pb-2">Growth IQ - معدلات الذكاء للنمو by Tiffani Bova - تيفاني بوفا</li>
+                  <li className="border-b pb-2">The Worst Business Model in the World - أسوأ نموذج عمل في العالم by Danny Schuman - داني شومان</li>
+                  <li className="border-b pb-2">Write Your Business Plan - اكتب خطة عملك by The Staff of Entrepreneur Media, Inc - طاقم عمل Entrepreneur Media، Inc</li>
+                  <li className="border-b pb-2">The Entrepreneurial Bible to Venture Capital - الكتاب المقدس لريادة الأعمال لرأس المال الاستثماري by Andrew Romans - أندرو رومانس</li>
+                  <li className="border-b pb-2">The Dragonfly Effect - تأثير اليعسوب by Jennifer Aaker, Andy Smith with Carlye Adler - جينيفر آكر وآندي سميث مع كارلي أدلر</li>
+                  <li className="border-b pb-2">Company of One - شركات الفرد الواحد by Paul Jarvis - بول جارفيس</li>
+                  <li className="border-b pb-2">Rapid Growth, Done Right - النمو السريع بالشكل الصحيح by Val Wright - فال رايت</li>
+                  <li className="border-b pb-2">Cooking Up a Business - مرحلة تحضير الأعمال by Rachel Hofstetter - راشيل هوفستيتر</li>
+                  <li className="border-b pb-2">Crazy is a Compliment - الجنون مجاملة by Linda Rottenberg - ليندا روتنبرغ</li>
+                  <li className="border-b pb-2">Think Like an Entrepreneur, Act Like a CEO - فكر كرائد أعمال تصرف كمدير تنفيذي by Beverly E. Jones - بيفرلي إي جونز</li>
+                  <li className="border-b pb-2">Never Split the Difference - لا تقسم الفرق أبداً by Christopher Voss & Tahl Raz - تال راس وكريستوفر فوس</li>
+                  <li className="border-b pb-2">Startup Growth Engines - محركات نمو الشركات الناشئة by Sean Ellis & Morgan Brown - شون إليز ومورغان براون</li>
+                  <li className="border-b pb-2">Scaling Up - التوسع by Verne Harnish - فيرن هارنيش</li>
+                  <li className="border-b pb-2">Moore's Law - قانون مور by Arnold Thackray, David Brock and Rachel Jones - أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
+                  <li className="border-b pb-2">Lost and Founder - ضائع ومؤسس by Rand Fishkin - راند فيشكن</li>
+                  <li className="border-b pb-2">Beyond Entrepreneurship 2.0 - ما وراء ريادة الأعمال 2.0 by Jim Collins and Bill Lazier - جيم كولينز وبيل ليزير</li>
+                  <li className="border-b pb-2">Blitzscaling - النمو الخاطف والسريع by Reid Hoffman and Chris Yeh - ريد هوفمان وكريس ييه</li>
+                  <li>Good to Great - من جيد إلى عظيم by James C. Collins - جيمس كولينز</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* How will it help you section */}
+        <section className="py-12 rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+                🧠 إزاي هتساعدك في الواقع؟
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-4">
+                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  <p className="text-lg">بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  <p className="text-lg">توفر عليك وقت التجريب والغلط</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  <p className="text-lg">تساعدك تفكر زي رائد أعمال، مش هاوي</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  <p className="text-lg">توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* Who is this for section */}
+        <section className="py-12 bg-gray-50 rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+                🎯 المجموعة دي مناسبة لمين؟
+              </h2>
+              <div className="bg-white rounded-xl p-6 shadow-md">
+                <ul className="space-y-3 text-lg">
+                  <li className="flex items-center gap-3 justify-end">
+                    <span>أي حد عنده فكرة وعايز يبدأ مشروع</span>
+                    <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
+                  </li>
+                  <li className="flex items-center gap-3 justify-end">
+                    <span>طلاب، مستقلين، أو موظفين بيحلموا بشغل خاص</span>
+                    <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
+                  </li>
+                  <li className="flex items-center gap-3 justify-end">
+                    <span>رواد أعمال مبتدئين عايزين خطة منظمة</span>
+                    <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
+                  </li>
+                  <li className="flex items-center gap-3 justify-end">
+                    <span>Accelerator أو Incubator Programs</span>
+                    <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* Price section */}
+        <section className="py-12 rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-rtl-teal/10 rounded-xl p-8 text-center">
+                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">💸 السعر: 1250 جنيه</h3>
+                <p className="text-xl mb-2">🚚 شحن خلال 2-4 أيام | 💳 الدفع عند الاستلام أو أونلاين</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Social Proof Section */}
-        <section className="py-16 bg-gray-50 rtl">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">⭐⭐⭐⭐⭐</h2>
-              <p className="text-xl md:text-2xl font-semibold mb-4">
-                أكثر من ٥٠٠٠ رائد أعمال استخدموا المجموعة وغيرت مشوارهم الريادي
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Visual Showcase */}
-        <section className="py-16 rtl">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="rounded-xl overflow-hidden shadow-md">
-                  <div className="aspect-[4/3] bg-rtl-teal/10 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <p className="text-rtl-teal font-bold mb-2">صورة الحقيبة</p>
-                      <p className="text-gray-500">Cover of the toolkit</p>
-                    </div>
-                  </div>
-                  <div className="p-4 text-center">
-                    <h3 className="font-bold">حقيبة المشروع</h3>
-                  </div>
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-md">
-                  <div className="aspect-[4/3] bg-rtl-yellow/10 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <p className="text-rtl-yellow font-bold mb-2">صورة الجورنال</p>
-                      <p className="text-gray-500">Snapshot of the journal</p>
-                    </div>
-                  </div>
-                  <div className="p-4 text-center">
-                    <h3 className="font-bold">جورنال المشروع</h3>
-                  </div>
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-md">
-                  <div className="aspect-[4/3] bg-rtl-purple/10 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <p className="text-rtl-purple font-bold mb-2">صورة الكتاب</p>
-                      <p className="text-gray-500">Book cover</p>
-                    </div>
-                  </div>
-                  <div className="p-4 text-center">
-                    <h3 className="font-bold">فن ريادة الأعمال</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Detailed Description */}
-        <section className="py-16 bg-gray-50 rtl">
+        <section className="py-12 bg-gray-50 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                تفاصيل المحتوى
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark">
+                ❤️ بيقولوا عنها إيه؟
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
-                توفّر مجموعة Startup Builder Kit كل ما يحتاجه رواد الأعمال وأصحاب المشاريع الناشئة لتأسيس وتخطيط مشروعاتهم بكفاءة من الفكرة وحتى التنفيذ.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                  <p className="text-lg">أكثر من 20 نموذجًا استراتيجيًا مثل: نموذج العمل التجاري، تحليل SWOT، خطة التسويق</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                  <p className="text-lg">كتاب شامل حول ريادة الأعمال (فن ريادة الأعمال)</p>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                  <p className="text-lg">جورنال عملي لتوثيق التقدم وتنظيم خطوات العمل</p>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="hover-scale shadow-md">
+                  <CardContent className="p-6">
+                    <p className="text-lg mb-4">"كنت حيران أبدأ منين… الكيت رتبتلي كل حاجة، حسيت فعلاً إني بدأت صح."</p>
+                    <p className="font-bold text-right">– أحمد</p>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md">
+                  <CardContent className="p-6">
+                    <p className="text-lg mb-4">"النماذج والكتاب مع بعض خلوني أفهم السوق وأكتب خطة لأول مرة في حياتي!"</p>
+                    <p className="font-bold text-right">– رنا</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -196,14 +297,14 @@ const StartupKit = () => {
         <section className="bg-rtl-teal text-white py-16 rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">جاهز تبدأ مشروعك؟</h2>
+              <h2 className="text-3xl font-bold mb-6">🟢 مستعد تبدأ شركتك؟</h2>
               <Button
                 className="inline-block bg-white text-rtl-teal px-8 py-6 rounded-lg font-bold text-lg hover:bg-rtl-yellow hover:text-rtl-dark transition-all duration-200 mb-4"
               >
                 <ShoppingCart className="ml-2 h-5 w-5" />
-                أضف للسلة الآن 🛒
+                اطلب Startup Builder Kit دلوقتي 🛒
               </Button>
-              <p className="text-lg font-medium mt-4">الكمية محدودة – الحق عرض اليوم!</p>
+              <p className="text-lg font-medium mt-4">📦 أول خطوة حقيقية تبدأ بيها رحلتك الريادية</p>
             </div>
           </div>
         </section>
