@@ -46,7 +46,7 @@ const StartupKit = () => {
                     كل أدوات التخطيط والتنفيذ اللي محتاجها علشان تبدأ شركتك الناشئة صح — من الفكرة لحد التنفيذ.
                   </p>
                   
-                  {/* NEW: Kit description content moved from separate section to hero */}
+                  {/* Kit description content moved from separate section to hero */}
                   <div dir="rtl" className="space-y-2 pr-4 text-base text-[#1A1F2C] mb-8">
                     <p>📦 <strong>Startup Builder Kit</strong> هي باكج ذكية بتجمع بين:</p>
                     <ul className="list-none space-y-1">
@@ -80,6 +80,19 @@ const StartupKit = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEW: Secondary Product Image Banner */}
+        <section className="bg-white py-6">
+          <div dir="rtl" className="container mx-auto px-4">
+            <div className="w-full max-w-5xl mx-auto my-8">
+              <img
+                src="/lovable-uploads/16a9f8b7-5b4e-4981-960a-0717c90cffe5.png"
+                alt="Startup Builder Kit Expanded Visual"
+                className="w-full h-auto rounded-xl shadow-lg object-contain"
+              />
             </div>
           </div>
         </section>
