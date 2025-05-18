@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ShoppingCart, Book, ClipboardCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const StartupKit = () => {
   return (
@@ -58,13 +57,12 @@ const StartupKit = () => {
                 </div>
                 <div className="flex-1">
                   <div className="w-full max-w-4xl mx-auto">
-                    <AspectRatio ratio={2/1} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                      <img 
-                        src="/lovable-uploads/490e51b9-80e9-4446-8503-53b301967b9f.png" 
-                        alt="Startup Builder Kit صورة المنتج" 
-                        className="w-full h-full object-cover"
-                      />
-                    </AspectRatio>
+                    {/* Replaced AspectRatio with direct image that preserves dimensions */}
+                    <img 
+                      src="/lovable-uploads/490e51b9-80e9-4446-8503-53b301967b9f.png" 
+                      alt="Startup Builder Kit صورة المنتج" 
+                      className="w-full h-auto rounded-xl shadow-lg object-contain"
+                    />
                   </div>
                 </div>
               </div>
@@ -211,7 +209,7 @@ const StartupKit = () => {
                   <ul dir="rtl" className="space-y-1 pr-4 text-right">
                     <li className="border-b pb-2">1. من الصفر إلى الواحد – بيتر ثيل وبليك ماسترز</li>
                     <li className="border-b pb-2">2. البناء للتشيد والاستدامة – جيمس س. كولينز</li>
-                    <li className="border-b pb-2">3. معدلات الذك��ء للنمو – تيفاني بوفا</li>
+                    <li className="border-b pb-2">3. معدلات الذكاء للنمو – تيفاني بوفا</li>
                     <li className="border-b pb-2">4. أسوأ نموذج عمل في العالم – داني شومان</li>
                     <li className="border-b pb-2">5. اكتب خطة عملك – طاقم عمل Entrepreneur Media</li>
                     <li className="border-b pb-2">6. الكتاب المقدس لريادة الأعمال – أندرو رومانس</li>
