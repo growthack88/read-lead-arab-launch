@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, ShoppingCart, Check, Book, ClipboardCheck } from "lucide-react";
+import { ShoppingCart, Book, ClipboardCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const StartupKit = () => {
@@ -14,14 +14,14 @@ const StartupKit = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <Logo />
-            <nav className="space-x-6">
-              <a href="/" className="text-rtl-dark hover:text-rtl-teal">
+            <nav className="space-x-6 flex flex-row-reverse">
+              <a href="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
                 الرئيسية
               </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
+              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
                 المنتجات
               </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
+              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
                 من نحن
               </a>
               <a href="#" className="text-rtl-dark hover:text-rtl-teal">
@@ -38,7 +38,7 @@ const StartupKit = () => {
         <section className="bg-gradient-to-br from-white to-gray-50 py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex flex-col md:flex-row-reverse items-center gap-8">
                 <div className="flex-1 text-right">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark mb-4">
                     🟢 Startup Builder Kit | مجموعة بناء الشركات الناشئة
@@ -49,7 +49,7 @@ const StartupKit = () => {
                   <Button
                     className="bg-rtl-teal hover:bg-rtl-teal/90 text-white px-8 py-6 rounded-lg text-lg"
                   >
-                    <ShoppingCart className="mr-2 h-5 w-5" />
+                    <ShoppingCart className="ml-2 h-5 w-5" />
                     أضف للسلة
                   </Button>
                 </div>
@@ -70,34 +70,34 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* What is this kit section - IMPROVED VERSION */}
+        {/* What is this kit section */}
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark flex items-center justify-end gap-3">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right flex items-center justify-end gap-3">
                 <span>💼 إيه هي المجموعة دي؟</span>
               </h2>
               <div className="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100">
                 <p className="text-xl mb-6 text-right flex items-center justify-end gap-3">
-                  <span>Startup Builder Kit هي باكج ذكية بتجمع بين:</span>
+                  <span><strong>Startup Builder Kit</strong> هي باكج ذكية بتجمع بين:</span>
                   <span className="text-3xl">📦</span>
                 </p>
-                <ul className="space-y-3 mb-6 text-lg">
-                  <li className="flex items-center justify-end gap-3">
+                <ul className="space-y-4 mb-6 text-lg pr-2">
+                  <li className="flex items-center justify-end gap-3 text-right">
                     <span>أدوات عملية تساعدك تطبّق خططك</span>
-                    <span className="text-rtl-teal">•</span>
+                    <span className="text-rtl-teal text-lg">•</span>
                   </li>
-                  <li className="flex items-center justify-end gap-3">
+                  <li className="flex items-center justify-end gap-3 text-right">
                     <span>محتوى تعليمي موجّه لريادة الأعمال</span>
-                    <span className="text-rtl-teal">•</span>
+                    <span className="text-rtl-teal text-lg">•</span>
                   </li>
-                  <li className="flex items-center justify-end gap-3">
+                  <li className="flex items-center justify-end gap-3 text-right">
                     <span>جورنال تفاعلي توثق فيه رحلتك الريادية</span>
-                    <span className="text-rtl-teal">•</span>
+                    <span className="text-rtl-teal text-lg">•</span>
                   </li>
                 </ul>
                 <p className="text-xl text-right bg-rtl-teal/10 p-4 rounded-lg border border-rtl-teal/20">
-                  ببساطة، بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
+                  بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
                 </p>
               </div>
             </div>
@@ -113,7 +113,7 @@ const StartupKit = () => {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark flex items-center justify-end gap-3">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right flex items-center justify-end gap-3">
                 <span>✨ إيه اللي بيميز الكيت دي عن أي حاجة تانية؟</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -164,22 +164,22 @@ const StartupKit = () => {
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark flex items-center justify-end gap-3">
-                <span>📚 الكتب العشرون المتضمنة في الكيت:</span>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right flex items-center justify-end gap-3">
                 <Book className="h-6 w-6 text-rtl-teal" />
+                <span>📚 الكتب العشرون المتضمنة في الكيت:</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* First Column */}
                 <div className="bg-white rounded-xl p-6 shadow-md">
                   <h3 className="text-xl font-bold mb-4 text-right text-rtl-teal">العمود الأول</h3>
-                  <ol className="space-y-3 text-right list-decimal list-inside">
+                  <ol dir="rtl" className="space-y-3 text-right list-decimal list-inside mr-4">
                     <li className="border-b pb-2">من الصفر إلى الواحد – بيتر ثيل وبليك ماسترز</li>
                     <li className="border-b pb-2">البناء للتشيد والاستدامة – جيمس س. كولينز</li>
                     <li className="border-b pb-2">معدلات الذكاء للنمو – تيفاني بوفا</li>
                     <li className="border-b pb-2">أسوأ نموذج عمل في العالم – داني شومان</li>
-                    <li className="border-b pb-2">اكتب خطة عملك – طاقم عمل Entrepreneur Media، Inc</li>
-                    <li className="border-b pb-2">الكتاب المقدس لريادة الأعمال لرأس المال الاستثماري – أندرو رومانس</li>
-                    <li className="border-b pb-2">تأثير اليعسوب – جينيفر آكر وآندي سميث مع كارلي أدلر</li>
+                    <li className="border-b pb-2">اكتب خطة عملك – طاقم عمل Entrepreneur Media</li>
+                    <li className="border-b pb-2">الكتاب المقدس لريادة الأعمال – أندرو رومانس</li>
+                    <li className="border-b pb-2">تأثير اليعسوب – جينيفر آكر وآندي سميث</li>
                     <li className="border-b pb-2">شركات الفرد الواحد – بول جارفيس</li>
                     <li className="border-b pb-2">النمو السريع بالشكل الصحيح – فال رايت</li>
                     <li>مرحلة تحضير الأعمال – راشيل هوفستيتر</li>
@@ -189,7 +189,7 @@ const StartupKit = () => {
                 {/* Second Column */}
                 <div className="bg-white rounded-xl p-6 shadow-md">
                   <h3 className="text-xl font-bold mb-4 text-right text-rtl-teal">العمود الثاني</h3>
-                  <ol className="space-y-3 text-right list-decimal list-inside" start={11}>
+                  <ol dir="rtl" className="space-y-3 text-right list-decimal list-inside mr-4" start={11}>
                     <li className="border-b pb-2">الجنون مجاملة – ليندا روتنبرغ</li>
                     <li className="border-b pb-2">فكر كرائد أعمال تصرف كمدير تنفيذي – بيفرلي إي جونز</li>
                     <li className="border-b pb-2">لا تقسم الفرق أبداً – كريستوفر فوس وتال راس</li>
@@ -219,21 +219,21 @@ const StartupKit = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-right">
                 🧠 إزاي هتساعدك في الواقع؟
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-4">
                 <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">بدل ما تبدأ من الصفر، كل حاجة جاهزة</p>
+                  <p className="text-lg">بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</p>
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
                 </div>
                 <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">توفر وقت التجريب</p>
+                  <p className="text-lg">توفر عليك وقت التجريب والغلط</p>
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
                 </div>
                 <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">تخليك تفكر كرائد أعمال</p>
+                  <p className="text-lg">تساعدك تفكر زي رائد أعمال، مش هاوي</p>
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
                 </div>
                 <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">توثّق كل خطوة في مشروعك</p>
+                  <p className="text-lg">توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</p>
                   <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
                 </div>
               </div>
@@ -254,7 +254,7 @@ const StartupKit = () => {
                 🎯 المجموعة دي مناسبة لمين؟
               </h2>
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <ul className="space-y-3 text-lg">
+                <ul className="space-y-4 text-lg">
                   <li className="flex items-center gap-3 justify-end">
                     <span>أي حد عنده فكرة وعايز يبدأ مشروع</span>
                     <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
@@ -268,7 +268,7 @@ const StartupKit = () => {
                     <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
                   </li>
                   <li className="flex items-center gap-3 justify-end">
-                    <span>برامج احتضان وتسريع الأعمال</span>
+                    <span>Accelerator أو Incubator Programs</span>
                     <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
                   </li>
                 </ul>
@@ -298,12 +298,12 @@ const StartupKit = () => {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 مستعد تبدأ؟</h2>
+              <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 مستعد تبدأ شركتك؟</h2>
               <Button
-                className="bg-rtl-teal hover:bg-rtl-teal/80 text-white px-12 py-6 rounded-lg text-xl font-bold transition-all duration-300 mx-auto flex items-center justify-center gap-3"
+                className="bg-rtl-yellow hover:bg-rtl-yellow/80 text-rtl-dark px-12 py-6 rounded-lg text-xl font-bold transition-all duration-300 mx-auto flex items-center justify-center gap-3 w-full md:w-auto"
               >
-                <ShoppingCart className="mr-2 h-6 w-6" />
-                🛒 اطلب الكيت الآن
+                <ShoppingCart className="ml-2 h-6 w-6" />
+                🛒 اطلب المجموعة الآن
               </Button>
               <p className="text-lg font-medium mt-6 text-rtl-dark">📦 أول خطوة حقيقية تبدأ بيها رحلتك الريادية</p>
             </div>
@@ -326,7 +326,7 @@ const StartupKit = () => {
                 </Card>
                 <Card className="hover-scale shadow-md">
                   <CardContent className="p-6">
-                    <p className="text-lg mb-4 text-right">"النماذج والكتاب ساعدوني أكتب خطة لأول مرة."</p>
+                    <p className="text-lg mb-4 text-right">"النماذج والكتاب مع بعض خلوني أفهم السوق وأكتب خطة لأول مرة في حياتي!"</p>
                     <p className="font-bold text-right">– رنا</p>
                   </CardContent>
                 </Card>
@@ -340,15 +340,15 @@ const StartupKit = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-rtl-yellow/20 rounded-xl p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">❓ عندك سؤال؟</h2>
-                <p className="text-xl">كلمنا واتساب على [رابط/رقم الدعم] — هنرد عليك فورًا!</p>
+                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">❓ أسئلة؟</h2>
+                <p className="text-xl">كلمنا واتساب على [رابط أو رقم الدعم] — هنرد عليك فورًا!</p>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Simple Footer - Updated */}
+      {/* Simple Footer */}
       <footer className="py-6 text-center border-t">
         <p className="text-gray-600">© جميع الحقوق محفوظة</p>
       </footer>
