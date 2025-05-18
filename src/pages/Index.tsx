@@ -21,10 +21,12 @@ const Index = () => {
     {
       title: "سلسلة التسويق الحديث",
       tagline: "تعلّم التسويق العصري بشكل عملي",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
     },
     {
       title: "فن البيع والشراء",
       tagline: "زود مبيعاتك بأساليب بيع فعّالة ومجربة",
+      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png"
     },
     {
       title: "فن ريادة الأعمال",
@@ -41,6 +43,7 @@ const Index = () => {
     {
       title: "إنتاجية بلا حدود",
       tagline: "ضاعف إنتاجيتك وحقق أهدافك أسرع",
+      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png"
     },
     {
       title: "كتاب القيادة والإدارة الفعالة",
@@ -93,6 +96,7 @@ const Index = () => {
                   color="bg-rtl-teal"
                   index={index}
                   link={product.link}
+                  imageSrc={product.imageSrc}
                 />
               ))}
             </div>
