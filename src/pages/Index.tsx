@@ -12,6 +12,7 @@ const Index = () => {
     {
       title: "Startup Journal",
       tagline: "حوّل فكرتك لمشروع حقيقي بخطوات عملية",
+      link: "/startup-kit"
     },
     {
       title: "قواعد النجاح المؤسسي",
@@ -91,6 +92,7 @@ const Index = () => {
                   tagline={product.tagline}
                   color="bg-rtl-teal"
                   index={index}
+                  link={product.link}
                 />
               ))}
             </div>

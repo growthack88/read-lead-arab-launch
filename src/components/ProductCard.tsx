@@ -1,14 +1,16 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   title: string;
   tagline: string;
   color: string;
   index: number;
+  link?: string;
 }
 
-const ProductCard = ({ title, tagline, color, index }: ProductCardProps) => {
+const ProductCard = ({ title, tagline, color, index, link = "#" }: ProductCardProps) => {
   // Generate a diverse set of colors for the cards
   const colorClasses = [
     "bg-rtl-teal",
@@ -32,12 +34,12 @@ const ProductCard = ({ title, tagline, color, index }: ProductCardProps) => {
       </div>
       <div className="p-6 bg-white rtl">
         <p className="text-gray-600 mb-4">{tagline}</p>
-        <a
-          href="#"
+        <Link
+          to={link}
           className="inline-block text-rtl-teal font-bold hover:underline"
         >
           تعرّف أكتر
-        </a>
+        </Link>
       </div>
     </div>
   );
