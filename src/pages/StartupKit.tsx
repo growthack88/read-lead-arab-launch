@@ -196,7 +196,7 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* Book List Section - TWO COLUMNS */}
+        {/* Book List Section - TWO COLUMNS with UPDATED HEADINGS */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -205,38 +205,38 @@ const StartupKit = () => {
                 <span>📚 الكتب العشرون المتضمنة في الكيت:</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* First Column */}
+                {/* First Column - UPDATED HEADING */}
                 <div className="bg-white rounded-xl p-6 shadow-md">
-                  <h3 className="text-xl font-bold mb-4 text-center text-rtl-teal">العمود الأول</h3>
-                  <ol dir="rtl" className="space-y-3 text-right list-decimal list-inside pr-4">
-                    <li className="border-b pb-2">من الصفر إلى الواحد – بيتر ثيل وبليك ماسترز</li>
-                    <li className="border-b pb-2">البناء للتشيد والاستدامة – جيمس س. كولينز</li>
-                    <li className="border-b pb-2">معدلات الذكاء للنمو – تيفاني بوفا</li>
-                    <li className="border-b pb-2">أسوأ نموذج عمل في العالم – داني شومان</li>
-                    <li className="border-b pb-2">اكتب خطة عملك – طاقم عمل Entrepreneur Media</li>
-                    <li className="border-b pb-2">الكتاب المقدس لريادة الأعمال – أندرو رومانس</li>
-                    <li className="border-b pb-2">تأثير اليعسوب – جينيفر آكر وآندي سميث</li>
-                    <li className="border-b pb-2">شركات الفرد الواحد – بول جارفيس</li>
-                    <li className="border-b pb-2">النمو السريع بالشكل الصحيح – فال رايت</li>
-                    <li>مرحلة تحضير الأعمال – راشيل هوفستيتر</li>
-                  </ol>
+                  <h3 className="text-xl font-bold mb-4 text-center text-rtl-teal">📘 كتب التخطيط، النماذج، والاستراتيجية</h3>
+                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
+                    <li className="border-b pb-2">1. من الصفر إلى الواحد – بيتر ثيل وبليك ماسترز</li>
+                    <li className="border-b pb-2">2. البناء للتشيد والاستدامة – جيمس س. كولينز</li>
+                    <li className="border-b pb-2">3. معدلات الذك��ء للنمو – تيفاني بوفا</li>
+                    <li className="border-b pb-2">4. أسوأ نموذج عمل في العالم – داني شومان</li>
+                    <li className="border-b pb-2">5. اكتب خطة عملك – طاقم عمل Entrepreneur Media</li>
+                    <li className="border-b pb-2">6. الكتاب المقدس لريادة الأعمال – أندرو رومانس</li>
+                    <li className="border-b pb-2">7. تأثير اليعسوب – جينيفر آكر وآندي سميث</li>
+                    <li className="border-b pb-2">8. شركات الفرد الواحد – بول جارفيس</li>
+                    <li className="border-b pb-2">9. النمو السريع بالشكل الصحيح – فال رايت</li>
+                    <li>10. مرحلة تحضير الأعمال – راشيل هوفستيتر</li>
+                  </ul>
                 </div>
                 
-                {/* Second Column */}
+                {/* Second Column - UPDATED HEADING */}
                 <div className="bg-white rounded-xl p-6 shadow-md">
-                  <h3 className="text-xl font-bold mb-4 text-center text-rtl-teal">العمود الثاني</h3>
-                  <ol dir="rtl" className="space-y-3 text-right list-decimal list-inside pr-4" start={11}>
-                    <li className="border-b pb-2">الجنون مجاملة – ليندا روتنبرغ</li>
-                    <li className="border-b pb-2">فكر كرائد أعمال تصرف كمدير تنفيذي – بيفرلي إي جونز</li>
-                    <li className="border-b pb-2">لا تقسم الفرق أبداً – كريستوفر فوس وتال راس</li>
-                    <li className="border-b pb-2">محركات نمو الشركات الناشئة – شون إليس ومورغان براون</li>
-                    <li className="border-b pb-2">التوسع – فيرن هارنيش</li>
-                    <li className="border-b pb-2">قانون مور – أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
-                    <li className="border-b pb-2">ضائع ومؤسس – راند فيشكن</li>
-                    <li className="border-b pb-2">ما وراء ريادة الأعمال 2.0 – جيم كولينز وبيل ليزير</li>
-                    <li className="border-b pb-2">النمو الخاطف والسريع – ريد هوفمان وكريس ييه</li>
-                    <li>من جيد إلى عظ��م – جيمس كولينز</li>
-                  </ol>
+                  <h3 className="text-xl font-bold mb-4 text-center text-rtl-teal">📙 كتب النمو، القيادة، وريادة الأعمال</h3>
+                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
+                    <li className="border-b pb-2">11. الجنون مجاملة – ليندا روتنبرغ</li>
+                    <li className="border-b pb-2">12. فكر كرائد أعمال تصرف كمدير تنفيذي – بيفرلي إي جونز</li>
+                    <li className="border-b pb-2">13. لا تقسم الفرق أبداً – كريستوفر فوس وتال راس</li>
+                    <li className="border-b pb-2">14. محركات نمو الشركات الناشئة – شون إليز ومورغان براون</li>
+                    <li className="border-b pb-2">15. التوسع – فيرن هارنيش</li>
+                    <li className="border-b pb-2">16. قانون مور – أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
+                    <li className="border-b pb-2">17. ضائع ومؤسس – راند فيشكن</li>
+                    <li className="border-b pb-2">18. ما وراء ريادة الأعمال 2.0 – جيم كولينز وبيل ليزير</li>
+                    <li className="border-b pb-2">19. النمو الخاطف والسريع – ريد هوفمان وكريس ييه</li>
+                    <li>20. من جيد إلى عظيم – جيمس كولينز</li>
+                  </ul>
                 </div>
               </div>
             </div>
