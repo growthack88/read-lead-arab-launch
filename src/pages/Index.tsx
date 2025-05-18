@@ -33,28 +33,6 @@ const Index = () => {
     },
   ];
   
-  // New packages section data
-  const newPackages = [
-    {
-      title: "باقة المبتدئ",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
-      description: "كل ما تحتاجه لبدء رحلتك في عالم الأعمال",
-      buttonText: "اكتشف الآن"
-    },
-    {
-      title: "باقة المحترف",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
-      description: "أدوات متقدمة لتطوير مهاراتك المهنية",
-      buttonText: "اكتشف الآن"
-    },
-    {
-      title: "باقة الشركات",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
-      description: "حلول متكاملة للشركات الصغيرة والمتوسطة",
-      buttonText: "اكتشف الآن"
-    },
-  ];
-  
   // Book bundles section data with the uploaded images
   const bookBundles = [
     {
@@ -213,29 +191,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* New Packages Section */}
-        <section id="new-packages" className="py-16 bg-white" dir="rtl">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              📦 الباقات الجديدة
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {newPackages.map((pack, index) => (
-                <ProductCard
-                  key={index}
-                  title={pack.title}
-                  index={index}
-                  imageSrc={pack.imageSrc}
-                  description={pack.description}
-                  buttonText={pack.buttonText}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* New Books Section - Updated with more books */}
-        <section id="new-books" className="py-16 bg-gray-50" dir="rtl">
+        <section id="new-books" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               📚 الكتب الجديدة
@@ -339,3 +296,4 @@ const Index = () => {
 };
 
 export default Index;
+
