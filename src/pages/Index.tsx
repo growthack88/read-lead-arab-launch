@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
@@ -9,7 +10,7 @@ import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuL
 import { cn } from "@/lib/utils";
 
 const Index = () => {
-  // New kits section data - UPDATED with specific kits and startup kit image
+  // New kits section data - UPDATED with specific kits and kit images
   const newKits = [
     {
       title: "Startup Kit",
@@ -20,13 +21,13 @@ const Index = () => {
     },
     {
       title: "Productivity Kit",
-      imageSrc: "/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png",
+      imageSrc: "/lovable-uploads/2f62bf47-4320-4e55-9c82-f20875cfde4e.png",
       description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
       buttonText: "اكتشف الآن"
     },
     {
       title: "Sales & Marketing Kit",
-      imageSrc: "/lovable-uploads/4a3afe5b-8ee2-4362-8f08-1f86ff2159cd.png",
+      imageSrc: "/lovable-uploads/85ccfc20-77b8-4b0f-abfe-3455983bfa07.png",
       description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
       buttonText: "اكتشف الآن"
     },
@@ -141,7 +142,7 @@ const Index = () => {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* New Kits Section - UPDATED */}
+        {/* New Kits Section - UPDATED with new kit images */}
         <section id="new-kits" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
