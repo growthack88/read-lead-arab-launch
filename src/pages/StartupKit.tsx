@@ -73,19 +73,19 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* What is this kit section */}
-        <section className="py-12">
+        {/* What is this kit section - UPDATED */}
+        <section className="py-12" dir="rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
                 💼 إيه هي المجموعة دي؟
               </h2>
-              <div className="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100">
-                <p className="text-xl mb-6 text-right">
-                  <span className="text-3xl ml-2">📦</span>
+              <div className="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100 text-right space-y-3">
+                <p className="text-xl">
+                  <span className="ml-2">📦</span>
                   <strong>Startup Builder Kit</strong> هي باكج ذكية بتجمع بين:
                 </p>
-                <ul className="space-y-4 mb-6 text-lg pr-6 text-right">
+                <ul className="list-none space-y-1 pr-2">
                   <li className="flex items-center justify-end gap-3">
                     <span>أدوات عملية تساعدك تطبّق خططك</span>
                     <span className="text-rtl-teal text-xl">•</span>
@@ -99,7 +99,7 @@ const StartupKit = () => {
                     <span className="text-rtl-teal text-xl">•</span>
                   </li>
                 </ul>
-                <p className="text-xl text-right bg-rtl-teal/10 p-4 rounded-lg border border-rtl-teal/20">
+                <p className="text-xl bg-rtl-teal/10 p-4 rounded-lg border border-rtl-teal/20">
                   بتساعدك تبدأ مشروعك بأسلوب منظم ومدروس بدل ما تفضل تلف في دايرة "أنا مش عارف أبدأ منين!"
                 </p>
               </div>
@@ -196,7 +196,7 @@ const StartupKit = () => {
                     <li className="border-b pb-2">الجنون مجاملة – ليندا روتنبرغ</li>
                     <li className="border-b pb-2">فكر كرائد أعمال تصرف كمدير تنفيذي – بيفرلي إي جونز</li>
                     <li className="border-b pb-2">لا تقسم الفرق أبداً – كريستوفر فوس وتال راس</li>
-                    <li className="border-b pb-2">محركات نمو الشركات الناشئة – شون إليز ومورغان براون</li>
+                    <li className="border-b pb-2">محركات نمو الشركات الناشئة – شون إليس ومورغان براون</li>
                     <li className="border-b pb-2">التوسع – فيرن هارنيش</li>
                     <li className="border-b pb-2">قانون مور – أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
                     <li className="border-b pb-2">ضائع ومؤسس – راند فيشكن</li>
@@ -215,30 +215,32 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* How will it help you section */}
-        <section className="py-12">
+        {/* How will it help you section - UPDATED */}
+        <section className="py-12" dir="rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
                 🧠 إزاي هتساعدك في الواقع؟
               </h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</p>
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                </div>
-                <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">توفر عليك وقت التجريب والغلط</p>
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                </div>
-                <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">تساعدك تفكر زي رائد أعمال، مش هاوي</p>
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                </div>
-                <div className="flex items-start gap-4 justify-end">
-                  <p className="text-lg">توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</p>
-                  <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
-                </div>
+              <div className="text-right space-y-2">
+                <ul className="list-none space-y-1 pr-2">
+                  <li className="flex items-start gap-4 justify-end">
+                    <p className="text-lg">بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</p>
+                    <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  </li>
+                  <li className="flex items-start gap-4 justify-end">
+                    <p className="text-lg">توفر عليك وقت التجريب والغلط</p>
+                    <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  </li>
+                  <li className="flex items-start gap-4 justify-end">
+                    <p className="text-lg">تساعدك تفكر زي رائد أعمال، مش هاوي</p>
+                    <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  </li>
+                  <li className="flex items-start gap-4 justify-end">
+                    <p className="text-lg">توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</p>
+                    <span className="text-rtl-teal text-xl flex-shrink-0">✅</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -249,15 +251,15 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* Who is this for section */}
-        <section className="py-12 bg-gray-50">
+        {/* Who is this for section - UPDATED */}
+        <section className="py-12 bg-gray-50" dir="rtl">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
                 🎯 المجموعة دي مناسبة لمين؟
               </h2>
-              <div className="bg-white rounded-xl p-6 shadow-md">
-                <ul className="space-y-4 text-lg pr-6">
+              <div className="bg-white rounded-xl p-6 shadow-md text-right space-y-2">
+                <ul className="list-disc pr-4 space-y-1">
                   <li className="flex items-center gap-3 justify-end">
                     <span>أي حد عنده فكرة وعايز يبدأ مشروع</span>
                     <ClipboardCheck className="h-5 w-5 text-rtl-teal flex-shrink-0" />
