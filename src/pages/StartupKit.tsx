@@ -102,6 +102,44 @@ const StartupKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
+        {/* COMBINED SECTION: Benefits and Target Audience */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <section dir="rtl" className="text-right my-8">
+                <h2 className="text-center text-2xl md:text-3xl font-bold mb-6 text-rtl-dark">🧠 الفوائد و الجمهور المستهدف</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Column 1: Benefits */}
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2 text-rtl-dark">🧠 إزاي هتساعدك في الواقع؟</h3>
+                    <ul className="list-none space-y-4 pr-4">
+                      <li>✅ بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</li>
+                      <li>✅ توفر عليك وقت التجريب والغلط</li>
+                      <li>✅ تساعدك تفكر زي رائد أعمال، مش هاوي</li>
+                      <li>✅ توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</li>
+                    </ul>
+                  </div>
+                  {/* Column 2: Target Audience */}
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2 text-rtl-dark">🎯 المجموعة دي مناسبة لمين؟</h3>
+                    <ul className="list-disc space-y-4 pr-4">
+                      <li>أي حد عنده فكرة وعايز يبدأ مشروع</li>
+                      <li>طلاب، مستقلين، أو موظفين بيحلموا بشغل خاص</li>
+                      <li>رواد أعمال مبتدئين عايزين خطة منظمة</li>
+                      <li>Accelerator أو Incubator Programs</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
         {/* What makes this kit special section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
@@ -195,54 +233,6 @@ const StartupKit = () => {
                     <li>من جيد إلى عظيم – جيمس كولينز</li>
                   </ol>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* How will it help you section - UPDATED with RTL */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div dir="rtl" className="rtl text-right space-y-2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
-                  🧠 إزاي هتساعدك في الواقع؟
-                </h2>
-                <ul className="list-none space-y-2 pr-4">
-                  <li>✅ بدل ما تبدأ من الصفر، كل حاجة جاهزة لك</li>
-                  <li>✅ توفر عليك وقت التجريب والغلط</li>
-                  <li>✅ تساعدك تفكر زي رائد أعمال، مش هاوي</li>
-                  <li>✅ توثّق خطواتك وتخلّي عندك رؤية واضحة لمشروعك</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* Who is this for section - UPDATED with RTL */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div dir="rtl" className="rtl text-right space-y-2">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
-                  🎯 المجموعة دي مناسبة لمين؟
-                </h2>
-                <ul className="list-disc pr-4 space-y-1">
-                  <li>أي حد عنده فكرة وعايز يبدأ مشروع</li>
-                  <li>طلاب، مستقلين، أو موظفين بيحلموا بشغل خاص</li>
-                  <li>رواد أعمال مبتدئين عايزين خطة منظمة</li>
-                  <li>Accelerator أو Incubator Programs</li>
-                </ul>
               </div>
             </div>
           </div>
