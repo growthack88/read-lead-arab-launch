@@ -35,7 +35,7 @@ const products = [
     id: 3,
     title: "Productivity Kit",
     subtitle: "مجموعة الإنتاجية وتطوير الذات",
-    imageSrc: "/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png",
+    imageSrc: "/lovable-uploads/114e9871-6093-4f4f-ac79-d414fc260de5.png",
     description: "أدوات لإدارة وقتك بفعالية وتطوير قدراتك الشخصية",
     buttonText: "اكتشف الآن",
     link: "/productivity-kit",
@@ -45,7 +45,7 @@ const products = [
 ];
 
 const Index = () => {
-  // New kits section data - UPDATED with prices
+  // New kits section data - UPDATED with prices and link
   const newKits = [
     {
       title: "Startup Kit",
@@ -58,9 +58,10 @@ const Index = () => {
     },
     {
       title: "Productivity Kit",
-      imageSrc: "/lovable-uploads/2f62bf47-4320-4e55-9c82-f20875cfde4e.png",
+      imageSrc: "/lovable-uploads/114e9871-6093-4f4f-ac79-d414fc260de5.png",
       description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
       buttonText: "اكتشف الآن",
+      link: "/productivity-kit",
       currentPrice: "٩٩٩ جنيه",
       comparePrice: "١٢٠٠ جنيه"
     },
@@ -82,7 +83,7 @@ const Index = () => {
       imageSrc: "/lovable-uploads/4374c556-afd0-4c74-af3c-f7ec9b255c52.png",
       description: "مهارات وأدوات بناء المشاريع الناجحة",
       buttonText: "احصل عليه الآن",
-      currentPrice: "٦٩٩ جنيه",
+      currentPrice: "٥٩٩ جنيه",
       comparePrice: "١٠٠٠ جنيه"
     },
     {
@@ -90,7 +91,7 @@ const Index = () => {
       imageSrc: "/lovable-uploads/7e647cc3-d9cb-45b4-9486-ce4dbc9b3fbc.png",
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
       buttonText: "احصل عليه الآن",
-      currentPrice: "٦٩٩ جنيه",
+      currentPrice: "٥٩٩ جنيه",
       comparePrice: "١١٠٠ جنيه"
     },
     {
@@ -98,7 +99,7 @@ const Index = () => {
       imageSrc: "/lovable-uploads/11be787d-a088-47ad-a120-ed395a63ab33.png",
       description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
       buttonText: "احصل عليه الآن",
-      currentPrice: "٦٩٩ جنيه",
+      currentPrice: "٥٩٩ جنيه",
       comparePrice: "١١٠٠ جنيه"
     },
     {
@@ -106,7 +107,7 @@ const Index = () => {
       imageSrc: "/lovable-uploads/8b66f9f6-fe4e-433c-b940-43ea64f00e92.png",
       description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
       buttonText: "احصل عليه الآن",
-      currentPrice: "٦٩٩ جنيه",
+      currentPrice: "٥٩٩ جنيه",
       comparePrice: "١١٠٠ جنيه"
     },
   ];

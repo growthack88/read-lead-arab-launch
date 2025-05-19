@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -69,7 +68,7 @@ const ProductivityKit = () => {
                 <div className="flex-1">
                   <div className="w-full max-w-4xl mx-auto">
                     <img 
-                      src="/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png" 
+                      src="/lovable-uploads/114e9871-6093-4f4f-ac79-d414fc260de5.png" 
                       alt="Productivity Kit صورة المنتج" 
                       className="w-full h-auto rounded-xl shadow-lg object-contain"
                     />
