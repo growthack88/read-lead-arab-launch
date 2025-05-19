@@ -34,6 +34,7 @@ const Index = () => {
       imageSrc: "/lovable-uploads/85ccfc20-77b8-4b0f-abfe-3455983bfa07.png",
       description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
       buttonText: "اكتشف الآن",
+      link: "/sales-marketing-kit",
       currentPrice: "٩٩٩ جنيه",
       comparePrice: "١٢٠٠ جنيه"
     },

@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -49,8 +48,11 @@ const SalesMarketingKit = () => {
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark mb-4 text-center">
                     🟢 Sales & Marketing Kit | مجموعة التسويق والمبيعات
                   </h1>
-                  <p className="text-lg md:text-xl text-gray-600 mb-8 text-right">
+                  <p className="text-lg md:text-xl text-gray-600 mb-4 text-right">
                     كل الأدوات العملية والمحتوى اللي يساعدك تفهم جمهورك، تخطط حملاتك، وتزوّد مبيعاتك.
+                  </p>
+                  <p className="text-base text-gray-600 mb-8 text-right">
+                    📦 Sales & Marketing Kit هي مجموعة أدوات متكاملة لأي شخص شغال أو حابب يدخل مجال التسويق أو المبيعات. بتساعدك تخطط حملات، تفهم جمهورك، وتحسّن أداءك البيعي والتسويقي.
                   </p>
                   
                   <div className="text-center md:text-right">
@@ -66,25 +68,12 @@ const SalesMarketingKit = () => {
                 <div className="flex-1">
                   <div className="w-full max-w-4xl mx-auto">
                     <img 
-                      src="/lovable-uploads/69091bf9-ba1b-4ced-82df-547bff4a1812.png" 
+                      src="/lovable-uploads/5f0538cc-c853-4d2b-b4a2-dd35507dd1dc.png" 
                       alt="Sales & Marketing Kit صورة المنتج" 
                       className="w-full h-auto rounded-xl shadow-lg object-contain"
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Kit Description Content Section */}
-        <section className="bg-white py-6">
-          <div dir="rtl" className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-2 pr-4 text-base text-[#1A1F2C] mb-8 text-right">
-                <p className="text-lg mt-6">
-                  📦 Sales & Marketing Kit هي مجموعة أدوات متكاملة لأي شخص شغال أو حابب يدخل مجال التسويق أو المبيعات. بتساعدك تخطط حملات، تفهم جمهورك، وتحسّن أداءك البيعي والتسويقي.
-                </p>
               </div>
             </div>
           </div>
@@ -351,7 +340,7 @@ const SalesMarketingKit = () => {
 
                     <div className="space-y-1">
                       <p className="font-semibold">٧. هل الكتب كاملة ولا ملخصات؟</p>
-                      <p>كتابين كاملين + ملخصات لأكثر من ٤٠ كتاب</p>
+                      <p>كتابين كاملين + ملخصات لأكثر من ٣٠ كتاب</p>
                     </div>
 
                     <div className="space-y-1">
