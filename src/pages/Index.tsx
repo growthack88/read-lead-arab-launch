@@ -35,7 +35,7 @@ const products = [
     id: 3,
     title: "Productivity Kit",
     subtitle: "مجموعة الإنتاجية وتطوير الذات",
-    imageSrc: "/lovable-uploads/114e9871-6093-4f4f-ac79-d414fc260de5.png",
+    imageSrc: "/lovable-uploads/9473f670-3be5-4be6-9b5d-89ff248bbfb7.png",
     description: "أدوات لإدارة وقتك بفعالية وتطوير قدراتك الشخصية",
     buttonText: "اكتشف الآن",
     link: "/productivity-kit",
@@ -45,7 +45,7 @@ const products = [
 ];
 
 const Index = () => {
-  // New kits section data - UPDATED with prices and link
+  // New kits section data - UPDATED with new Productivity Kit image
   const newKits = [
     {
       title: "Startup Kit",
@@ -58,7 +58,7 @@ const Index = () => {
     },
     {
       title: "Productivity Kit",
-      imageSrc: "/lovable-uploads/114e9871-6093-4f4f-ac79-d414fc260de5.png",
+      imageSrc: "/lovable-uploads/9473f670-3be5-4be6-9b5d-89ff248bbfb7.png",
       description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
       buttonText: "اكتشف الآن",
       link: "/productivity-kit",
