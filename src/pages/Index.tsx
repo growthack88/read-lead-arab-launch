@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
@@ -8,6 +7,42 @@ import TrustBadgesSection from "@/components/TrustBadgesSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+
+const products = [
+  {
+    id: 1,
+    title: "Startup Builder Kit",
+    subtitle: "مجموعة بناء الشركات الناشئة",
+    imageSrc: "/lovable-uploads/490e51b9-80e9-4446-8503-53b301967b9f.png",
+    description: "أدوات ومحتوى لبناء شركتك الناشئة بمنهجية صحيحة",
+    buttonText: "اكتشف الآن",
+    link: "/startup-kit",
+    currentPrice: "١٢٥٠ جنيه",
+    comparePrice: null
+  },
+  {
+    id: 2,
+    title: "Sales & Marketing Kit",
+    subtitle: "مجموعة التسويق والمبيعات",
+    imageSrc: "/lovable-uploads/85ccfc20-77b8-4b0f-abfe-3455983bfa07.png",
+    description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
+    buttonText: "اكتشف الآن",
+    link: "/sales-marketing-kit",
+    currentPrice: "٩٩٩ جنيه",
+    comparePrice: "١٢٠٠ جنيه"
+  },
+  {
+    id: 3,
+    title: "Productivity Kit",
+    subtitle: "مجموعة الإنتاجية وتطوير الذات",
+    imageSrc: "/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png",
+    description: "أدوات لإدارة وقتك بفعالية وتطوير قدراتك الشخصية",
+    buttonText: "اكتشف الآن",
+    link: "/productivity-kit",
+    currentPrice: "٩٩٩ جنيه",
+    comparePrice: "١٢٠٠ جنيه"
+  }
+];
 
 const Index = () => {
   // New kits section data - UPDATED with prices
@@ -56,7 +91,7 @@ const Index = () => {
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
       buttonText: "احصل عليه الآن",
       currentPrice: "٦٩٩ جنيه",
-      comparePrice: "١٠٠٠ جنيه"
+      comparePrice: "١١٠٠ جنيه"
     },
     {
       title: "سلسلة التسويق الحديث",
@@ -64,7 +99,7 @@ const Index = () => {
       description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
       buttonText: "احصل عليه الآن",
       currentPrice: "٦٩٩ جنيه",
-      comparePrice: "١٠٠٠ جنيه"
+      comparePrice: "١١٠٠ جنيه"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",
@@ -72,7 +107,7 @@ const Index = () => {
       description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
       buttonText: "احصل عليه الآن",
       currentPrice: "٦٩٩ جنيه",
-      comparePrice: "١٠٠٠ جنيه"
+      comparePrice: "١١٠٠ جنيه"
     },
   ];
   
