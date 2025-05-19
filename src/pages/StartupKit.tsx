@@ -4,6 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ShoppingCart, Book, ClipboardCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const StartupKit = () => {
   return (
@@ -101,8 +107,6 @@ const StartupKit = () => {
         <div className="container mx-auto px-4 py-6">
           <Separator className="bg-gray-200" />
         </div>
-
-        {/* REMOVED: "What is this kit" section since we moved its content to the hero */}
 
         {/* COMBINED SECTION: Benefits and Target Audience */}
         <section className="py-12 bg-white">
@@ -302,16 +306,81 @@ const StartupKit = () => {
           </div>
         </section>
 
-        {/* Questions Section */}
+        {/* REPLACE: Questions Section with FAQ Section */}
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
-                ❓ أسئلة؟
-              </h2>
-              <div className="bg-rtl-yellow/20 rounded-xl p-8 text-center">
-                <p className="text-xl">كلمنا واتساب على [رابط أو رقم الدعم] — هنرد عليك فورًا!</p>
-              </div>
+              <section dir="rtl" className="text-right max-w-6xl mx-auto mt-12 space-y-6 border-t pt-8">
+                <h2 className="text-xl font-bold text-center mb-6">📌 الأسئلة الشائعة – Startup Kit</h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                  {/* Column 1 */}
+                  <div className="space-y-4 h-full">
+                    <div className="space-y-1">
+                      <p className="font-semibold">١. إيه هو Startup Kit؟</p>
+                      <p>Startup Kit هو صندوق أدوات متكامل بيساعد أي حد عنده فكرة مشروع يبدأ صح. جواه أدوات عملية، كروت، نوت بوك، وتمبلتس بتساعدك تحوّل فكرتك لخطة واضحة وخطوات تنفيذية.</p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٢. مين اللي ممكن يستخدم Startup Kit؟</p>
+                      <p>أي شخص عنده فكرة مشروع أو لسه في بداية رحلته كرائد أعمال – سواء طالب، موظف عايز يفتح مشروع جانبي، أو حتى مؤسس بدأ ولسه محتاج يجهز خطته.</p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٣. هو منتج رقمي ولا فعلي؟</p>
+                      <p>الـ Startup Kit منتج فعلي ملموس – هيوصلك لحد باب بيتك. ممكن كمان يكون في نسخ رقمية لبعض الأدوات قريب.</p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٤. إيه اللي موجود جوّه الكيت؟</p>
+                      <ul className="list-none space-y-1 pr-4">
+                        <li>✅ كروت بتساعدك تفكر في فكرتك من كل الزوايا</li>
+                        <li>✅ تمبلت Business Model Canvas</li>
+                        <li>✅ جورنال منظمة لكتابة وتخطيط كل خطوة</li>
+                        <li>✅ Tools تخلّيك تبني خطة تسويق، منتج، وتمويل</li>
+                      </ul>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٥. هل في شرح لطريقة استخدام الأدوات؟</p>
+                      <p>أيوه طبعًا. كل أداة معاها إرشادات بسيطة بتوضح إزاي تستخدمها خطوة بخطوة.</p>
+                    </div>
+                  </div>
+
+                  {/* Column 2 */}
+                  <div className="space-y-4 h-full">
+                    <div className="space-y-1">
+                      <p className="font-semibold">٦. هل لازم أكون دارس بزنس عشان أستفيد؟</p>
+                      <p>لأ خالص. الأدوات معمولة بلغة بسيطة وسهلة علشان تساعدك تفكّر وتشتغل على مشروعك حتى لو معندكش خلفية بزنس.</p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٧. الكيت ده هيساعدني أوصل لإيه؟</p>
+                      <ul className="list-disc pr-4 space-y-1">
+                        <li>تفهم فكرتك بوضوح</li>
+                        <li>تحط خطة واقعية</li>
+                        <li>تتجنب الأخطاء اللي بيقع فيها ناس كتير</li>
+                        <li>تبدأ بطريقة منظمة وواثقة</li>
+                      </ul>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٨. بيوصل خلال قد إيه؟</p>
+                      <p>التوصيل بيتم خلال ٣–٥ أيام عمل داخل مصر</p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">٩. إزاي أطلبه؟</p>
+                      <p>سهل جدًا! ممكن تطلبه من خلال الموقع الرسمي هنا أو تبعتلنا على الإنبوكس على السوشيال ميديا.</p>
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="font-semibold">١٠. لو عندي أسئلة أكتر؟</p>
+                      <p>احنا دايمًا موجودين. ابعتلنا على الايميل أو الواتساب، وهنجاوبك فورًا: <strong>hi@readtolead.store</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </section>
