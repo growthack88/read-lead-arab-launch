@@ -12,6 +12,8 @@ interface ProductCardProps {
   imageSrc?: string;
   description?: string;
   buttonText?: string;
+  currentPrice?: string;
+  comparePrice?: string;
 }
 
 const ProductCard = ({ 
@@ -22,7 +24,9 @@ const ProductCard = ({
   link, 
   imageSrc,
   description = "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة",
-  buttonText = "احصل عليه الآن"
+  buttonText = "احصل عليه الآن",
+  currentPrice,
+  comparePrice
 }: ProductCardProps) => {
   // Card content with fixed title and bottom description box
   const cardContent = (
@@ -52,6 +56,19 @@ const ProductCard = ({
         <p className="text-rtl-dark mb-3 text-right text-sm">
           {description}
         </p>
+        
+        {/* Pricing section - New */}
+        {(currentPrice || comparePrice) && (
+          <div className="flex flex-row-reverse justify-between items-center mb-3">
+            {currentPrice && (
+              <span className="text-lg font-bold text-rtl-teal">{currentPrice}</span>
+            )}
+            {comparePrice && (
+              <span className="text-sm line-through text-gray-500">{comparePrice}</span>
+            )}
+          </div>
+        )}
+        
         <div className="flex justify-end">
           <Button 
             variant="teal" 

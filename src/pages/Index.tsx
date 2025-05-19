@@ -10,106 +10,136 @@ import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuL
 import { cn } from "@/lib/utils";
 
 const Index = () => {
-  // New kits section data - UPDATED with specific kits and kit images
+  // New kits section data - UPDATED with prices
   const newKits = [
     {
       title: "Startup Kit",
       imageSrc: "/lovable-uploads/2bcb0011-1478-4447-a8aa-cf255f4c7aa1.png",
       description: "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة بنجاح",
       buttonText: "اكتشف الآن",
-      link: "/startup-kit"
+      link: "/startup-kit",
+      currentPrice: "٩٩٩ جنيه",
+      comparePrice: "١٢٠٠ جنيه"
     },
     {
       title: "Productivity Kit",
       imageSrc: "/lovable-uploads/2f62bf47-4320-4e55-9c82-f20875cfde4e.png",
       description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٩٩٩ جنيه",
+      comparePrice: "١٢٠٠ جنيه"
     },
     {
       title: "Sales & Marketing Kit",
       imageSrc: "/lovable-uploads/85ccfc20-77b8-4b0f-abfe-3455983bfa07.png",
       description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٩٩٩ جنيه",
+      comparePrice: "١٢٠٠ جنيه"
     },
   ];
   
-  // Book bundles section data with the uploaded images
+  // Book bundles section data with prices
   const bookBundles = [
     {
       title: "سلسلة فن ريادة الأعمال",
       imageSrc: "/lovable-uploads/4374c556-afd0-4c74-af3c-f7ec9b255c52.png",
       description: "مهارات وأدوات بناء المشاريع الناجحة",
-      buttonText: "احصل عليه الآن"
+      buttonText: "احصل عليه الآن",
+      currentPrice: "٦٩٩ جنيه",
+      comparePrice: "١٠٠٠ جنيه"
     },
     {
       title: "سلسلة فن البيع والشراء",
       imageSrc: "/lovable-uploads/7e647cc3-d9cb-45b4-9486-ce4dbc9b3fbc.png",
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
-      buttonText: "احصل عليه الآن"
+      buttonText: "احصل عليه الآن",
+      currentPrice: "٦٩٩ جنيه",
+      comparePrice: "١٠٠٠ جنيه"
     },
     {
       title: "سلسلة التسويق الحديث",
       imageSrc: "/lovable-uploads/11be787d-a088-47ad-a120-ed395a63ab33.png",
       description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
-      buttonText: "احصل عليه الآن"
+      buttonText: "احصل عليه الآن",
+      currentPrice: "٦٩٩ جنيه",
+      comparePrice: "١٠٠٠ جنيه"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",
       imageSrc: "/lovable-uploads/8b66f9f6-fe4e-433c-b940-43ea64f00e92.png",
       description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
-      buttonText: "احصل عليه الآن"
+      buttonText: "احصل عليه الآن",
+      currentPrice: "٦٩٩ جنيه",
+      comparePrice: "١٠٠٠ جنيه"
     },
   ];
   
-  // New books section data with the uploaded book covers
+  // New books section data with pricing
   const newBooks = [
     {
       title: "سلسلة إدارة حياتك المهنية",
       imageSrc: "/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png",
       description: "تخطيط وتطوير مسارك الوظيفي باحترافية",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة التسويق الحديث",
       imageSrc: "/lovable-uploads/e02202fa-1c1f-4c69-9eeb-d8a406d41e9a.png",
       description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة القيادة وإدارة الفعالة",
       imageSrc: "/lovable-uploads/7b271e77-fc40-4b05-a14f-f093c1f9cdb4.png",
       description: "استراتيجيات فعالة للقيادة وإدارة الناجحة",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة النتاجية بلا حدود",
       imageSrc: "/lovable-uploads/167ced76-30d4-4269-a2d7-3f25b31cbe18.png",
       description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",
       imageSrc: "/lovable-uploads/247722eb-0ea5-4d90-bf5b-52a81145490e.png",
       description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة فن البيع والشراء",
       imageSrc: "/lovable-uploads/1522fafc-8928-4f3e-9cf7-4d6f2c0617df.png",
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة فن ريادة الأعمال",
       imageSrc: "/lovable-uploads/8b7decb8-2edd-41e2-acb7-f8ca9ffd7014.png",
       description: "مهارات وأدوات بناء المشاريع الناجحة",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
     {
       title: "سلسلة قواعد النجاح المؤسسي",
       imageSrc: "/lovable-uploads/8376e2d7-8776-42f1-a5dd-e4e3b2d93df8.png",
       description: "بناء ثقافة مؤسسية ناجحة وبيئة عمل محفزة",
-      buttonText: "اكتشف الآن"
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه"
     },
   ];
 
@@ -148,7 +178,7 @@ const Index = () => {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* New Kits Section - UPDATED with new kit images */}
+        {/* New Kits Section - UPDATED with new kit images and pricing */}
         <section id="new-kits" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
@@ -164,13 +194,15 @@ const Index = () => {
                   imageSrc={kit.imageSrc}
                   description={kit.description}
                   buttonText={kit.buttonText}
+                  currentPrice={kit.currentPrice}
+                  comparePrice={kit.comparePrice}
                 />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Book Bundles Section - NEW */}
+        {/* Book Bundles Section - Updated with pricing */}
         <section id="book-bundles" className="py-16 bg-gray-50" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
@@ -185,13 +217,15 @@ const Index = () => {
                   imageSrc={bundle.imageSrc}
                   description={bundle.description}
                   buttonText={bundle.buttonText}
+                  currentPrice={bundle.currentPrice}
+                  comparePrice={bundle.comparePrice}
                 />
               ))}
             </div>
           </div>
         </section>
 
-        {/* New Books Section - Updated with more books */}
+        {/* New Books Section - Updated with prices */}
         <section id="new-books" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
@@ -206,6 +240,8 @@ const Index = () => {
                   imageSrc={book.imageSrc}
                   description={book.description}
                   buttonText={book.buttonText}
+                  currentPrice={book.currentPrice}
+                  comparePrice={book.comparePrice}
                 />
               ))}
             </div>
@@ -296,4 +332,3 @@ const Index = () => {
 };
 
 export default Index;
-
