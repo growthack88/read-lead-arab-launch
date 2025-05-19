@@ -68,7 +68,7 @@ const ProductivityKit = () => {
                 <div className="flex-1">
                   <div className="w-full max-w-4xl mx-auto">
                     <img 
-                      src="/lovable-uploads/114e9871-6093-4f4f-ac79-d414fc260de5.png" 
+                      src="/lovable-uploads/25442e28-ce4d-4e5f-a33e-8797d27abb1c.png" 
                       alt="Productivity Kit صورة المنتج" 
                       className="w-full h-auto rounded-xl shadow-lg object-contain"
                     />
