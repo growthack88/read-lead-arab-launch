@@ -6,26 +6,21 @@ const HeroSection = () => {
   return (
     <section className="bg-gradient-to-br from-white to-gray-50 py-16 md:py-24 rtl" dir="rtl">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
+        <div className="max-w-4xl mx-auto text-center space-y-4">
+          {/* Hero Title */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark mb-6">
-            نخبة الكتب والكيتس اللي هتغيّر تفكيرك… وتكبر بيزنسك
+            نخبة الكتب والأدوات التي سترتقي بحياتك وتُنمي أعمالك
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            كتب حديثة، كيتس عملية، وتجميعات مختارة تساعدك تحقق نقلة في شغلك وحياتك — بخطوات واضحة وسهلة تبدأ بيها النهاردة.
+          
+          {/* Subheading */}
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            مجموعة مختارة بعناية من أقوى الكتب والحقائب التعليمية المصممة لمساعدتك على تحقيق النجاح المهني والشخصي من خلال خطوات واضحة ومباشرة.
           </p>
           
-          {/* Highlight Callouts */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto text-sm mb-8">
-            <div className="bg-[#F1F5F9] rounded-lg px-4 py-3 text-right shadow-sm">
-              🔹 كيتات جديدة كليًا لمجالات ريادة الأعمال، التسويق، وإدارة الوقت
-            </div>
-            <div className="bg-[#F1F5F9] rounded-lg px-4 py-3 text-right shadow-sm">
-              🔹 باقات كتب حديثة مترتبة على حسب هدفك
-            </div>
-            <div className="bg-[#F1F5F9] rounded-lg px-4 py-3 text-right shadow-sm">
-              🔹 إصدارات جديدة أول مرة تُنشر من Read to Lead
-            </div>
-          </div>
+          {/* CTA/Highlight Line */}
+          <p className="text-md md:text-lg font-medium text-rtl-teal mb-8">
+            حقائب تعليمية جديدة | مجموعات كتب حصرية | إصدارات حديثة
+          </p>
           
           <a
             href="#products"
