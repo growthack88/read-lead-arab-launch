@@ -203,13 +203,13 @@ const ProductivityKit = () => {
           </div>
         </section>
 
-        {/* Book List Section - TWO COLUMNS */}
+        {/* Book List Section - Productivity Books */}
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center flex items-center justify-center gap-3">
                 <Book className="h-6 w-6 text-rtl-teal" />
-                <span>📚 الكتب المتضمنة</span>
+                <span>📚 كتب زيادة الانتاجية</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Single column with all books */}
@@ -241,6 +241,51 @@ const ProductivityKit = () => {
                     <li className="border-b pb-2">18. اصنع الوقت – جيك ناب، جون زيراتسكي</li>
                     <li className="border-b pb-2">19. الضوضاء – جوزيف ماكورماك</li>
                     <li>20. على مدار الساعة – لورا فاندركام</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEW Book List Section - Self Development Books */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center flex items-center justify-center gap-3">
+                <Book className="h-6 w-6 text-rtl-purple" />
+                <span>📚 كتب تطوير الذات</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* First column with books 1-10 */}
+                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
+                    <li className="border-b pb-2">1. كيفية اتخاذ القرار - آني ديوك</li>
+                    <li className="border-b pb-2">2. العادات الجيدة والعادات السيئة - ويندي وود</li>
+                    <li className="border-b pb-2">3. العامل الحفاز - تشاندرامولي فينكاتيسان</li>
+                    <li className="border-b pb-2">4. الوصول إلى نعم مع نفسك - ويليام أوري</li>
+                    <li className="border-b pb-2">5. 59 ثانية - ريتشارد وايزمان</li>
+                    <li className="border-b pb-2">6. قواعد الدماغ - جون ميدينا</li>
+                    <li className="border-b pb-2">7. كُل، تحرّك، ونام - توم راث</li>
+                    <li className="border-b pb-2">8. الإبلاغ عن الهراء - كارل بيرغستروم، جيفن جي ويست</li>
+                    <li className="border-b pb-2">9. الأهداف - زيغ زيغلر</li>
+                    <li>10. مغيرو اللعبة - ديف اسبري</li>
+                  </ul>
+                </div>
+                
+                {/* Second column with books 11-20 */}
+                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
+                    <li className="border-b pb-2">11. كيف لا تكون صبيا - روبرت ويب</li>
+                    <li className="border-b pb-2">12. كيف تجعل الأشخاص يحبونك في 90 ثانية أو أقل - نيكولاس بوثمان</li>
+                    <li className="border-b pb-2">13. قواعد نابليون هيل الذهبية - نابليون هيل</li>
+                    <li className="border-b pb-2">14. الفتيات الأذكياء يخطئون أيضاً - بيلا زانيسكو</li>
+                    <li className="border-b pb-2">15. ابتسم أو تموت - باربرا إرينريك</li>
+                    <li className="border-b pb-2">16. ولدت لتفوز - زيغ زيجلار، توم زيجلار</li>
+                    <li className="border-b pb-2">17. مفارقة الشمبانزي - ستيف بيترز</li>
+                    <li className="border-b pb-2">18. أول 20 ساعة - جوش كوفمان</li>
+                    <li className="border-b pb-2">19. كود البطل - ويليام إتش مكرافن</li>
+                    <li>20. فن اللامبالاة - مارك مانسون</li>
                   </ul>
                 </div>
               </div>
