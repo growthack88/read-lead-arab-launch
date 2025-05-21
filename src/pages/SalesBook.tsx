@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -8,6 +7,9 @@ import { Separator } from "@/components/ui/separator";
 import SEO from "@/components/SEO";
 
 const SalesBook = () => {
+  // Shopify checkout link for Sales Book
+  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42047911624809:1?channel=buy_button";
+
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       <SEO 
@@ -138,7 +140,7 @@ const SalesBook = () => {
                 </div>
                 <div className="mt-6 text-right">
                   <p className="text-gray-700">
-                    🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
+                    🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                   </p>
                 </div>
               </div>
@@ -161,11 +163,12 @@ const SalesBook = () => {
                 </h2>
               </div>
               <div className="mb-6">
-                <Button
-                  className="w-full max-w-md mx-auto bg-[#0D9488] hover:bg-[#0D9488]/80 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
+                <a
+                  href={shopifyCheckoutLink}
+                  className="inline-flex items-center justify-center w-full max-w-md mx-auto bg-[#0D9488] hover:bg-[#0D9488]/80 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
                 >
                   <ShoppingCart className="ml-2 h-6 w-6" /> 🛒 اطلب كتاب فن البيع والشراء الآن
-                </Button>
+                </a>
               </div>
               <p className="text-gray-700 mt-4">
                 الخطوة الجاية في احتراف المبيعات تبدأ من هنا
@@ -336,11 +339,12 @@ const SalesBook = () => {
                 </h2>
               </div>
               <div className="mb-6">
-                <Button
-                  className="w-full max-w-md mx-auto bg-[#0D9488] hover:bg-[#0D9488]/90 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
+                <a
+                  href={shopifyCheckoutLink}
+                  className="inline-flex items-center justify-center w-full max-w-md mx-auto bg-[#0D9488] hover:bg-[#0D9488]/90 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
                 >
                   <ShoppingCart className="ml-2 h-6 w-6" /> 🛒 اطلب كتاب فن البيع والشراء الآن
-                </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -361,9 +365,12 @@ const SalesBook = () => {
       
       {/* Sticky Purchase Button */}
       <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md py-3 px-4 z-50 flex justify-between items-center md:px-8">
-        <Button className="bg-[#0D9488] text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
+        <a 
+          href={shopifyCheckoutLink}
+          className="inline-flex items-center bg-[#0D9488] text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity"
+        >
           <ShoppingCart className="ml-2 h-5 w-5" /> 📦 اطلب الآن
-        </Button>
+        </a>
         <div className="font-bold text-lg">
           السعر: 400 جنيه
         </div>
