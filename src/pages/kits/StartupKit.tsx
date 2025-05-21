@@ -56,7 +56,7 @@ const StartupKit = () => {
             {/* Right Column - Text */}
             <div className="space-y-4 order-2 md:order-1">
               <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark">
-                🟢 Startup Builder Kit | مجموعة بناء الشركات الناشئة
+                Startup Builder Kit | مجموعة بناء الشركات الناشئة
               </h1>
               <p className="text-lg text-gray-700 font-medium">
                 كل أدوات التخطيط والتنفيذ اللي محتاجها علشان تبدأ شركتك الناشئة صح — من الفكرة لحد التنفيذ.
