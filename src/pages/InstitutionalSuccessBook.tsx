@@ -1,367 +1,290 @@
 
 import React from "react";
-import Logo from "@/components/Logo";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ShoppingCart } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { ArrowRight } from "lucide-react";
 
 const InstitutionalSuccessBook = () => {
+  // Function to scroll back to top when navigating between sections
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="min-h-screen bg-white" dir="rtl">
+    <div className="min-h-screen bg-white pb-20">
       {/* Header */}
-      <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
+      <header className="py-4 border-b sticky top-0 bg-white/95 backdrop-blur-sm z-10 shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <Logo />
-            <nav className="space-x-6 flex flex-row-reverse">
-              <a href="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                الرئيسية
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                المنتجات
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                من نحن
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
-                تواصل معنا
-              </a>
+            <Link to="/" className="text-2xl font-bold text-rtl-dark">
+              Read to Lead
+            </Link>
+            <nav className="rtl">
+              <ul className="flex space-x-4 space-x-reverse">
+                <li>
+                  <Link to="/" className="text-rtl-dark hover:text-rtl-teal">
+                    الرئيسية
+                  </Link>
+                </li>
+                <li>
+                  <a href="#" className="text-rtl-dark hover:text-rtl-teal">
+                    المنتجات
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-rtl-dark hover:text-rtl-teal">
+                    تواصل معنا
+                  </a>
+                </li>
+              </ul>
             </nav>
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="py-8 pb-24">
-        {/* Hero Section - Two-Column Layout */}
-        <section className="bg-gradient-to-br from-white to-gray-50 py-16">
+      <main>
+        {/* Hero Section */}
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto">
-              {/* Column 1: Text Content */}
-              <div className="space-y-4 text-right order-2 md:order-1">
-                <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark mb-4">
-                  🟢 كتاب قواعد النجاح المؤسسي | أسرار الشركات العظيمة
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto rtl">
+              {/* Left Column (Content) */}
+              <div className="order-2 md:order-1 text-right">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-rtl-dark mb-4">
+                  🟢 كتاب القيادة والإدارة الفعالة | أسرار القادة الملهمين
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 mb-4">
-                  خلاصة أهم 20 كتاب في بناء وتطوير المؤسسات الناجحة، هتساعدك تفهم كيفية بناء شركة مستدامة وثقافة عمل محفزة.
+                <p className="text-lg font-semibold text-gray-700 mb-4">
+                  خلاصة أهم 20 كتاب في القيادة والإدارة لمساعدتك على بناء فريق متميز وتحقيق نتائج استثنائية.
                 </p>
-                <p className="text-base text-gray-600 mb-8">
-                  📦 كتاب "قواعد النجاح المؤسسي" هو دليلك العملي لبناء وإدارة شركة ناجحة. جمعنالك فيه أسرار أنجح المؤسسات العالمية من خلال ملخصات لأهم 20 كتاب في مجال بناء المؤسسات. هتتعلم كيفية بناء ثقافة شركة قوية، إدارة الفرق بفعالية، تطوير العمليات الداخلية، وقيادة المؤسسة للنمو المستدام.
+                <p className="text-gray-600 mb-6">
+                  كتاب "القيادة والإدارة الفعالة" هو دليلك الشامل لأحدث نظريات وتطبيقات القيادة. جمعنالك فيه خلاصة تجارب أنجح القادة في العالم، من بناء الرؤية وتحفيز الفريق، لحل الصراعات وإدارة التغيير، وحتى تطوير مهارات الذكاء العاطفي واتخاذ القرارات الصعبة.
                 </p>
               </div>
-              
-              {/* Column 2: Product Image */}
+
+              {/* Right Column (Image) */}
               <div className="order-1 md:order-2">
                 <img
-                  src="/lovable-uploads/ec4abcba-b74e-4ebf-bad7-2676c65f4c6b.png"
-                  alt="كتاب قواعد النجاح المؤسسي"
-                  className="w-full h-auto rounded-xl shadow-lg object-cover max-w-md mx-auto"
-                  style={{ aspectRatio: "2/1" }}
+                  src="/lovable-uploads/a8c83a5d-2e17-41b6-8a41-ee1dac2ed5c4.png"
+                  alt="كتاب القيادة والإدارة الفعالة"
+                  className="aspect-[2/1] rounded-xl shadow-lg object-contain w-full"
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* Target Audience and Benefits Section - MERGED */}
-        <section className="py-12 bg-white">
+        {/* Target Audience and Benefits */}
+        <section className="py-8 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-                {/* Target Audience Column */}
-                <div className="space-y-2 text-right h-full">
-                  <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
-                    🎯 الكتاب ده مناسب لمين؟
-                  </h2>
-                  <ul className="list-none space-y-3 pr-4">
-                    <li>✅ مؤسسي الشركات اللي بيطمحوا لبناء مؤسسات مستدامة</li>
-                    <li>✅ المديرين التنفيذيين اللي بيواجهوا تحديات في إدارة وتنمية فرقهم</li>
-                    <li>✅ مديري الموارد البشرية المسؤولين عن بناء ثقافة الشركة</li>
-                    <li>✅ قادة الفرق اللي بيحتاجوا يحسنوا من أداء وإنتاجية فرقهم</li>
-                    <li>✅ المستثمرين اللي عايزين يفهموا عوامل نجاح الشركات</li>
-                    <li>✅ خبراء التطوير المؤسسي والاستشاريين في مجال الأعمال</li>
-                  </ul>
-                </div>
-                
-                {/* Benefits Column */}
-                <div className="space-y-2 text-right h-full">
-                  <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
-                    🧠 إزاي الكتاب هيفيدك؟
-                  </h2>
-                  <ul className="list-none space-y-3 pr-4">
-                    <li>• هتتعلم كيفية بناء ثقافة شركة إيجابية تجذب وتحافظ على أفضل المواهب</li>
-                    <li>• هتكتشف أساليب القيادة الفعالة اللي بتلهم الفرق وتحقق نتائج استثنائية</li>
-                    <li>• هتفهم استراتيجيات تحسين الاجتماعات وجعلها أكثر إنتاجية وفعالية</li>
-                    <li>• هتعرف إزاي تبني بيئة عمل صحية محفزة للإبداع والابتكار</li>
-                    <li>• هتتعلم كيفية إدارة التغيير والتحول الرقمي في المؤسسات</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* Price section */}
-        <section className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold mb-8 text-rtl-dark text-right">
-                💸 السعر والمزايا
-              </h2>
-              <div className="bg-rtl-teal/10 rounded-xl p-8">
-                <div className="flex justify-between items-center flex-wrap">
-                  <div>
-                    <p className="text-lg">السعر السابق: <span className="line-through text-gray-500">500 جنيه</span></p>
-                  </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-rtl-teal">السعر: 400 جنيه</h3>
-                  </div>
-                </div>
-                <div className="mt-6 text-right">
-                  <p className="text-gray-700">
-                    🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* CTA Section */}
-        <section className="py-12 bg-gradient-to-br from-teal-50 to-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">
-                  🟢 جاهز تبني مؤسسة استثنائية ومستدامة؟
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto rtl">
+              {/* Target Audience */}
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <h2 className="text-xl font-bold mb-4 text-right">
+                  🎯 الكتاب ده مناسب لمين؟
                 </h2>
+                <ul className="space-y-2 text-right">
+                  <li className="flex items-center justify-end gap-2">
+                    <span>المديرين اللي عايزين يطوروا أساليب قيادتهم</span>
+                    <span className="text-green-500 text-lg">✅</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>قادة الفرق اللي بيواجهوا تحديات في إدارة فرقهم</span>
+                    <span className="text-green-500 text-lg">✅</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>رواد الأعمال اللي بيبنوا فرق عمل لأول مرة</span>
+                    <span className="text-green-500 text-lg">✅</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>المهنيين الطموحين اللي بيحضروا نفسهم لأدوار قيادية</span>
+                    <span className="text-green-500 text-lg">✅</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>أصحاب الشركات اللي عايزين يحسنوا أداء فرقهم</span>
+                    <span className="text-green-500 text-lg">✅</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>المديرين التنفيذيين اللي بيقودوا عمليات تغيير وتطوير</span>
+                    <span className="text-green-500 text-lg">✅</span>
+                  </li>
+                </ul>
               </div>
-              <div className="mb-6">
+
+              {/* Benefits */}
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <h2 className="text-xl font-bold mb-4 text-right">
+                  🧠 إزاي الكتاب هيفيدك؟
+                </h2>
+                <ul className="space-y-2 text-right">
+                  <li className="flex items-center justify-end gap-2">
+                    <span>هتتعلم إزاي تبني رؤية واضحة لفريقك وتلهمهم للعمل بحماس</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>هتكتشف أساليب القيادة المختلفة ومتى تستخدم كل أسلوب</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>هتفهم كيفية حل الصراعات وإدارة الشخصيات الصعبة في فريقك</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>هتتقن استراتيجيات التحفيز والتفويض وتنمية مهارات فريقك</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                  <li className="flex items-center justify-end gap-2">
+                    <span>هتتعلم كيفية قيادة عمليات التغيير بنجاح وبأقل مقاومة ممكنة</span>
+                    <span className="text-rtl-teal">•</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-12 bg-white rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl font-bold mb-6">💸 السعر والمزايا</h2>
+              <div className="bg-gray-50 p-8 rounded-xl shadow-sm">
+                <div className="flex justify-center items-center gap-3 mb-4">
+                  <span className="text-2xl font-bold text-rtl-teal">
+                    السعر: 400 جنيه
+                  </span>
+                  <span className="text-lg text-gray-500 line-through">
+                    السعر السابق: 500 جنيه
+                  </span>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
+                </p>
+                <h3 className="text-xl font-bold mb-6">
+                  🟢 جاهز تصبح قائد ملهم يحقق نتائج استثنائية؟
+                </h3>
                 <Button
-                  className="w-full max-w-md mx-auto bg-[#0D9488] hover:bg-[#0D9488]/80 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
+                  className="bg-[#0D9488] text-white px-5 py-3 rounded-lg hover:scale-105 transition text-lg"
                 >
-                  <ShoppingCart className="ml-2 h-6 w-6" /> 🛒 اطلب كتاب قواعد النجاح المؤسسي الآن
+                  🛒 اطلب كتاب القيادة والإدارة الفعالة الآن
                 </Button>
-              </div>
-              <p className="text-gray-700 mt-4">
-                الخطوة الجاية في تطوير شركتك تبدأ من هنا
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* Book Summaries Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-right mb-8">
-                <h2 className="text-2xl font-bold mb-2 text-rtl-dark">
-                  📚 إيه اللي هتلاقيه جوا الكتاب؟
-                </h2>
-                <p className="text-gray-700">
-                  20 ملخص لأهم الكتب العالمية الخاصة ببناء وتطوير المؤسسات:
+                <p className="mt-4 text-gray-600">
+                  الخطوة الجاية في رحلتك القيادية تبدأ من هنا
                 </p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="text-right">
-                  <ol className="list-decimal list-inside space-y-1 pr-4" dir="rtl">
-                    <li>Chief Joy Officer - كبير موظفي المرح by Richard Sheridan</li>
-                    <li>Everybody Matters - الجميع مهمون by Bob Chapman & Raj Sisodia</li>
-                    <li>How to Fix Meetings - كيفية إصلاح الاجتماعات by Graham Allcott and Hayley Watts</li>
-                    <li>The Culture Code - قانون الثقافة by Daniel Coyle</li>
-                    <li>The Ideal Team Player - لاعب الفريق المثالي by Patrick Lencioni</li>
-                    <li>The Robots Are Coming! - عصر الروبوتات قادم by Andrés Oppenheimer</li>
-                    <li>Work Won't Love You Back - لن يحبك العمل بالمقابل by Sarah Jaffe</li>
-                    <li>What You Do Is Who You Are - ما تفعله هو من أنت by Ben Horowitz</li>
-                    <li>All You Have to Do Is Ask - كل ما عليك فعله هو السؤال by Wayne Baker</li>
-                    <li>Change the Culture, Change the Game - غيَّر الثقافة، غيَّر اللعبة! by Roger Connors and Tom Smith</li>
-                  </ol>
-                </div>
-                <div className="text-right">
-                  <ol className="list-decimal list-inside space-y-1 pr-4" start={11} dir="rtl">
-                    <li>Good People, Bad Managers - أشخاص طيبون ومدراء سيئون by Samuel A. Culbert</li>
-                    <li>Eat Sleep Work Repeat - كُل، نم، اعمل، ثم كرر! by Bruce Daisley</li>
-                    <li>Carrots and Sticks - الجزر والعصي by Ian Ayres</li>
-                    <li>Build It - قم بالبناء by Glenn Elliott and Debra Corey</li>
-                    <li>Feminist Fight Club - نادي القتال النسوي by Jessica Bennett</li>
-                    <li>Getting Naked - التعري by Patrick Lencioni</li>
-                    <li>Joy Inc. - شركة المرح by Rich Sheridan</li>
-                    <li>The No Asshole Rule - قاعدة لا للحمقى by Robert I. Sutton</li>
-                    <li>The Best Place to Work - أفضل مكان للعمل by Ron Friedman</li>
-                    <li>Meetings Suck - اجتماعات غير مجدية by Cameron Herold</li>
-                  </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* What's Inside Section */}
+        <section className="py-12 bg-gray-50 rtl">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-bold mb-4 text-center">
+                📚 إيه اللي هتلاقيه جوا الكتاب؟
+              </h2>
+              <p className="text-center mb-8">
+                20 ملخص لأهم الكتب العالمية الخاصة بالقيادة والإدارة
+              </p>
+              <div className="bg-white p-6 rounded-xl shadow-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <ul className="space-y-1 pr-4 text-right">
+                    <li>The 21 Irrefutable Laws of Leadership - القوانين 21 التي لا تقبل الجدل في مفهوم القيادة by John C. Maxwell - جون سي ماكسويل</li>
+                    <li>The Art of Negotiation - فن التفاوض by Michael Wheeler - مايكل ويلر</li>
+                    <li>The CEO Next Door - الرئيس التنفيذي القادم by Elena Botelho and Kim Powell - ايلينا بوتيلو، كيم باول</li>
+                    <li>The Coach's Survival Guide - دليل استرشادي لاستمرارية المدرب by Kim Morgan - كيم مورغان</li>
+                    <li>The Coaching Habit - عادات التدريب by Michael Bungay Stanier - مايكل بونجي ستانييه</li>
+                    <li>The Discomfort Zone - منطقة الانزعاج by Marcia Reynolds - مارسيا رينولدز</li>
+                    <li>The First-Time Manager - مدير لأول مرة by Loren B. Belker, Jim McCormick and Gary S. Topchik - لورين بيلكر، جيم ماكورميك، غاري س. توبشيك</li>
+                    <li>The Leader Habit - عادات القائد by Martin Lanik - مارتن لانيك</li>
+                    <li>The Leader as a Mensch - القائد كإنسان by Bruna Martinuzzi - برونا مارتينوزى</li>
+                    <li>The Leadership Lab - معمل صناعة القيادة by Chris Lewis, Dr Pippa Malmgren - كريس لويس، بيبا مالمغرن</li>
+                  </ul>
+                  <ul className="space-y-1 pr-4 text-right">
+                    <li>The Leader's Greatest Return - أعظم عائد للقائد by John C. Maxwell - جون سي ماكسويل</li>
+                    <li>The Making of a Manager - عملية صناعة المديرين by Julie Zhuo - جولي تشو</li>
+                    <li>The Motivation Code - الكود التحفيزي by Todd Henry with Ron Penner, Todd W. Hall, and Joshua Miller - تود هنرى، رون بينر، تود دبليو هول، جوشوا ميلر</li>
+                    <li>The Power of Giving Away Power - قوة التخلي عن السلطة by Matthew Barzun - ماثيو بارزون</li>
+                    <li>The Scrum Fieldbook - كتاب سكروم الميداني by J.J. Sutherland - جيف ساذرلاند</li>
+                    <li>The Smartest Guys in the Room - أذكى من في الغرفة by Bethany Mclean, Peter Elkind - بيثاني ماكلين، بيتر إلكيند</li>
+                    <li>The Wise Company - الشركة العقلانية by Ikujiro Nonaka and Hirotaka Takeuchi - إيكوجيرو نوناكا، هيروتاكا تاكوشي</li>
+                    <li>Theory U - نظرية U by C. Otto Scharmer - أوتو شارمر</li>
+                    <li>True North - الاتجاه الشمالي الصحيح by Bill George - بيل جورج</li>
+                    <li>The Languages of Leadership - لغات القيادة by Wendy Born - ويندي بورن</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
 
         {/* FAQ Section */}
-        <section className="py-12 bg-gray-50">
+        <section className="py-12 bg-white rtl">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-right mb-8">
-                <h2 className="text-2xl font-bold text-rtl-dark">
-                  ❓ الأسئلة الشائعة – كتاب قواعد النجاح المؤسسي
-                </h2>
-              </div>
-              
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-2xl font-bold mb-8 text-center">
+                ❓ الأسئلة الشائعة – كتاب القيادة والإدارة الفعالة
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">١. إيه هو كتاب قواعد النجاح المؤسسي؟</h3>
-                    <p>هو كتاب بيجمع خلاصة أهم 20 كتاب عالمي في مجال بناء وتطوير المؤسسات الناجحة، ويقدمها بشكل مبسط وعملي.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٢. مين ممكن يستفيد منه؟</h3>
-                    <p>المديرين، قادة الفرق، مؤسسي الشركات، مديري الموارد البشرية، وكل شخص مسؤول عن إدارة وتطوير فريق أو مؤسسة.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٣. الكتاب ده بيحل أي مشاكل؟</h3>
-                    <p>بيحل مشاكل ضعف ثقافة الشركة، تحديات إدارة الفرق، الاجتماعات غير الفعالة، صعوبة الاحتفاظ بالمواهب، وتحديات القيادة المؤسسية.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٤. إيه اللي بيميز الكتاب ده؟</h3>
-                    <p>
-                      ✔️ ملخص لأشهر 20 كتاب في بناء المؤسسات<br/>
-                      ✔️ استراتيجيات عملية مجربة من شركات عالمية ناجحة<br/>
-                      ✔️ حلول للتحديات اليومية اللي بتواجه القادة<br/>
-                      ✔️ أدوات لبناء ثقافة شركة قوية ومتماسكة
-                    </p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٥. هل الكتاب مناسب للشركات الناشئة؟</h3>
-                    <p>أيوه، الكتاب مفيد لأي شركة بغض النظر عن حجمها، سواء شركة ناشئة، شركة صغيرة، أو مؤسسة كبيرة.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٦. إزاي الكتاب بيساعدني فعليًا؟</h3>
-                    <p>
-                      • تبني ثقافة شركة قوية تجذب وتحتفظ بالمواهب<br/>
-                      • تطور استراتيجيات قيادة فعالة ومؤثرة<br/>
-                      • تحسن إنتاجية فريقك وتحفزهم للإبداع<br/>
-                      • تصمم بيئة عمل إيجابية وملهمة
-                    </p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٧. هل الكتاب نظري ولا عملي؟</h3>
-                    <p>الكتاب بيجمع بين النظريات المهمة والتطبيقات العملية، كل فكرة مدعومة بخطوات واضحة للتنفيذ وأمثلة من شركات حقيقية.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٨. الكتاب مناسب لأي حجم شركة؟</h3>
-                    <p>أيوه، الكتاب بيقدم مبادئ تصلح لمختلف أحجام الشركات، من الشركات الناشئة الصغيرة للمؤسسات الكبيرة.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">٩. هل المبادئ في الكتاب تناسب السوق المصري؟</h3>
-                    <p>أكيد، رغم إن الكتب أصلها عالمية، لكن المبادئ عالمية ومجربة في بيئات مختلفة وتم مراعاة تطويعها لتناسب السوق المحلي.</p>
-                  </div>
-                </Card>
-                
-                <Card className="p-4">
-                  <div className="text-right space-y-2">
-                    <h3 className="font-bold">١٠. إزاي أطلب الكتاب؟</h3>
-                    <p>اطلبه من خلال الموقع أو تواصل معانا، وهيوصل لحد بابك.</p>
-                  </div>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section className="py-12 bg-gradient-to-br from-teal-50 to-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">
-                  اطلب الكتاب دلوقتي وابدأ رحلة تطوير مؤسستك
-                </h2>
-              </div>
-              <div className="mb-6">
-                <Button
-                  className="w-full max-w-md mx-auto bg-[#0D9488] hover:bg-[#0D9488]/90 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
-                >
-                  <ShoppingCart className="ml-2 h-6 w-6" /> 🛒 اطلب كتاب قواعد النجاح المؤسسي الآن
-                </Button>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">١. إيه هو كتاب القيادة والإدارة الفعالة؟</p>
+                  <p>هو كتاب بيجمع خلاصة أهم 20 كتاب عالمي في مجال القيادة والإدارة، ويقدمها بشكل مبسط وعملي يمكن تطبيقه على طول.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٢. مين ممكن يستفيد منه؟</p>
+                  <p>أي شخص في موقع قيادي أو بيطمح له، سواء كان مدير، قائد فريق، رائد أعمال، أو حتى موظف طموح بيستعد لدور قيادي.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٣. الكتاب ده بيحل أي مشاكل؟</p>
+                  <p>بيحل مشاكل ضعف التحفيز في الفريق، تحديات إدارة الشخصيات المختلفة، صعوبة اتخاذ القرارات الصعبة، مقاومة التغيير، وتحديات بناء رؤية مشتركة.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٤. إيه اللي بيميز الكتاب ده؟</p>
+                  <p>✔️ ملخص لأشهر 20 كتاب في القيادة والإدارة<br />✔️ أساليب قيادية مختلفة تناسب المواقف المتنوعة<br />✔️ استراتيجيات عملية لبناء وتحفيز الفرق<br />✔️ دراسات حالة من قادة ناجحين حول العالم</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٥. هل الكتاب مناسب للمديرين الجدد؟</p>
+                  <p>تماماً، الكتاب مفيد بشكل خاص للمديرين الجدد لأنه بيوفر لهم الأسس والمهارات اللي محتاجينها في بداية رحلتهم القيادية.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٦. إزاي الكتاب بيساعدني فعليًا؟</p>
+                  <p>
+                    تتعلم أساليب قيادية مختلفة ومتى تستخدم كل منها<br />
+                    تبني رؤية واضحة وتوصلها بفعالية للفريق<br />
+                    تحفز فريقك وتخليهم يقدموا أفضل ما عندهم<br />
+                    تدير الصراعات والتحديات بين أعضاء الفريق
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٧. هل الكتاب نظري ولا عملي؟</p>
+                  <p>الكتاب بيجمع بين الأسس النظرية للقيادة والتطبيقات العملية اللي تقدر تبدأ تنفذها على طول مع فريقك.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٨. الكتاب مكتوب بأي لغة؟</p>
+                  <p>الكتاب مكتوب بالعربية البسيطة والمفهومة، مع الاحتفاظ بالمصطلحات الأصلية المهمة في عالم القيادة.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">٩. هل نظريات القيادة دي تنفع في ثقافتنا المصرية؟</p>
+                  <p>أيوه، رغم إن النظريات أصلها غربي، لكن تم تكييفها لتناسب الثقافة المصرية والعربية وأسلوب العمل المحلي.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <p className="font-bold mb-2">١٠. إزاي أطلب الكتاب؟</p>
+                  <p>اطلبه من خلال الموقع أو تواصل معانا، وهيوصل لحد بابك.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer with centered logo */}
-      <footer className="bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center w-full mb-4">
-              <Logo className="mx-auto" />
-            </div>
-            <p className="text-gray-600 mb-4 text-center">© 2025 جميع الحقوق محفوظة</p>
-          </div>
-        </div>
-      </footer>
-      
-      {/* Sticky Purchase Button */}
-      <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md py-3 px-4 z-50 flex justify-between items-center md:px-8">
-        <Button className="bg-[#0D9488] text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
-          <ShoppingCart className="ml-2 h-5 w-5" /> 📦 اطلب الآن
-        </Button>
-        <div className="font-bold text-lg">
-          السعر: 400 جنيه
-        </div>
+      {/* Sticky Purchase Bar */}
+      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl">
+        <button className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
+          📦 اطلب الآن
+        </button>
+        <span className="font-bold text-[#0D9488]">السعر: 400 جنيه</span>
       </div>
     </div>
   );
 };
 
 export default InstitutionalSuccessBook;
+
