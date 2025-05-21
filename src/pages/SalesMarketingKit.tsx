@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,9 @@ import {
 } from "@/components/ui/accordion";
 
 const SalesMarketingKit = () => {
+  // Shopify checkout link for Sales & Marketing Kit
+  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button";
+
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       {/* Header */}
@@ -56,13 +60,13 @@ const SalesMarketingKit = () => {
                   </p>
                   
                   <div className="text-center md:text-right">
-                    <Button
-                      variant="yellow"
-                      className="px-8 py-6 rounded-lg text-lg"
+                    <a
+                      href={shopifyCheckoutLink}
+                      className="px-8 py-6 rounded-lg text-lg bg-[#0D9488] text-white inline-flex items-center gap-2 hover:bg-[#0D9488]/90 transition-colors"
                     >
                       <ShoppingCart className="ml-2 h-5 w-5" />
                       أضف للسلة
-                    </Button>
+                    </a>
                   </div>
                 </div>
                 <div className="flex-1">
@@ -201,13 +205,13 @@ const SalesMarketingKit = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 جاهز تطور شغلك؟</h2>
-              <Button
-                variant="yellow"
-                className="px-12 py-6 rounded-lg text-xl font-bold transition-all duration-300 mx-auto flex items-center justify-center gap-3 w-full md:w-auto"
+              <a
+                href={shopifyCheckoutLink}
+                className="px-12 py-6 rounded-lg text-xl font-bold transition-all duration-300 mx-auto flex items-center justify-center gap-3 w-full md:w-auto bg-[#0D9488] text-white hover:bg-[#0D9488]/90"
               >
                 <ShoppingCart className="ml-2 h-6 w-6" />
                 🛒 اطلب Sales & Marketing Kit الآن
-              </Button>
+              </a>
               <p className="text-lg font-medium mt-6 text-rtl-dark">الخطوة الجاية في نمو البيزنس بتاعك تبدأ من هنا</p>
             </div>
           </div>
@@ -369,6 +373,15 @@ const SalesMarketingKit = () => {
       <footer className="py-6 text-center border-t">
         <p className="text-gray-600">© جميع الحقوق محفوظة</p>
       </footer>
+
+      {/* Sticky Purchase CTA */}
+      <div className="fixed bottom-0 w-full bg-white border-t px-4 py-3 flex justify-between items-center z-50 shadow-md">
+        <span className="font-bold text-[#0D9488]">السعر: 999 جنيه</span>
+        <a href={shopifyCheckoutLink} className="bg-[#0D9488] text-white px-5 py-2 rounded-md hover:opacity-90 flex items-center gap-2">
+          <ShoppingCart className="w-4 h-4" />
+          📦 اطلب الآن
+        </a>
+      </div>
     </div>
   );
 };
