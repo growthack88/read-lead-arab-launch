@@ -23,10 +23,10 @@ const HeroSection = () => {
           </p>
           
           <a
-            href="#products"
-            className="inline-flex items-center bg-rtl-teal text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-opacity-90 transition-all duration-200"
+            href="#kits"
+            className="bg-[#0D9488] text-white font-bold py-3 px-6 rounded-xl text-lg hover:scale-105 transition-all inline-flex items-center"
           >
-            اكتشف كل المنتجات
+            اكتشف المنتجات الآن 🚀
             <ArrowRight className="mr-2 h-5 w-5 rotate-180" />
           </a>
         </div>

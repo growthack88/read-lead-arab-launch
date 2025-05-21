@@ -166,7 +166,7 @@ const Index = () => {
                 {["الرئيسية", "المنتجات", "من نحن", "تواصل معنا"].map((item, index) => (
                   <NavigationMenuItem key={index}>
                     <NavigationMenuLink
-                      href={item === "المنتجات" ? "#products" : "#"}
+                      href={item === "المنتجات" ? "#kits" : "#"}
                       className={cn(
                         "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-base font-medium transition-colors",
                         "hover:bg-rtl-teal/10 hover:text-rtl-teal focus:bg-rtl-teal/10 focus:text-rtl-teal focus:outline-none"
@@ -188,7 +188,7 @@ const Index = () => {
         <HeroSection />
 
         {/* New Kits Section - UPDATED with new kit images and pricing */}
-        <section id="new-kits" className="py-16 bg-white" dir="rtl">
+        <section id="kits" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               🟢 الكيتس الجديدة
@@ -245,74 +245,9 @@ const Index = () => {
         <FinalCTASection />
       </main>
 
-      {/* Footer */}
-      <footer className="bg-rtl-dark text-white py-10 rtl">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-bold text-lg mb-4">Read to Lead</h3>
-              <p className="text-gray-300">
-                مجموعة مختارة من أقوى الكتب والكيتس التعليمية لنجاحك الشخصي والمهني
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">روابط مهمة</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    الرئيسية
-                  </a>
-                </li>
-                <li>
-                  <a href="#products" className="text-gray-300 hover:text-white">
-                    المنتجات
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    من نحن
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">خدمة العملاء</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    الأسئلة الشائعة
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    سياسة الشحن
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    تواصل معنا
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-4">تواصل معنا</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center justify-end gap-2">
-                  <span>info@readtolead.com</span>
-                  <span>✉️</span>
-                </li>
-                <li className="flex items-center justify-end gap-2">
-                  <span>+123456789</span>
-                  <span>📱</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-6 text-center">
-            <p className="text-gray-400">© 2024 جميع الحقوق محفوظة Read to Lead</p>
-          </div>
-        </div>
+      {/* Updated Footer */}
+      <footer className="bg-[#1A1F2C] text-white text-center py-4">
+        <p>© 2025 جميع الحقوق محفوظة Read to Lead</p>
       </footer>
     </div>
   );
