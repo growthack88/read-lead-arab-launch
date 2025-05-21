@@ -5,8 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import Header from "@/components/Header";
+import { ShoppingCart } from "lucide-react";
 
 const ProductivityKit = () => {
+  // Shopify checkout link for Productivity Kit
+  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button";
+  
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       <SEO 
@@ -38,9 +42,10 @@ const ProductivityKit = () => {
                 </p>
                 <div className="mt-6">
                   <a 
-                    href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
-                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block"
+                    href={shopifyCheckoutLink}
+                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block flex items-center gap-2 justify-center"
                   >
+                    <ShoppingCart className="w-5 h-5" />
                     🛒 اطلب Productivity Kit الآن
                   </a>
                 </div>
@@ -105,9 +110,10 @@ const ProductivityKit = () => {
                     🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                   </p>
                   <a 
-                    href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
-                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block"
+                    href={shopifyCheckoutLink}
+                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block flex items-center gap-2 justify-center"
                   >
+                    <ShoppingCart className="w-5 h-5" />
                     🛒 اطلب Productivity Kit الآن
                   </a>
                 </div>
@@ -188,8 +194,9 @@ const ProductivityKit = () => {
       </footer>
 
       {/* Sticky Purchase Bar */}
-      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center">
-        <a href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button" className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
+      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center shadow-md">
+        <a href={shopifyCheckoutLink} className="bg-[#0D9488] text-white px-5 py-2 rounded-md hover:opacity-90 flex items-center gap-2">
+          <ShoppingCart className="w-4 h-4" />
           📦 اطلب الآن
         </a>
         <span className="font-bold text-[#0D9488]">السعر: ٩٩٩ جنيه</span>
