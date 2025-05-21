@@ -5,10 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShoppingCart } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import SEO from "@/components/SEO";
 
 const SalesBook = () => {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO 
+        title="كتاب فن البيع والشراء | Read to Lead"
+        description="كل ما تحتاجه لتتقن فن المبيعات والتفاوض وزيادة الأرباح من خلال خلاصة 20 كتاب عالمي."
+        image="/assets/book-sales.jpg"
+        url="https://land.readtolead.store/sales-book"
+      />
+      
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <div className="container mx-auto px-4">

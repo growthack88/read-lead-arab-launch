@@ -3,10 +3,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const SelfDevelopmentBook = () => {
   return (
     <div className="min-h-screen bg-white pb-20 font-tajawal">
+      <SEO 
+        title="كتاب تطوير الذات والنمو الشخصي | Read to Lead"
+        description="طور نفسك على المستويين الشخصي والمهني من خلال خلاصة 20 كتاب عالمي."
+        image="/assets/book-self.jpg"
+        url="https://land.readtolead.store/personal-development-book"
+      />
+      
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/95 backdrop-blur-sm z-10 shadow-sm">
         <div className="container mx-auto px-4">

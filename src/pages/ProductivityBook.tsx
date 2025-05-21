@@ -1,9 +1,11 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShoppingCart, Book } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import SEO from "@/components/SEO";
 import {
   Accordion,
   AccordionContent,
@@ -14,6 +16,13 @@ import {
 const ProductivityBook = () => {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO 
+        title="كتاب إنتاجية بلا حدود | Read to Lead"
+        description="ملخصات لأهم كتب الإنتاجية وأساليب تنظيم الوقت في كتاب واحد عملي وسهل التطبيق."
+        image="/assets/book-productivity.jpg"
+        url="https://land.readtolead.store/productivity-book"
+      />
+      
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <div className="container mx-auto px-4">
