@@ -1,6 +1,14 @@
 
 import React from "react";
 
+// Define the type for Facebook Pixel
+declare global {
+  interface Window {
+    fbq?: any;
+    _fbq?: any;
+  }
+}
+
 interface SEOProps {
   title: string;
   description: string;
