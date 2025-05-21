@@ -50,7 +50,7 @@ const SalesMarketingKit = () => {
               <div className="flex flex-col md:flex-row-reverse items-center gap-8">
                 <div className="flex-1 text-right">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark mb-4 text-center">
-                    🟢 Sales & Marketing Kit | مجموعة التسويق والمبيعات
+                    Sales & Marketing Kit | مجموعة التسويق والمبيعات
                   </h1>
                   <p className="text-lg md:text-xl text-gray-600 mb-4 text-right">
                     كل الأدوات العملية والمحتوى اللي يساعدك تفهم جمهورك، تخطط حملاتك، وتزوّد مبيعاتك.
