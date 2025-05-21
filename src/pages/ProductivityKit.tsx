@@ -191,13 +191,12 @@ const ProductivityKit = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 مستعد تبدأ رحلتك في الإنتاجية؟</h2>
-              <Button
-                variant="yellow"
-                className="px-12 py-6 rounded-lg text-xl font-bold transition-all duration-300 mx-auto flex items-center justify-center gap-3 w-full md:w-auto"
-              >
-                <ShoppingCart className="ml-2 h-6 w-6" />
-                🛒 اطلب Productivity Kit الآن
-              </Button>
+       <a
+  href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
+  className="bg-[#FCD34D] text-black px-8 py-6 rounded-lg text-lg flex items-center justify-center hover:opacity-90 transition"
+>
+  <ShoppingCart className="ml-2 h-5 w-5" />
+🛒 اطلب Productivity Kit الآن</a>
               <p className="text-lg font-medium mt-6 text-rtl-dark">ابدأ بإدارة وقتك وتطوير نفسك من النهاردة</p>
             </div>
           </div>
