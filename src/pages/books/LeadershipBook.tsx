@@ -3,8 +3,12 @@ import React from "react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
+import { ShoppingCart } from "lucide-react";
 
 const LeadershipBook = () => {
+  // Shopify checkout link for Leadership Book
+  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42047911460969:1?channel=buy_button";
+
   // Function to scroll back to top when navigating between sections
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -138,10 +142,10 @@ const LeadershipBook = () => {
                   🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
                 <a 
-                  href="https://si51ve-s6.myshopify.com/cart/42047911460969:1?channel=buy_button"
-                  className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block"
+                  href={shopifyCheckoutLink}
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white"
                 >
-                  🛒 اطلب كتاب القيادة والإدارة الفعالة الآن
+                  <ShoppingCart className="ml-2 h-5 w-5" /> 🛒 اطلب كتاب القيادة والإدارة الفعالة الآن
                 </a>
                 <p className="mt-4 text-gray-600">الخطوة الجاية في رحلتك القيادية تبدأ من هنا</p>
               </div>
@@ -283,8 +287,11 @@ const LeadershipBook = () => {
 
       {/* Sticky Purchase Bar */}
       <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center">
-        <a href="https://si51ve-s6.myshopify.com/cart/42047911460969:1?channel=buy_button" className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
-          📦 اطلب الآن
+        <a 
+          href={shopifyCheckoutLink}
+          className="inline-flex items-center bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90 transition"
+        >
+          <ShoppingCart className="ml-2 h-5 w-5" /> 📦 اطلب الآن
         </a>
         <span className="font-bold text-[#0D9488]">السعر: 400 جنيه</span>
       </div>
