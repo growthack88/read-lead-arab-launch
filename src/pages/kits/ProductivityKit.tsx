@@ -43,10 +43,10 @@ const ProductivityKit = () => {
                 <div className="mt-6">
                   <a 
                     href={shopifyCheckoutLink}
-                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block flex items-center gap-2 justify-center"
+                    className="px-6 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block flex items-center gap-2 justify-center font-semibold"
                   >
                     <ShoppingCart className="w-5 h-5" />
-                    🛒 اطلب Productivity Kit الآن
+                    📦 اطلب Productivity Kit الآن
                   </a>
                 </div>
               </div>
@@ -111,10 +111,10 @@ const ProductivityKit = () => {
                   </p>
                   <a 
                     href={shopifyCheckoutLink}
-                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block flex items-center gap-2 justify-center"
+                    className="px-6 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block flex items-center gap-2 justify-center font-semibold"
                   >
                     <ShoppingCart className="w-5 h-5" />
-                    🛒 اطلب Productivity Kit الآن
+                    📦 اطلب Productivity Kit الآن
                   </a>
                 </div>
               </div>
