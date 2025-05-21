@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -40,11 +39,12 @@ const ProductivityBook = () => {
 
       {/* Main Content */}
       <main className="py-8 pb-24">
-        {/* Hero Section */}
+        {/* Hero Section - Converted to Two-Column Layout */}
         <section className="bg-gradient-to-br from-white to-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-8">
-              <div className="text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto">
+              {/* Column 1: Text Content */}
+              <div className="space-y-4 text-right order-2 md:order-1">
                 <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark mb-4">
                   🟢 كتاب إنتاجية بلا حدود | طريقك للعمل الذكي
                 </h1>
@@ -56,11 +56,12 @@ const ProductivityBook = () => {
                 </p>
               </div>
               
-              <div className="mx-auto">
+              {/* Column 2: Product Image */}
+              <div className="order-1 md:order-2">
                 <img
                   src="/lovable-uploads/b346efb8-3583-4174-b3c9-14d5cef23ec9.png"
                   alt="كتاب إنتاجية بلا حدود"
-                  className="w-full h-auto rounded-xl shadow-lg object-cover mx-auto"
+                  className="w-full h-auto rounded-xl shadow-lg object-cover max-w-md mx-auto"
                   style={{ aspectRatio: "2/1" }}
                 />
               </div>
