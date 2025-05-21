@@ -8,7 +8,9 @@ const Header = () => {
     <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <nav className="space-x-6 flex flex-row-reverse">
             <Link to="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
               الرئيسية

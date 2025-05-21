@@ -1,8 +1,10 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import Header from "@/components/Header";
 
 const ProductivityKit = () => {
   return (
@@ -15,29 +17,7 @@ const ProductivityKit = () => {
       />
       
       {/* Header */}
-      <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <Link to="/">
-              <Logo />
-            </Link>
-            <nav className="space-x-6 flex flex-row-reverse">
-              <Link to="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                الرئيسية
-              </Link>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                المنتجات
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                من نحن
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
-                تواصل معنا
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="py-16">
@@ -56,6 +36,14 @@ const ProductivityKit = () => {
                 <p className="text-gray-600 leading-relaxed">
                   مجموعة "الإنتاجية وتطوير الذات" هي صندوق أدوات متكامل لكل من يريد استغلال وقته بشكل أفضل وتطوير مهاراته وإمكانياته. جمعنا لك فيها خلاصة أساليب الخبراء في إدارة الوقت وتنظيم المهام وتحسين التركيز مع تطبيقات عملية تساعدك على تنفيذها في حياتك اليومية.
                 </p>
+                <div className="mt-6">
+                  <a 
+                    href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
+                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block"
+                  >
+                    🛒 اطلب Productivity Kit الآن
+                  </a>
+                </div>
               </div>
 
               {/* Right Column - Image */}
@@ -70,18 +58,60 @@ const ProductivityKit = () => {
           </div>
         </section>
 
-        {/* New kits section data - UPDATED with new Productivity Kit image */}
-        <section id="new-kits" className="py-16 bg-white" dir="rtl">
+        {/* Kit contents section */}
+        <section id="kit-contents" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
               محتويات الكيت
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <ul>
-                <li>كتاب إنتاجية بلا حدود</li>
-                <li>قلم أنيق</li>
-                <li>نوت بوك</li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
+                <h3 className="font-bold text-xl mb-3">كتاب إنتاجية بلا حدود</h3>
+                <p className="text-gray-600">
+                  دليل شامل للتخطيط الفعال وزيادة الإنتاجية في العمل والحياة
+                </p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
+                <h3 className="font-bold text-xl mb-3">نوت بوك</h3>
+                <p className="text-gray-600">
+                  دفتر ملاحظات أنيق لتدوين أفكارك وخططك اليومية
+                </p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
+                <h3 className="font-bold text-xl mb-3">قلم أنيق</h3>
+                <p className="text-gray-600">
+                  قلم عالي الجودة لكتابة ملاحظاتك وأهدافك بوضوح
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Buy Now Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-6 text-rtl-dark">
+                استثمر في إنتاجيتك وتطوير ذاتك اليوم
+              </h2>
+
+              <div className="bg-white p-8 rounded-2xl shadow-sm mb-8">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl font-bold text-rtl-teal">السعر: ٩٩٩ جنيه</span>
+                    <span className="text-lg line-through text-gray-500">السعر السابق: ١٢٠٠ جنيه</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
+                  </p>
+                  <a 
+                    href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
+                    className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block"
+                  >
+                    🛒 اطلب Productivity Kit الآن
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -101,9 +131,9 @@ const ProductivityKit = () => {
               <h3 className="font-bold text-lg mb-4">روابط مهمة</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
+                  <Link to="/" className="text-gray-300 hover:text-white">
                     الرئيسية
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#products" className="text-gray-300 hover:text-white">
@@ -152,10 +182,18 @@ const ProductivityKit = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-6 text-center">
-            <p className="text-gray-400">© 2024 جميع الحقوق محفوظة Read to Lead</p>
+            <p className="text-gray-400">© 2025 جميع الحقوق محفوظة Read to Lead</p>
           </div>
         </div>
       </footer>
+
+      {/* Sticky Purchase Bar */}
+      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center">
+        <a href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button" className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
+          📦 اطلب الآن
+        </a>
+        <span className="font-bold text-[#0D9488]">السعر: ٩٩٩ جنيه</span>
+      </div>
     </div>
   );
 };

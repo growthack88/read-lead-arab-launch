@@ -9,6 +9,7 @@ interface ProductCardProps {
   color?: string;
   index: number;
   link?: string;
+  checkoutLink?: string;
   imageSrc?: string;
   description?: string;
   buttonText?: string;
@@ -22,6 +23,7 @@ const ProductCard = ({
   color = "bg-rtl-teal", 
   index, 
   link, 
+  checkoutLink,
   imageSrc,
   description = "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة",
   buttonText = "احصل عليه الآن",
@@ -70,13 +72,22 @@ const ProductCard = ({
         )}
         
         <div className="flex justify-end">
-          <Button 
-            variant="teal" 
-            size="sm" 
-            className="hover:bg-rtl-teal/80 transition-colors"
-          >
-            {buttonText}
-          </Button>
+          {checkoutLink ? (
+            <a 
+              href={checkoutLink}
+              className="bg-rtl-teal text-white px-4 py-2 rounded-md text-sm hover:bg-rtl-teal/80 transition-colors"
+            >
+              {buttonText}
+            </a>
+          ) : (
+            <Button 
+              variant="teal" 
+              size="sm" 
+              className="hover:bg-rtl-teal/80 transition-colors"
+            >
+              {buttonText}
+            </Button>
+          )}
         </div>
       </div>
     </div>
@@ -85,7 +96,7 @@ const ProductCard = ({
   const cardClassName = "rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg";
 
   // If we have a link, wrap the card in a Link component
-  if (link) {
+  if (link && !checkoutLink) {
     return (
       <Link to={link} className={cardClassName}>
         {cardContent}
@@ -93,7 +104,7 @@ const ProductCard = ({
     );
   }
 
-  // Render as a div when no link is provided
+  // Render as a div when no link is provided or when we have a checkout link
   return (
     <div className={cardClassName}>
       {cardContent}

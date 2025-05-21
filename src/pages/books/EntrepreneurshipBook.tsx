@@ -1,3 +1,4 @@
+
 import React from "react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -137,13 +138,12 @@ const EntrepreneurshipBook = () => {
                 <p className="text-gray-600 mb-4">
                   🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
-                <Button
-                  variant="custom"
-                  size="lg"
-                  className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white"
+                <a 
+                  href="https://si51ve-s6.myshopify.com/cart/42047911690345:1?channel=buy_button"
+                  className="px-5 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white inline-block"
                 >
                   🛒 اطلب كتاب فن ريادة الأعمال الآن
-                </Button>
+                </a>
                 <p className="mt-4 text-gray-600">الخطوة الجاية في مشروعك الخاص تبدأ من هنا</p>
               </div>
             </div>
@@ -283,9 +283,9 @@ const EntrepreneurshipBook = () => {
 
       {/* Sticky Purchase Bar */}
       <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center">
-        <button className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
+        <a href="https://si51ve-s6.myshopify.com/cart/42047911690345:1?channel=buy_button" className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
           📦 اطلب الآن
-        </button>
+        </a>
         <span className="font-bold text-[#0D9488]">السعر: 400 جنيه</span>
       </div>
     </div>

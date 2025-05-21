@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
@@ -17,6 +18,7 @@ const products = [
     description: "أدوات ومحتوى لبناء شركتك الناشئة بمنهجية صحيحة",
     buttonText: "اكتشف الآن",
     link: "/startup-kit",
+    checkoutLink: "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button",
     currentPrice: "١٢٥٠ جنيه",
     comparePrice: null
   },
@@ -28,6 +30,7 @@ const products = [
     description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
     buttonText: "اكتشف الآن",
     link: "/sales-marketing-kit",
+    checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
     currentPrice: "٩٩٩ جنيه",
     comparePrice: "١٢٠٠ جنيه"
   },
@@ -39,6 +42,7 @@ const products = [
     description: "أدوات لإدارة وقتك بفعالية وتطوير قدراتك الشخصية",
     buttonText: "اكتشف الآن",
     link: "/productivity-kit",
+    checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
     currentPrice: "٩٩٩ جنيه",
     comparePrice: "١٢٠٠ جنيه"
   }
@@ -51,8 +55,9 @@ const Index = () => {
       title: "Startup Kit",
       imageSrc: "/lovable-uploads/2bcb0011-1478-4447-a8aa-cf255f4c7aa1.png",
       description: "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة بنجاح",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       link: "/startup-kit",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button",
       currentPrice: "٩٩٩ جنيه",
       comparePrice: "١٢٠٠ جنيه"
     },
@@ -60,8 +65,9 @@ const Index = () => {
       title: "Productivity Kit",
       imageSrc: "/lovable-uploads/9473f670-3be5-4be6-9b5d-89ff248bbfb7.png",
       description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       link: "/productivity-kit",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
       currentPrice: "٩٩٩ جنيه",
       comparePrice: "١٢٠٠ جنيه"
     },
@@ -69,8 +75,9 @@ const Index = () => {
       title: "Sales & Marketing Kit",
       imageSrc: "/lovable-uploads/85ccfc20-77b8-4b0f-abfe-3455983bfa07.png",
       description: "أدوات تسويقية احترافية لزيادة المبيعات وجذب العملاء",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       link: "/sales-marketing-kit",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
       currentPrice: "٩٩٩ جنيه",
       comparePrice: "١٢٠٠ جنيه"
     },
@@ -82,73 +89,81 @@ const Index = () => {
       title: "سلسلة النتاجية بلا حدود",
       imageSrc: "/lovable-uploads/167ced76-30d4-4269-a2d7-3f25b31cbe18.png",
       description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/productivity-book"
+      link: "/productivity-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911362665:1?channel=buy_button"
     },
     {
       title: "سلسلة إدارة حياتك المهنية",
       imageSrc: "/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png",
       description: "تخطيط وتطوير مسارك الوظيفي باحترافية",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/career-book"
+      link: "/career-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911755881:1?channel=buy_button"
     },
     {
       title: "سلسلة التسويق الحديث",
       imageSrc: "/lovable-uploads/e02202fa-1c1f-4c69-9eeb-d8a406d41e9a.png",
       description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/marketing-book"
+      link: "/marketing-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911559273:1?channel=buy_button"
     },
     {
       title: "سلسلة القيادة والإدارة الفعالة",
       imageSrc: "/lovable-uploads/7b271e77-fc40-4b05-a14f-f093c1f9cdb4.png",
       description: "استراتيجيات فعالة للقيادة وإدارة الناجحة",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/leadership-book"
+      link: "/leadership-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911460969:1?channel=buy_button"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",
       imageSrc: "/lovable-uploads/247722eb-0ea5-4d90-bf5b-52a81145490e.png",
       description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/self-development-book"
+      link: "/self-development-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911264361:1?channel=buy_button"
     },
     {
       title: "سلسلة فن البيع والشراء",
       imageSrc: "/lovable-uploads/1522fafc-8928-4f3e-9cf7-4d6f2c0617df.png",
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/sales-book"
+      link: "/sales-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911624809:1?channel=buy_button"
     },
     {
       title: "سلسلة فن ريادة الأعمال",
       imageSrc: "/lovable-uploads/8b7decb8-2edd-41e2-acb7-f8ca9ffd7014.png",
       description: "مهارات وأدوات بناء المشاريع الناجحة",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/entrepreneurship-book"
+      link: "/entrepreneurship-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911690345:1?channel=buy_button"
     },
     {
       title: "سلسلة قواعد النجاح المؤسسي",
       imageSrc: "/lovable-uploads/8376e2d7-8776-42f1-a5dd-e4e3b2d93df8.png",
       description: "بناء ثقافة مؤسسية ناجحة وبيئة عمل محفزة",
-      buttonText: "اكتشف الآن",
+      buttonText: "اطلب الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه",
-      link: "/institutional-success-book"
+      link: "/institutional-success-book",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42047911854185:1?channel=buy_button"
     },
   ];
 
@@ -200,6 +215,7 @@ const Index = () => {
                   title={kit.title}
                   index={index}
                   link={kit.link}
+                  checkoutLink={kit.checkoutLink}
                   imageSrc={kit.imageSrc}
                   description={kit.description}
                   buttonText={kit.buttonText}
@@ -229,6 +245,7 @@ const Index = () => {
                   currentPrice={book.currentPrice}
                   comparePrice={book.comparePrice}
                   link={book.link}
+                  checkoutLink={book.checkoutLink}
                 />
               ))}
             </div>
