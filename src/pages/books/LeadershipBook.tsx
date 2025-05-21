@@ -1,6 +1,8 @@
+
 import React from "react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 const LeadershipBook = () => {
   // Function to scroll back to top when navigating between sections
@@ -10,6 +12,13 @@ const LeadershipBook = () => {
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO 
+        title="كتاب القيادة والإدارة الفعالة | Read to Lead"
+        description="استراتيجيات فعّالة لبناء فرق قوية، اتخاذ قرارات حاسمة، وقيادة ناجحة."
+        image="/assets/book-leadership.jpg"
+        url="https://land.readtolead.store/leadership-book"
+      />
+      
       {/* Header */}
       <Header />
 

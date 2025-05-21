@@ -6,6 +6,7 @@ import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Logo from "@/components/Logo";
+import SEO from "@/components/SEO";
 
 const StartupKit = () => {
   // Function to scroll back to top when navigating between sections
@@ -15,6 +16,13 @@ const StartupKit = () => {
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO 
+        title="Startup Builder Kit | كيت تأسيس الشركات الناشئة"
+        description="كل الأدوات اللي هتحتاجها عشان تبدأ شركتك الناشئة من الفكرة للتنفيذ – كتاب، أدوات، وجورنال عملي من Read to Lead."
+        image="/assets/startup-kit-banner.jpg"
+        url="https://land.readtolead.store/startup-kit"
+      />
+      
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <div className="container mx-auto px-4">

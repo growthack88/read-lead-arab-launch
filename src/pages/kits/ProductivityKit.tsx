@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -8,9 +9,9 @@ const ProductivityKit = () => {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       <SEO 
-        title="Productivity Kit | كيت الإنتاجية وتطوير الذات"
-        description="مجموعة الإنتاجية المتكاملة لزيادة كفاءة عملك وإدارة وقتك بفاعلية - كتب، أدوات، وتقنيات عملية من Read to Lead."
-        image="https://land.readtolead.store/assets/productivity-kit-banner.jpg"
+        title="Productivity Kit | كيت الإنتاجية والنمو الشخصي"
+        description="أدوات وتقنيات تساعدك على إدارة وقتك وزيادة إنتاجيتك الشخصية والمهنية."
+        image="/assets/productivity-kit-banner.jpg"
         url="https://land.readtolead.store/productivity-kit"
       />
       

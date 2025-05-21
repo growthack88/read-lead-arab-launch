@@ -1,7 +1,9 @@
+
 import React from "react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const EntrepreneurshipBook = () => {
   // Function to scroll back to top when navigating between sections
@@ -11,6 +13,13 @@ const EntrepreneurshipBook = () => {
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO 
+        title="كتاب فن ريادة الأعمال | Read to Lead"
+        description="دليل عملي شامل لتحويل فكرتك لمشروع حقيقي ناجح بأسلوب منظم وتطبيقي."
+        image="/assets/book-entrepreneurship.jpg"
+        url="https://land.readtolead.store/entrepreneurship-book"
+      />
+      
       {/* Header */}
       <Header />
 
