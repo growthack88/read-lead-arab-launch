@@ -64,6 +64,11 @@ const SEO: React.FC<SEOProps> = ({
     }
     canonicalLink.setAttribute('href', url);
     
+    // Track PageView with Facebook Pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'PageView');
+    }
+    
     // Cleanup function to restore original title
     const originalTitle = document.title;
     return () => {
