@@ -382,6 +382,14 @@ const ProductivityKit = () => {
               </section>
             </div>
           </div>
+
+          <a
+  href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
+  className="bg-[#FCD34D] text-black px-8 py-6 rounded-lg text-lg flex items-center justify-center hover:opacity-90 transition"
+>
+  <ShoppingCart className="ml-2 h-5 w-5" />
+🛒 اطلب Productivity Kit الآن
+</a>
         </section>
       </main>
 
