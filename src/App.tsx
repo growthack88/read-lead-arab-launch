@@ -9,6 +9,7 @@ import SalesBook from "./pages/SalesBook";
 import CareerBook from "./pages/CareerBook";
 import InstitutionalSuccessBook from "./pages/InstitutionalSuccessBook";
 import MarketingBook from "./pages/MarketingBook";
+import SelfDevelopmentBook from "./pages/SelfDevelopmentBook";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "./components/ui/toaster";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/career-book" element={<CareerBook />} />
           <Route path="/institutional-success-book" element={<InstitutionalSuccessBook />} />
           <Route path="/marketing-book" element={<MarketingBook />} />
+          <Route path="/self-development-book" element={<SelfDevelopmentBook />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
