@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,9 @@ const StartupKit = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // Shopify checkout link for Startup Kit
+  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button";
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
@@ -226,7 +230,7 @@ const StartupKit = () => {
                 <li className="border-b pb-2">١١. الجنون مجاملة – ليندا روتنبرغ</li>
                 <li className="border-b pb-2">١٢. فكر كرائد أعمال تصرف كمدير تنفيذي – بيفرلي إي جونز</li>
                 <li className="border-b pb-2">١٣. لا تقسم الفرق أبداً – كريستوفر فوس وتال راس</li>
-                <li className="border-b pb-2">١٤. محركات نمو الشركات الناشئة – شون إليز ومورغان براون</li>
+                <li className="border-b pb-2">١٤. محركات نمو الشركات الناشئة – شون إليس ومورغان براون</li>
                 <li className="border-b pb-2">١٥. التوسع – فيرن هارنيش</li>
                 <li className="border-b pb-2">١٦. قانون مور – أرنولد ثاكري، ديفيد بروك، راشيل جونز</li>
                 <li className="border-b pb-2">١٧. ضائع ومؤسس – راند فيشكن</li>
@@ -256,14 +260,13 @@ const StartupKit = () => {
                 <p className="text-gray-600 mb-6">
                   🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
-                <Button
-                  variant="custom"
-                  size="lg"
-                  className="px-6 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white flex items-center gap-2"
+                <a
+                  href={shopifyCheckoutLink}
+                  className="px-6 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white flex items-center gap-2 justify-center"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   🛒 اطلب Startup Builder Kit الآن
-                </Button>
+                </a>
                 <p className="mt-4 text-gray-600">📦 أول خطوة حقيقية تبدأ بيها رحلتك الريادية</p>
               </div>
             </div>
@@ -385,12 +388,13 @@ const StartupKit = () => {
 
       {/* Sticky Purchase Bar */}
       <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl shadow-md">
-        <Button
+        <a
+          href={shopifyCheckoutLink}
           className="bg-[#0D9488] text-white px-5 py-2 rounded-md hover:opacity-90 flex items-center gap-2"
         >
           <ShoppingCart className="w-4 h-4" />
           📦 اطلب الآن
-        </Button>
+        </a>
         <span className="font-bold text-[#0D9488]">السعر: 1250 جنيه</span>
       </div>
       
