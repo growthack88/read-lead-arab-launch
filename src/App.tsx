@@ -22,15 +22,21 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          
+          {/* Kit Pages */}
           <Route path="/startup-kit" element={<StartupKit />} />
           <Route path="/sales-marketing-kit" element={<SalesMarketingKit />} />
           <Route path="/productivity-kit" element={<ProductivityKit />} />
+          
+          {/* Book Pages */}
           <Route path="/productivity-book" element={<ProductivityBook />} />
           <Route path="/sales-book" element={<SalesBook />} />
           <Route path="/career-book" element={<CareerBook />} />
           <Route path="/institutional-success-book" element={<InstitutionalSuccessBook />} />
           <Route path="/marketing-book" element={<MarketingBook />} />
           <Route path="/self-development-book" element={<SelfDevelopmentBook />} />
+          
+          {/* Catch All */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
