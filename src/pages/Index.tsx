@@ -58,8 +58,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/startup-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button",
-      currentPrice: "٩٩٩ جنيه",
-      comparePrice: "١٢٠٠ جنيه"
+      currentPrice: "١٢٥٠ جنيه",
+      comparePrice: "٢٠٠٠ جنيه"
     },
     {
       title: "Productivity Kit",
