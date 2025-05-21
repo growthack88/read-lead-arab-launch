@@ -13,15 +13,28 @@ const Header = () => {
             <Link to="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
               الرئيسية
             </Link>
-            <Link to="/startup-kit" className="text-rtl-dark hover:text-rtl-teal mr-6">
-              الكيتس
-            </Link>
-            <Link to="/productivity-book" className="text-rtl-dark hover:text-rtl-teal mr-6">
-              الكتب
-            </Link>
-            <Link to="#" className="text-rtl-dark hover:text-rtl-teal">
+            <a 
+              href="#kits" 
+              className="text-rtl-dark hover:text-[#0D9488] transition mr-6"
+            >
+              المنتجات
+            </a>
+            <a 
+              href="https://readtolead.store/pages/%D9%85%D9%86-%D9%86%D8%AD%D9%86"
+              className="text-rtl-dark hover:text-[#0D9488] transition mr-6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              من نحن
+            </a>
+            <a 
+              href="https://readtolead.store/pages/contact"
+              className="text-rtl-dark hover:text-[#0D9488] transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               تواصل معنا
-            </Link>
+            </a>
           </nav>
         </div>
       </div>
