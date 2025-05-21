@@ -76,7 +76,7 @@ const Index = () => {
     },
   ];
   
-  // New books section data with pricing - REMOVED duplicate book card
+  // New books section data with pricing and updated links
   const newBooks = [
     {
       title: "سلسلة النتاجية بلا حدود",
@@ -93,7 +93,8 @@ const Index = () => {
       description: "تخطيط وتطوير مسارك الوظيفي باحترافية",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/career-book"
     },
     {
       title: "سلسلة التسويق الحديث",
@@ -101,15 +102,17 @@ const Index = () => {
       description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/marketing-book"
     },
     {
-      title: "سلسلة القيادة وإدارة الفعالة",
+      title: "سلسلة القيادة والإدارة الفعالة",
       imageSrc: "/lovable-uploads/7b271e77-fc40-4b05-a14f-f093c1f9cdb4.png",
       description: "استراتيجيات فعالة للقيادة وإدارة الناجحة",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/leadership-book"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",
@@ -117,7 +120,8 @@ const Index = () => {
       description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/self-development-book"
     },
     {
       title: "سلسلة فن البيع والشراء",
@@ -125,7 +129,8 @@ const Index = () => {
       description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/sales-book"
     },
     {
       title: "سلسلة فن ريادة الأعمال",
@@ -133,7 +138,8 @@ const Index = () => {
       description: "مهارات وأدوات بناء المشاريع الناجحة",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/entrepreneurship-book"
     },
     {
       title: "سلسلة قواعد النجاح المؤسسي",
@@ -141,7 +147,8 @@ const Index = () => {
       description: "بناء ثقافة مؤسسية ناجحة وبيئة عمل محفزة",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/institutional-success-book"
     },
   ];
 
@@ -204,7 +211,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* New Books Section - Updated with prices and link to productivity book */}
+        {/* New Books Section - Updated with prices and links */}
         <section id="new-books" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">

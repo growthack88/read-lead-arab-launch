@@ -1,13 +1,14 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import StartupKit from "./pages/StartupKit";
+import StartupKit from "./pages/kits/StartupKit";
 import SalesMarketingKit from "./pages/SalesMarketingKit";
 import ProductivityKit from "./pages/ProductivityKit";
 import ProductivityBook from "./pages/ProductivityBook";
 import SalesBook from "./pages/SalesBook";
 import CareerBook from "./pages/CareerBook";
-import InstitutionalSuccessBook from "./pages/InstitutionalSuccessBook";
+import EntrepreneurshipBook from "./pages/books/EntrepreneurshipBook";
+import LeadershipBook from "./pages/books/LeadershipBook";
 import MarketingBook from "./pages/MarketingBook";
 import SelfDevelopmentBook from "./pages/SelfDevelopmentBook";
 import NotFound from "./pages/NotFound";
@@ -32,9 +33,11 @@ function App() {
           <Route path="/productivity-book" element={<ProductivityBook />} />
           <Route path="/sales-book" element={<SalesBook />} />
           <Route path="/career-book" element={<CareerBook />} />
-          <Route path="/institutional-success-book" element={<InstitutionalSuccessBook />} />
+          <Route path="/leadership-book" element={<LeadershipBook />} />
           <Route path="/marketing-book" element={<MarketingBook />} />
           <Route path="/self-development-book" element={<SelfDevelopmentBook />} />
+          <Route path="/entrepreneurship-book" element={<EntrepreneurshipBook />} />
+          <Route path="/institutional-success-book" element={<LeadershipBook />} /> {/* Alias for backward compatibility */}
           
           {/* Catch All */}
           <Route path="*" element={<NotFound />} />
