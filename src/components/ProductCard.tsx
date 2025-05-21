@@ -72,7 +72,13 @@ const ProductCard = ({
         )}
         
         <div className="flex justify-end">
-          {checkoutLink ? (
+          {/* On homepage we show internal navigation buttons,
+              On product pages we use direct checkout links */}
+          {link ? (
+            <Link to={link} className="bg-rtl-teal text-white px-4 py-2 rounded-md text-sm hover:bg-rtl-teal/80 transition-colors">
+              {buttonText}
+            </Link>
+          ) : checkoutLink ? (
             <a 
               href={checkoutLink}
               className="bg-rtl-teal text-white px-4 py-2 rounded-md text-sm hover:bg-rtl-teal/80 transition-colors"
@@ -95,12 +101,12 @@ const ProductCard = ({
 
   const cardClassName = "rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg";
 
-  // If we have a link, wrap the card in a Link component
+  // If we have a link but no checkout link, wrap the card in a Link component for internal navigation
   if (link && !checkoutLink) {
     return (
-      <Link to={link} className={cardClassName}>
+      <div className={cardClassName}>
         {cardContent}
-      </Link>
+      </div>
     );
   }
 
