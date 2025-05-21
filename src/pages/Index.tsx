@@ -118,7 +118,8 @@ const Index = () => {
       description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه"
+      comparePrice: "٥٠٠ جنيه",
+      link: "/productivity-book"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",
