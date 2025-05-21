@@ -1,4 +1,3 @@
-
 import React from "react";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
@@ -77,10 +76,10 @@ const Index = () => {
     },
   ];
   
-  // New books section data with pricing
+  // New books section data with pricing - REMOVED duplicate book card
   const newBooks = [
     {
-      title: "كتاب إنتاجية بلا حدود",
+      title: "سلسلة النتاجية بلا حدود",
       imageSrc: "/lovable-uploads/167ced76-30d4-4269-a2d7-3f25b31cbe18.png",
       description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
       buttonText: "اكتشف الآن",
@@ -111,15 +110,6 @@ const Index = () => {
       buttonText: "اكتشف الآن",
       currentPrice: "٤٠٠ جنيه",
       comparePrice: "٥٠٠ جنيه"
-    },
-    {
-      title: "سلسلة النتاجية بلا حدود",
-      imageSrc: "/lovable-uploads/167ced76-30d4-4269-a2d7-3f25b31cbe18.png",
-      description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
-      buttonText: "اكتشف الآن",
-      currentPrice: "٤٠٠ جنيه",
-      comparePrice: "٥٠٠ جنيه",
-      link: "/productivity-book"
     },
     {
       title: "سلسلة تطوير الذات والنمو الشخصي",

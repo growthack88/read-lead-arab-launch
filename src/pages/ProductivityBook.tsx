@@ -39,7 +39,7 @@ const ProductivityBook = () => {
       </header>
 
       {/* Main Content */}
-      <main className="py-8">
+      <main className="py-8 pb-24">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-white to-gray-50 py-16">
           <div className="container mx-auto px-4">
@@ -58,7 +58,7 @@ const ProductivityBook = () => {
               
               <div className="mx-auto">
                 <img
-                  src="/lovable-uploads/a3f8304d-2ca7-4b26-9282-b9178b10ca5d.png"
+                  src="/lovable-uploads/b346efb8-3583-4174-b3c9-14d5cef23ec9.png"
                   alt="كتاب إنتاجية بلا حدود"
                   className="w-full h-auto rounded-xl shadow-lg object-cover mx-auto"
                   style={{ aspectRatio: "2/1" }}
@@ -73,47 +73,39 @@ const ProductivityBook = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* Target Audience Section */}
+        {/* Target Audience and Benefits Section - MERGED */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="text-right">
-                <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
-                  🎯 الكتاب ده مناسب لمين؟
-                </h2>
-                <ul className="list-none space-y-3 pr-4">
-                  <li>✅ الموظفين اللي عايزين يحسنوا أداءهم ويزيدوا فرص ترقيتهم</li>
-                  <li>✅ رواد الأعمال اللي بيتعاملوا مع مهام كتيرة في وقت محدود</li>
-                  <li>✅ الفريلانسرز اللي بيتعاملوا مع مشاريع متعددة</li>
-                  <li>✅ المديرين اللي محتاجين يديروا فرقهم بكفاءة أعلى</li>
-                  <li>✅ الطلبة اللي بيدوروا على طرق أفضل للمذاكرة والتحصيل</li>
-                  <li>✅ أي شخص حاسس إن اليوم بيخلص من غير ما ينجز اللي عايزه</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section Divider */}
-        <div className="container mx-auto px-4 py-6">
-          <Separator className="bg-gray-200" />
-        </div>
-
-        {/* Benefits Section */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-right">
-                <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
-                  🧠 إزاي الكتاب هيفيدك؟
-                </h2>
-                <ul className="list-none space-y-3 pr-4">
-                  <li>• هتتعلم إزاي تستخدم طريقة الـ Time Blocking لزيادة التركيز وتقليل التشتت</li>
-                  <li>• هتكتشف تقنيات إدارة الطاقة مش بس إدارة الوقت، لأن الطاقة أهم من الوقت</li>
-                  <li>• هتتعلم استراتيجيات عملية لتقليل المهام غير المهمة وتركز على اللي بيعمل فرق</li>
-                  <li>• إزاي تشتغل بذكاء وليس بجهد!</li>
-                  <li>• هتتعلم تشتغل ساعات أقل بإنتاجية أعلى.</li>
-                </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                {/* Target Audience Column */}
+                <div className="space-y-2 text-right h-full">
+                  <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
+                    🎯 الكتاب ده مناسب لمين؟
+                  </h2>
+                  <ul className="list-none space-y-3 pr-4">
+                    <li>✅ الموظفين اللي عايزين يحسنوا أداءهم ويزيدوا فرص ترقيتهم</li>
+                    <li>✅ رواد الأعمال اللي بيتعاملوا مع مهام كتيرة في وقت محدود</li>
+                    <li>✅ الفريلانسرز اللي بيتعاملوا مع مشاريع متعددة</li>
+                    <li>✅ المديرين اللي محتاجين يديروا فرقهم بكفاءة أعلى</li>
+                    <li>✅ الطلبة اللي بيدوروا على طرق أفضل للمذاكرة والتحصيل</li>
+                    <li>✅ أي شخص حاسس إن اليوم بيخلص من غير ما ينجز اللي عايزه</li>
+                  </ul>
+                </div>
+                
+                {/* Benefits Column */}
+                <div className="space-y-2 text-right h-full">
+                  <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
+                    🧠 إزاي الكتاب هيفيدك؟
+                  </h2>
+                  <ul className="list-none space-y-3 pr-4">
+                    <li>• هتتعلم إزاي تستخدم طريقة الـ Time Blocking لزيادة التركيز وتقليل التشتت</li>
+                    <li>• هتكتشف تقنيات إدارة الطاقة مش بس إدارة الوقت، لأن الطاقة أهم من الوقت</li>
+                    <li>• هتتعلم استراتيجيات عملية لتقليل المهام غير المهمة وتركز على اللي بيعمل فرق</li>
+                    <li>• إزاي تشتغل بذكاء وليس بجهد!</li>
+                    <li>• هتتعلم تشتغل ساعات أقل بإنتاجية أعلى.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -351,15 +343,27 @@ const ProductivityBook = () => {
         </section>
       </main>
 
-      {/* Footer */}
+      {/* Footer with centered logo */}
       <footer className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Logo className="mx-auto mb-6" />
-            <p className="text-gray-600 mb-4">© 2025 جميع الحقوق محفوظة</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center w-full mb-4">
+              <Logo className="mx-auto" />
+            </div>
+            <p className="text-gray-600 mb-4 text-center">© 2025 جميع الحقوق محفوظة</p>
           </div>
         </div>
       </footer>
+      
+      {/* Sticky Purchase Button */}
+      <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md py-3 px-4 z-50 flex justify-between items-center md:px-8">
+        <Button className="bg-[#0D9488] text-white px-6 py-2 rounded-md hover:opacity-90 transition-opacity">
+          <ShoppingCart className="ml-2 h-5 w-5" /> 📦 اطلب الآن
+        </Button>
+        <div className="font-bold text-lg">
+          السعر: 400 جنيه
+        </div>
+      </div>
     </div>
   );
 };
