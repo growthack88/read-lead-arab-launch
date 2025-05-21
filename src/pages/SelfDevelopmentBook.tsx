@@ -2,10 +2,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingCart } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const SelfDevelopmentBook = () => {
+  // Shopify checkout link for Self-Development Book
+  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42047911264361:1?channel=buy_button";
+  
   return (
     <div className="min-h-screen bg-white pb-20 font-tajawal">
       <SEO 
@@ -164,11 +167,12 @@ const SelfDevelopmentBook = () => {
                 <h3 className="text-xl font-bold mb-6">
                   🟢 جاهز تكتشف النسخة الأفضل من نفسك؟
                 </h3>
-                <Button
-                  className="bg-[#0D9488] text-white px-5 py-3 rounded-lg hover:scale-105 transition text-lg"
+                <a
+                  href={shopifyCheckoutLink}
+                  className="inline-flex items-center justify-center bg-[#0D9488] text-white px-5 py-3 rounded-lg hover:scale-105 transition text-lg"
                 >
-                  🛒 اطلب كتاب تطوير الذات والنمو الشخصي الآن
-                </Button>
+                  <ShoppingCart className="ml-2 h-5 w-5" /> 🛒 اطلب كتاب تطوير الذات والنمو الشخصي الآن
+                </a>
                 <p className="mt-4 text-gray-600">
                   الخطوة الجاية في رحلة تطوير نفسك تبدأ من هنا
                 </p>
@@ -281,7 +285,9 @@ const SelfDevelopmentBook = () => {
       {/* Sticky Purchase Bar */}
       <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl">
         <span className="font-bold text-[#0D9488]">السعر: 400 جنيه</span>
-        <button className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">📦 اطلب الآن</button>
+        <a href={shopifyCheckoutLink} className="inline-flex items-center bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
+          <ShoppingCart className="ml-2 h-5 w-5" /> 📦 اطلب الآن
+        </a>
       </div>
 
       {/* Footer */}
