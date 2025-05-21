@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
@@ -76,44 +77,17 @@ const Index = () => {
     },
   ];
   
-  // Book bundles section data with prices
-  const bookBundles = [
-    {
-      title: "سلسلة فن ريادة الأعمال",
-      imageSrc: "/lovable-uploads/4374c556-afd0-4c74-af3c-f7ec9b255c52.png",
-      description: "مهارات وأدوات بناء المشاريع الناجحة",
-      buttonText: "احصل عليه الآن",
-      currentPrice: "٥٩٩ جنيه",
-      comparePrice: "١٠٠٠ جنيه"
-    },
-    {
-      title: "سلسلة فن البيع والشراء",
-      imageSrc: "/lovable-uploads/7e647cc3-d9cb-45b4-9486-ce4dbc9b3fbc.png",
-      description: "تقنيات احترافية للبيع والتفاوض وخدمة العملاء",
-      buttonText: "احصل عليه الآن",
-      currentPrice: "٥٩٩ جنيه",
-      comparePrice: "١١٠٠ جنيه"
-    },
-    {
-      title: "سلسلة التسويق الحديث",
-      imageSrc: "/lovable-uploads/11be787d-a088-47ad-a120-ed395a63ab33.png",
-      description: "استراتيجيات وأدوات التسويق في العصر الرقمي",
-      buttonText: "احصل عليه الآن",
-      currentPrice: "٥٩٩ جنيه",
-      comparePrice: "١١٠٠ جنيه"
-    },
-    {
-      title: "سلسلة تطوير الذات والنمو الشخصي",
-      imageSrc: "/lovable-uploads/8b66f9f6-fe4e-433c-b940-43ea64f00e92.png",
-      description: "رحلة لتطوير مهاراتك وتحقيق النمو الشخصي",
-      buttonText: "احصل عليه الآن",
-      currentPrice: "٥٩٩ جنيه",
-      comparePrice: "١١٠٠ جنيه"
-    },
-  ];
-  
   // New books section data with pricing
   const newBooks = [
+    {
+      title: "كتاب إنتاجية بلا حدود",
+      imageSrc: "/lovable-uploads/167ced76-30d4-4269-a2d7-3f25b31cbe18.png",
+      description: "كتابة التخطيط الفعال وزيادة إنتاجيتك",
+      buttonText: "اكتشف الآن",
+      currentPrice: "٤٠٠ جنيه",
+      comparePrice: "٥٠٠ جنيه",
+      link: "/productivity-book"
+    },
     {
       title: "سلسلة إدارة حياتك المهنية",
       imageSrc: "/lovable-uploads/438f3ead-8d32-4c2c-8c1d-f6bdea33c7d3.png",
@@ -239,30 +213,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Book Bundles Section - Updated with pricing */}
-        <section id="book-bundles" className="py-16 bg-gray-50" dir="rtl">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-              📚 باقات الكتب الجديدة
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {bookBundles.map((bundle, index) => (
-                <ProductCard
-                  key={index}
-                  title={bundle.title}
-                  index={index}
-                  imageSrc={bundle.imageSrc}
-                  description={bundle.description}
-                  buttonText={bundle.buttonText}
-                  currentPrice={bundle.currentPrice}
-                  comparePrice={bundle.comparePrice}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* New Books Section - Updated with prices */}
+        {/* New Books Section - Updated with prices and link to productivity book */}
         <section id="new-books" className="py-16 bg-white" dir="rtl">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
@@ -279,6 +230,7 @@ const Index = () => {
                   buttonText={book.buttonText}
                   currentPrice={book.currentPrice}
                   comparePrice={book.comparePrice}
+                  link={book.link}
                 />
               ))}
             </div>
