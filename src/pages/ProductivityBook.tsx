@@ -3,8 +3,14 @@ import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Book } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const ProductivityBook = () => {
   return (
@@ -15,16 +21,16 @@ const ProductivityBook = () => {
           <div className="flex justify-between items-center">
             <Logo />
             <nav className="space-x-6 flex flex-row-reverse">
-              <a href="/" className="text-gray-800 hover:text-teal-600 mr-6">
+              <a href="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
                 الرئيسية
               </a>
-              <a href="#" className="text-gray-800 hover:text-teal-600 mr-6">
+              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
                 المنتجات
               </a>
-              <a href="#" className="text-gray-800 hover:text-teal-600 mr-6">
+              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
                 من نحن
               </a>
-              <a href="#" className="text-gray-800 hover:text-teal-600">
+              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
                 تواصل معنا
               </a>
             </nav>
@@ -39,7 +45,7 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
               <div className="text-center">
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark mb-4">
                   🟢 كتاب إنتاجية بلا حدود | طريقك للعمل الذكي
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 mb-4">
@@ -72,7 +78,7 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-right">
-                <h2 className="text-2xl font-bold mb-6 text-gray-800">
+                <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
                   🎯 الكتاب ده مناسب لمين؟
                 </h2>
                 <ul className="list-none space-y-3 pr-4">
@@ -98,7 +104,7 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-right">
-                <h2 className="text-2xl font-bold mb-6 text-gray-800">
+                <h2 className="text-2xl font-bold mb-6 text-rtl-dark">
                   🧠 إزاي الكتاب هيفيدك؟
                 </h2>
                 <ul className="list-none space-y-3 pr-4">
@@ -122,16 +128,16 @@ const ProductivityBook = () => {
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold mb-8 text-gray-800 text-right">
+              <h2 className="text-2xl font-bold mb-8 text-rtl-dark text-right">
                 💸 السعر والمزايا
               </h2>
-              <div className="bg-teal-50 rounded-xl p-8">
+              <div className="bg-rtl-teal/10 rounded-xl p-8">
                 <div className="flex justify-between items-center flex-wrap">
                   <div>
                     <p className="text-lg">السعر السابق: <span className="line-through text-gray-500">500 جنيه</span></p>
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-teal-600">السعر: 400 جنيه</h3>
+                    <h3 className="text-3xl font-bold text-rtl-teal">السعر: 400 جنيه</h3>
                   </div>
                 </div>
                 <div className="mt-6 text-right">
@@ -154,7 +160,7 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">
+                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">
                   🟢 جاهز تضاعف إنتاجيتك وتنجز أكتر بوقت أقل؟
                 </h2>
               </div>
@@ -182,7 +188,7 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-right mb-8">
-                <h2 className="text-2xl font-bold mb-2 text-gray-800">
+                <h2 className="text-2xl font-bold mb-2 text-rtl-dark">
                   📚 إيه اللي هتلاقيه جوا الكتاب؟
                 </h2>
                 <p className="text-gray-700">
@@ -206,7 +212,7 @@ const ProductivityBook = () => {
                   </ol>
                 </div>
                 <div className="text-right">
-                  <ol className="list-decimal list-inside space-y-1 pr-4" start="11" dir="rtl">
+                  <ol className="list-decimal list-inside space-y-1 pr-4" start={11} dir="rtl">
                     <li>تقليل الجهد – غريغ ماكيون</li>
                     <li>حرية التركيز – مايكل هايت</li>
                     <li>جيمبا كايزن – ماساكي ايماي</li>
@@ -234,7 +240,7 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-right mb-8">
-                <h2 className="text-2xl font-bold text-gray-800">
+                <h2 className="text-2xl font-bold text-rtl-dark">
                   ❓ الأسئلة الشائعة – كتاب إنتاجية بلا حدود
                 </h2>
               </div>
@@ -329,13 +335,13 @@ const ProductivityBook = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">
+                <h2 className="text-2xl font-bold mb-4 text-rtl-dark">
                   اطلب الكتاب دلوقتي وابدأ رحلة الإنتاجية
                 </h2>
               </div>
               <div className="mb-6">
                 <Button
-                  className="w-full max-w-md mx-auto bg-teal-600 hover:bg-teal-700 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
+                  className="w-full max-w-md mx-auto bg-rtl-teal hover:bg-rtl-teal/90 text-white py-6 rounded-lg text-xl hover:scale-[1.02] transition-transform"
                 >
                   <ShoppingCart className="ml-2 h-6 w-6" /> 🛒 اطلب كتاب إنتاجية بلا حدود الآن
                 </Button>
