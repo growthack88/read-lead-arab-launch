@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShoppingCart } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import Logo from "@/components/Logo";
 
 const MarketingBook = () => {
   return (
