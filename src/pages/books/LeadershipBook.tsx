@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 
 const LeadershipBook = () => {
@@ -10,20 +9,23 @@ const LeadershipBook = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir="rtl">
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section className="py-10 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto rtl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
             {/* Left Column - Text */}
-            <div className="space-y-4 order-2 md:order-1">
+            <div className="space-y-4 order-2 md:order-1 text-right">
               <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark">
                 🟢 كتاب القيادة والإدارة الفعالة | أسرار القادة الملهمين
               </h1>
               <p className="text-lg text-gray-700 font-medium">
                 خلاصة أهم 20 كتاب في القيادة والإدارة لمساعدتك على بناء فريق متميز وتحقيق نتائج استثنائية.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 كتاب "القيادة والإدارة الفعالة" هو دليلك الشامل لأحدث نظريات وتطبيقات القيادة. جمعنالك فيه خلاصة تجارب أنجح القادة في العالم، من بناء الرؤية وتحفيز الفريق، لحل الصراعات وإدارة التغيير، وحتى تطوير مهارات الذكاء العاطفي واتخاذ القرارات الصعبة.
               </p>
             </div>
@@ -33,7 +35,7 @@ const LeadershipBook = () => {
               <img
                 src="/lovable-uploads/7b271e77-fc40-4b05-a14f-f093c1f9cdb4.png"
                 alt="كتاب القيادة والإدارة الفعالة"
-                className="aspect-[2/1] rounded-xl shadow-lg object-contain w-full"
+                className="aspect-[2/1] rounded-xl shadow-lg object-cover w-full"
               />
             </div>
           </div>
@@ -43,7 +45,7 @@ const LeadershipBook = () => {
       {/* Benefits & Target Audience Section */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto rtl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Right Column (target audience) */}
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-bold mb-4 text-rtl-dark">
@@ -112,7 +114,7 @@ const LeadershipBook = () => {
       {/* Pricing Section */}
       <section className="py-16 bg-white" id="pricing">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center rtl">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-rtl-dark">
               🟢 جاهز تصبح قائد ملهم يحقق نتائج استثنائية؟
             </h2>
@@ -124,7 +126,7 @@ const LeadershipBook = () => {
                   <span className="text-lg line-through text-gray-500">السعر السابق: 500 جنيه</span>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
+                  🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
                 <Button
                   variant="custom"
@@ -140,10 +142,10 @@ const LeadershipBook = () => {
         </div>
       </section>
 
-      {/* What's Inside Section */}
+      {/* What's Inside Section - Updated to use proper list */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rtl">
+          <div className="max-w-4xl mx-auto text-right">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-rtl-dark">
               📚 إيه اللي هتلاقيه جوا الكتاب؟
             </h2>
@@ -152,7 +154,7 @@ const LeadershipBook = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-1">
-              <ul className="space-y-1 pr-4 text-right">
+              <ul className="space-y-1 pr-4 list-disc list-inside">
                 <li>The 21 Irrefutable Laws of Leadership - القوانين 21 التي لا تقبل الجدل في مفهوم القيادة by John C. Maxwell - جون سي ماكسويل</li>
                 <li>The Art of Negotiation - فن التفاوض by Michael Wheeler - مايكل ويلر</li>
                 <li>The CEO Next Door - الرئيس التنفيذي القادم by Elena Botelho and Kim Powell - ايلينا بوتيلو، كيم باول</li>
@@ -165,7 +167,7 @@ const LeadershipBook = () => {
                 <li>The Leadership Lab - معمل صناعة القيادة by Chris Lewis, Dr Pippa Malmgren - كريس لويس، بيبا مالمغرن</li>
               </ul>
 
-              <ul className="space-y-1 pr-4 text-right">
+              <ul className="space-y-1 pr-4 list-disc list-inside">
                 <li>The Leader's Greatest Return - أعظم عائد للقائد by John C. Maxwell - جون سي ماكسويل</li>
                 <li>The Making of a Manager - عملية صناعة المديرين by Julie Zhuo - جولي تشو</li>
                 <li>The Motivation Code - الكود التحفيزي by Todd Henry with Ron Penner, Todd W. Hall, and Joshua Miller - تود هنرى، رون بينر، تود دبليو هول، جوشوا ميلر</li>
@@ -185,7 +187,7 @@ const LeadershipBook = () => {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rtl">
+          <div className="max-w-4xl mx-auto text-right">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-rtl-dark">
               ❓ الأسئلة الشائعة – كتاب القيادة والإدارة الفعالة
             </h2>
@@ -272,7 +274,7 @@ const LeadershipBook = () => {
       </section>
 
       {/* Sticky Purchase Bar */}
-      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl">
+      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center">
         <button className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
           📦 اطلب الآن
         </button>

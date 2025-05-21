@@ -1,6 +1,5 @@
-
 import React from "react";
-import Logo from "@/components/Logo";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ShoppingCart } from "lucide-react";
@@ -10,35 +9,15 @@ const MarketingBook = () => {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       {/* Header */}
-      <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <Logo />
-            <nav className="space-x-6 flex flex-row-reverse">
-              <a href="/" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                الرئيسية
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                المنتجات
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal mr-6">
-                من نحن
-              </a>
-              <a href="#" className="text-rtl-dark hover:text-rtl-teal">
-                تواصل معنا
-              </a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main className="py-8 pb-24">
         {/* Hero Section - Two-Column Layout */}
         <section className="bg-gradient-to-br from-white to-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center max-w-5xl mx-auto">
-              {/* Column 1: Text Content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+              {/* Left Column - Text Content */}
               <div className="space-y-4 text-right order-2 md:order-1">
                 <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark mb-4">
                   🟢 كتاب التسويق الحديث | أسرار صناعة الماركتنج
@@ -51,13 +30,12 @@ const MarketingBook = () => {
                 </p>
               </div>
               
-              {/* Column 2: Product Image */}
+              {/* Right Column - Product Image - Updated */}
               <div className="order-1 md:order-2">
                 <img
                   src="/lovable-uploads/490e51b9-80e9-4446-8503-53b301967b9f.png"
                   alt="كتاب التسويق الحديث"
-                  className="w-full h-auto rounded-xl shadow-lg object-cover max-w-md mx-auto"
-                  style={{ aspectRatio: "2/1" }}
+                  className="aspect-[2/1] w-full object-cover rounded-lg shadow-lg"
                 />
               </div>
             </div>
@@ -130,7 +108,7 @@ const MarketingBook = () => {
                 </div>
                 <div className="mt-6 text-right">
                   <p className="text-gray-700">
-                    🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
+                    🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                   </p>
                 </div>
               </div>

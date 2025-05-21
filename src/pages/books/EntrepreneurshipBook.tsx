@@ -1,6 +1,5 @@
-
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -11,20 +10,23 @@ const EntrepreneurshipBook = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir="rtl">
+      {/* Header */}
+      <Header />
+
       {/* Hero Section */}
       <section className="py-10 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto rtl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
             {/* Left Column - Text */}
-            <div className="space-y-4 order-2 md:order-1">
+            <div className="space-y-4 order-2 md:order-1 text-right">
               <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark">
                 🟢 كتاب فن ريادة الأعمال | دليلك الشامل لبناء مشروعك الناجح
               </h1>
               <p className="text-lg text-gray-700 font-medium">
                 خلاصة أهم 20 كتاب عالمي في ريادة الأعمال هتساعدك تحول فكرتك لمشروع حقيقي ناجح.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-relaxed">
                 كتاب "فن ريادة الأعمال" هو دليلك العملي لبناء مشروعك الخاص من الصفر للنجاح. جمعنالك فيه خلاصة تجارب أنجح رواد الأعمال في العالم، بداية من تحويل الفكرة لنموذج أعمال، مروراً بخطط التمويل والتسويق، وحتى استراتيجيات النمو والتوسع.
               </p>
             </div>
@@ -34,7 +36,7 @@ const EntrepreneurshipBook = () => {
               <img
                 src="/lovable-uploads/4b92d458-9572-4368-a623-072f5ac39987.png"
                 alt="كتاب فن ريادة الأعمال"
-                className="aspect-[2/1] rounded-xl shadow-lg object-contain w-full"
+                className="aspect-[2/1] rounded-xl shadow-lg object-cover w-full"
               />
             </div>
           </div>
@@ -44,7 +46,7 @@ const EntrepreneurshipBook = () => {
       {/* Benefits & Target Audience Section */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto rtl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Right Column (target audience) */}
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <h2 className="text-2xl font-bold mb-4 text-rtl-dark">
@@ -113,7 +115,7 @@ const EntrepreneurshipBook = () => {
       {/* Pricing Section */}
       <section className="py-16 bg-white" id="pricing">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center rtl">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-rtl-dark">
               🟢 جاهز تخلق فرصتك الخاصة وتبني مشروعك الناجح؟
             </h2>
@@ -125,7 +127,7 @@ const EntrepreneurshipBook = () => {
                   <span className="text-lg line-through text-gray-500">السعر السابق: 500 جنيه</span>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
+                  🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
                 <Button
                   variant="custom"
@@ -141,10 +143,10 @@ const EntrepreneurshipBook = () => {
         </div>
       </section>
 
-      {/* What's Inside Section */}
+      {/* What's Inside Section - Updated to use proper list */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rtl">
+          <div className="max-w-4xl mx-auto text-right">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-rtl-dark">
               📚 إيه اللي هتلاقيه جوا الكتاب؟
             </h2>
@@ -153,7 +155,7 @@ const EntrepreneurshipBook = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-1">
-              <ul className="space-y-1 pr-4 text-right">
+              <ul className="space-y-1 pr-4 list-disc list-inside">
                 <li>Zero to One - من الصفر إلى الواحد by Peter Thiel & Blake Masters - بيتر ثيل وبليك ماسترز</li>
                 <li>Built to Last - البناء للتشيد والاستدامة by Jim Collins - جيمس س. كولينز</li>
                 <li>Growth IQ - معدلات الذكاء للنمو by Tiffani Bova - تيفاني بوفا</li>
@@ -166,7 +168,7 @@ const EntrepreneurshipBook = () => {
                 <li>Cooking Up a Business - مرحلة تحضير الأعمال by Rachel Hofstetter - راشيل هوفستيتر</li>
               </ul>
 
-              <ul className="space-y-1 pr-4 text-right">
+              <ul className="space-y-1 pr-4 list-disc list-inside">
                 <li>Crazy is a Compliment - الجنون مجاملة by Linda Rottenberg - ليندا روتنبرغ</li>
                 <li>Think Like an Entrepreneur, Act Like a CEO - فكر كرائد أعمال تصرف كمدير تنفيذي by Beverly E. Jones - بيفرلي إي جونز</li>
                 <li>Never Split the Difference - لا تقسم الفرق أبداً by Christopher Voss & Tahl Raz - تال راس وكريستوفر فوس</li>
@@ -186,7 +188,7 @@ const EntrepreneurshipBook = () => {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto rtl">
+          <div className="max-w-4xl mx-auto text-right">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-rtl-dark">
               ❓ الأسئلة الشائعة – كتاب فن ريادة الأعمال
             </h2>
@@ -272,7 +274,7 @@ const EntrepreneurshipBook = () => {
       </section>
 
       {/* Sticky Purchase Bar */}
-      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl">
+      <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center">
         <button className="bg-[#0D9488] text-white px-4 py-2 rounded-md hover:opacity-90">
           📦 اطلب الآن
         </button>
