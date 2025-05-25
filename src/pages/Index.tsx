@@ -31,8 +31,8 @@ const products = [
     buttonText: "اكتشف الآن",
     link: "/sales-marketing-kit",
     checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
-    currentPrice: "٩٩٩ جنيه",
-    comparePrice: "١٢٠٠ جنيه"
+    currentPrice: "١٢٥٠ جنيه",
+    comparePrice: "٢٠٠٠ جنيه"
   },
   {
     id: 3,
@@ -43,8 +43,8 @@ const products = [
     buttonText: "اكتشف الآن",
     link: "/productivity-kit",
     checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
-    currentPrice: "٩٩٩ جنيه",
-    comparePrice: "١٢٠٠ جنيه"
+    currentPrice: "١٢٥٠ جنيه",
+    comparePrice: "٢٠٠٠ جنيه"
   }
 ];
 
@@ -68,8 +68,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/productivity-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
-      currentPrice: "٩٩٩ جنيه",
-      comparePrice: "١٢٠٠ جنيه"
+     currentPrice: "١٢٥٠ جنيه",
+      comparePrice: "٢٠٠٠ جنيه"
     },
     {
       title: "Sales & Marketing Kit",
@@ -78,8 +78,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/sales-marketing-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
-      currentPrice: "٩٩٩ جنيه",
-      comparePrice: "١٢٠٠ جنيه"
+        currentPrice: "١٢٥٠ جنيه",
+      comparePrice: "٢٠٠٠ جنيه"
     },
   ];
   
