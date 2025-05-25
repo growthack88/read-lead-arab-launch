@@ -65,7 +65,7 @@ const SalesMarketingKit = () => {
                       className="px-8 py-6 rounded-lg text-lg bg-[#0D9488] text-white inline-flex items-center gap-2 hover:bg-[#0D9488]/90 transition-colors"
                     >
                       <ShoppingCart className="ml-2 h-5 w-5" />
-                      أضف للسلة
+          🛒 اطلب Sales & Marketing Kit الآن
                     </a>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ const SalesMarketingKit = () => {
 
       {/* Sticky Purchase CTA */}
       <div className="fixed bottom-0 w-full bg-white border-t px-4 py-3 flex justify-between items-center z-50 shadow-md">
-        <span className="font-bold text-[#0D9488]">السعر: 999 جنيه</span>
+        <span className="font-bold text-[#0D9488]">السعر: 1250 جنيه</span>
         <a href={shopifyCheckoutLink} className="bg-[#0D9488] text-white px-5 py-2 rounded-md hover:opacity-90 flex items-center gap-2">
           <ShoppingCart className="w-4 h-4" />
           📦 اطلب الآن
