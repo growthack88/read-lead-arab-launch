@@ -178,8 +178,8 @@ const ProductivityKit = () => {
                 💸 السعر والمزايا
               </h2>
               <div className="bg-rtl-teal/10 rounded-xl p-8 text-center">
-                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: ٩٩٩ جنيه</h3>
-                <p className="text-xl mb-2">السعر السابق: <span className="line-through text-gray-500">١٢٠٠ جنيه</span></p>
+                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: 1250 جنيه</h3>
+                <p className="text-xl mb-2">السعر السابق: <span className="line-through text-gray-500">2000 جنيه</span></p>
                 <p className="text-xl mb-2">🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين</p>
               </div>
             </div>
