@@ -254,8 +254,8 @@ const StartupKit = () => {
             <div className="bg-rtl-teal/10 p-8 rounded-2xl shadow-sm mb-8">
               <div className="flex flex-col items-center gap-2">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl font-bold text-rtl-teal">السعر: 1250 جنيه</span>
-                  <span className="text-lg line-through text-gray-500">السعر السابق: 1400 جنيه</span>
+                  <span className="text-2xl font-bold text-rtl-teal">السعر: 999 جنيه</span>
+                  <span className="text-lg line-through text-gray-500">السعر السابق: 2000 جنيه</span>
                 </div>
                 <p className="text-gray-600 mb-6">
                   🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
@@ -395,7 +395,7 @@ const StartupKit = () => {
           <ShoppingCart className="w-4 h-4" />
           📦 اطلب الآن
         </a>
-        <span className="font-bold text-[#0D9488]">السعر: 1250 جنيه</span>
+        <span className="font-bold text-[#0D9488]">السعر: 999 جنيه</span>
       </div>
       
       {/* Simple Footer */}
