@@ -192,7 +192,7 @@ const SalesMarketingKit = () => {
                 💸 السعر والمزايا
               </h2>
               <div className="bg-rtl-teal/10 rounded-xl p-8 text-center">
-                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: 1250 جنيه</h3>
+                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: ٩٩٩ جنيه</h3>
                 <p className="text-xl mb-2">السعر السابق: <span className="line-through text-gray-500">2000 جنيه</span></p>
                 <p className="text-xl mb-2">🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين</p>
               </div>
@@ -344,7 +344,7 @@ const SalesMarketingKit = () => {
 
                     <div className="space-y-1">
                       <p className="font-semibold">٧. هل الكتب كاملة ولا ملخصات؟</p>
-                      <p>كتابين كاملين + ملخصات لأكثر من ٣٠ كتاب</p>
+                      <p>كتابين كاملين ل ملخصات من ٤٠ كتاب الاكثر شهرة وقراءة.</p>
                     </div>
 
                     <div className="space-y-1">
@@ -376,7 +376,7 @@ const SalesMarketingKit = () => {
 
       {/* Sticky Purchase CTA */}
       <div className="fixed bottom-0 w-full bg-white border-t px-4 py-3 flex justify-between items-center z-50 shadow-md">
-        <span className="font-bold text-[#0D9488]">السعر: 1250 جنيه</span>
+        <span className="font-bold text-[#0D9488]">السعر: ٩٩٩ جنيه</span>
         <a href={shopifyCheckoutLink} className="bg-[#0D9488] text-white px-5 py-2 rounded-md hover:opacity-90 flex items-center gap-2">
           <ShoppingCart className="w-4 h-4" />
           📦 اطلب الآن
