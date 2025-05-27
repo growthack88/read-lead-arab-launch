@@ -19,8 +19,8 @@ const products = [
     buttonText: "اكتشف الآن",
     link: "/startup-kit",
     checkoutLink: "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button",
-    currentPrice: "١٢٥٠ جنيه",
-    comparePrice: null
+    currentPrice: "999 جنيه",
+    comparePrice: 2000
   },
   {
     id: 2,
@@ -31,8 +31,8 @@ const products = [
     buttonText: "اكتشف الآن",
     link: "/sales-marketing-kit",
     checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
-    currentPrice: "١٢٥٠ جنيه",
-    comparePrice: "٢٠٠٠ جنيه"
+    currentPrice: "999 جنيه",
+    comparePrice: "2000 جنيه"
   },
   {
     id: 3,
@@ -43,8 +43,8 @@ const products = [
     buttonText: "اكتشف الآن",
     link: "/productivity-kit",
     checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
-    currentPrice: "١٢٥٠ جنيه",
-    comparePrice: "٢٠٠٠ جنيه"
+    currentPrice: "999 جنيه",
+    comparePrice: "2000 جنيه"
   }
 ];
 
@@ -58,8 +58,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/startup-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button",
-      currentPrice: "١٢٥٠ جنيه",
-      comparePrice: "٢٠٠٠ جنيه"
+      currentPrice: "999 جنيه",
+      comparePrice: "2000 جنيه"
     },
     {
       title: "Productivity Kit",
@@ -68,8 +68,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/productivity-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
-     currentPrice: "١٢٥٠ جنيه",
-      comparePrice: "٢٠٠٠ جنيه"
+     currentPrice: "999 جنيه",
+      comparePrice: "2000 جنيه"
     },
     {
       title: "Sales & Marketing Kit",
@@ -78,8 +78,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/sales-marketing-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
-        currentPrice: "١٢٥٠ جنيه",
-      comparePrice: "٢٠٠٠ جنيه"
+        currentPrice: "999 جنيه",
+      comparePrice: "2000 جنيه"
     },
   ];
   
