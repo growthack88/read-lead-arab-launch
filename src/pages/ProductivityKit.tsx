@@ -178,7 +178,7 @@ const ProductivityKit = () => {
                 💸 السعر والمزايا
               </h2>
               <div className="bg-rtl-teal/10 rounded-xl p-8 text-center">
-                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: 1250 جنيه</h3>
+                <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: 999 جنيه</h3>
                 <p className="text-xl mb-2">السعر السابق: <span className="line-through text-gray-500">2000 جنيه</span></p>
                 <p className="text-xl mb-2">🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين</p>
               </div>
@@ -331,7 +331,7 @@ const ProductivityKit = () => {
                         <li>• عن الإنتاجية</li>
                         <li>• عن تطوير الذات</li>
                       </ul>
-                      <p>📖 + ملخصات لأكتر من ٢٠ كتاب عالمي</p>
+                      <p>📖 + ملخصات لأكتر من 40 كتاب عالمي</p>
                     </div>
 
                     <div className="space-y-1">
@@ -360,7 +360,7 @@ const ProductivityKit = () => {
 
                     <div className="space-y-1">
                       <p className="font-semibold">٧. الكتب كاملة ولا ملخصة؟</p>
-                      <p>فيها كتابين كاملين + ملخصات مركّزة لأكتر من ٢٠ كتاب عالمي.</p>
+                      <p>فيها كتابين كاملين ل ملخصات مركّزة لأكتر من ٤٠ كتاب عالمي.</p>
                     </div>
 
                     <div className="space-y-1">
