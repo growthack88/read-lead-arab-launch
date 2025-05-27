@@ -104,7 +104,7 @@ const ProductivityKit = () => {
                 <div className="flex flex-col items-center gap-2">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl font-bold text-rtl-teal">السعر: ٩٩٩ جنيه</span>
-                    <span className="text-lg line-through text-gray-500">السعر السابق: ١٢٠٠ جنيه</span>
+                    <span className="text-lg line-through text-gray-500">السعر السابق: ٢٠٠٠ جنيه</span>
                   </div>
                   <p className="text-gray-600 mb-4">
                     🚚 شحن خلال ١-٣ أيام | 💳 الدفع عند الاستلام أو أونلاين
@@ -177,11 +177,11 @@ const ProductivityKit = () => {
               <h3 className="font-bold text-lg mb-4">تواصل معنا</h3>
               <ul className="space-y-2">
                 <li className="flex items-center justify-end gap-2">
-                  <span>info@readtolead.com</span>
+                  <span>hi@readtolead.store</span>
                   <span>✉️</span>
                 </li>
                 <li className="flex items-center justify-end gap-2">
-                  <span>+123456789</span>
+                  <span>+201096590917</span>
                   <span>📱</span>
                 </li>
               </ul>
