@@ -54,9 +54,9 @@ const StartupKit = () => {
       {/* Hero Section */}
       <section className="py-10 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto rtl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto rtl min-h-[500px]">
             {/* Right Column - Text */}
-            <div className="space-y-4 order-2 md:order-1">
+            <div className="space-y-4 order-2 md:order-1 flex flex-col justify-center">
               <h1 className="text-3xl md:text-4xl font-bold text-rtl-dark">
                 Startup Builder Kit | مجموعة بناء الشركات الناشئة
               </h1>
@@ -86,11 +86,11 @@ const StartupKit = () => {
             </div>
 
             {/* Left Column - Image */}
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 flex items-stretch">
               <img
                 src="/lovable-uploads/490e51b9-80e9-4446-8503-53b301967b9f.png"
                 alt="Startup Builder Kit"
-                className="aspect-[2/1] rounded-xl shadow-lg object-contain w-full"
+                className="w-full h-full min-h-[400px] md:min-h-full rounded-xl shadow-lg object-cover"
               />
             </div>
           </div>
