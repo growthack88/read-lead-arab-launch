@@ -1,9 +1,11 @@
+
 import React from "react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ShoppingCart, Book, ClipboardCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import QuantitySelector from "@/components/QuantitySelector";
 import {
   Accordion,
   AccordionContent,
@@ -12,8 +14,11 @@ import {
 } from "@/components/ui/accordion";
 
 const ProductivityKit = () => {
+  const baseCheckoutUrl = "https://si51ve-s6.myshopify.com/cart";
+  const productVariantId = "42289428791401";
+
   return (
-    <div className="min-h-screen bg-white" dir="rtl">
+    <div className="min-h-screen bg-white pb-20" dir="rtl">
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <div className="container mx-auto px-4">
@@ -56,13 +61,12 @@ const ProductivityKit = () => {
                   </p>
                   
                   <div className="text-center md:text-right">
-        <a
-  href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
-  className="bg-[#FCD34D] text-black px-8 py-6 rounded-lg text-lg flex items-center justify-center hover:opacity-90 transition"
->
-  <ShoppingCart className="ml-2 h-5 w-5" />
-احصل علي الباقة الان
-</a>
+                    <QuantitySelector 
+                      baseCheckoutUrl={baseCheckoutUrl}
+                      productVariantId={productVariantId}
+                      buttonText="احصل علي الباقة الان"
+                      price="999"
+                    />
                   </div>
                 </div>
                 <div className="flex-1">
@@ -191,12 +195,12 @@ const ProductivityKit = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 مستعد تبدأ رحلتك في الإنتاجية؟</h2>
-       <a
-  href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
-  className="bg-[#FCD34D] text-black px-8 py-6 rounded-lg text-lg flex items-center justify-center hover:opacity-90 transition"
->
-  <ShoppingCart className="ml-2 h-5 w-5" />
-🛒 اطلب Productivity Kit الآن</a>
+              <QuantitySelector 
+                baseCheckoutUrl={baseCheckoutUrl}
+                productVariantId={productVariantId}
+                buttonText="🛒 اطلب Productivity Kit الآن"
+                price="999"
+              />
               <p className="text-lg font-medium mt-6 text-rtl-dark">ابدأ بإدارة وقتك وتطوير نفسك من النهاردة</p>
             </div>
           </div>
@@ -383,13 +387,14 @@ const ProductivityKit = () => {
             </div>
           </div>
 
-          <a
-  href="https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button"
-  className="bg-[#FCD34D] text-black px-8 py-6 rounded-lg text-lg flex items-center justify-center hover:opacity-90 transition"
->
-  <ShoppingCart className="ml-2 h-5 w-5" />
-🛒 اطلب Productivity Kit الآن
-</a>
+          <div className="mt-8 flex justify-center">
+            <QuantitySelector 
+              baseCheckoutUrl={baseCheckoutUrl}
+              productVariantId={productVariantId}
+              buttonText="🛒 اطلب Productivity Kit الآن"
+              price="999"
+            />
+          </div>
         </section>
       </main>
 
@@ -397,6 +402,17 @@ const ProductivityKit = () => {
       <footer className="py-6 text-center border-t">
         <p className="text-gray-600">© جميع الحقوق محفوظة</p>
       </footer>
+
+      {/* Sticky Purchase Bar */}
+      <div className="fixed bottom-0 w-full bg-white border-t px-4 py-3 flex justify-between items-center z-50 shadow-md">
+        <span className="font-bold text-[#0D9488]">السعر: 999 جنيه</span>
+        <QuantitySelector 
+          baseCheckoutUrl={baseCheckoutUrl}
+          productVariantId={productVariantId}
+          buttonText="📦 اطلب الآن"
+          price="999"
+        />
+      </div>
     </div>
   );
 };
