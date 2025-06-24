@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Logo from "@/components/Logo";
 import SEO from "@/components/SEO";
+import QuantitySelector from "@/components/QuantitySelector";
 
 const StartupKit = () => {
   // Function to scroll back to top when navigating between sections
@@ -14,8 +15,9 @@ const StartupKit = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Shopify checkout link for Startup Kit
-  const shopifyCheckoutLink = "https://si51ve-s6.myshopify.com/cart/42288739254377:1?channel=buy_button";
+  // Shopify checkout base URL and product variant ID
+  const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
+  const productVariantId = "42288739254377";
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
@@ -252,7 +254,7 @@ const StartupKit = () => {
             </h2>
 
             <div className="bg-rtl-teal/10 p-8 rounded-2xl shadow-sm mb-8">
-              <div className="flex flex-col items-center gap-2">
+              <div className="flex flex-col items-center gap-4">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl font-bold text-rtl-teal">السعر: 999 جنيه</span>
                   <span className="text-lg line-through text-gray-500">السعر السابق: 2000 جنيه</span>
@@ -260,13 +262,12 @@ const StartupKit = () => {
                 <p className="text-gray-600 mb-6">
                   🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
-                <a
-                  href={shopifyCheckoutLink}
-                  className="px-6 py-3 rounded-lg hover:scale-105 transition text-lg bg-[#0D9488] text-white flex items-center gap-2 justify-center"
-                >
-                  <ShoppingCart className="w-5 h-5" />
-                  🛒 اطلب Startup Builder Kit الآن
-                </a>
+                <QuantitySelector
+                  baseCheckoutUrl={shopifyBaseUrl}
+                  productVariantId={productVariantId}
+                  buttonText="🛒 اطلب Startup Builder Kit الآن"
+                  price="999"
+                />
                 <p className="mt-4 text-gray-600">📦 أول خطوة حقيقية تبدأ بيها رحلتك الريادية</p>
               </div>
             </div>
@@ -388,14 +389,13 @@ const StartupKit = () => {
 
       {/* Sticky Purchase Bar */}
       <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl shadow-md">
-        <a
-          href={shopifyCheckoutLink}
-          className="bg-[#0D9488] text-white px-5 py-2 rounded-md hover:opacity-90 flex items-center gap-2"
-        >
-          <ShoppingCart className="w-4 h-4" />
-          📦 اطلب الآن
-        </a>
         <span className="font-bold text-[#0D9488]">السعر: 999 جنيه</span>
+        <QuantitySelector
+          baseCheckoutUrl={shopifyBaseUrl}
+          productVariantId={productVariantId}
+          buttonText="📦 اطلب الآن"
+          price="999"
+        />
       </div>
       
       {/* Simple Footer */}
