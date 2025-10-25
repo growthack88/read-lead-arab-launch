@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import StartupKit from "./pages/kits/StartupKit";
 import ProjectLeaderKit from "./pages/kits/ProjectLeaderKit";
 import HRManagerKit from "./pages/kits/HRManagerKit";
+import AllInOne from "./pages/kits/AllInOne";
 import SalesMarketingKit from "./pages/SalesMarketingKit";
 import ProductivityKit from "./pages/ProductivityKit";
 import ProductivityBook from "./pages/ProductivityBook";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/startup-kit" element={<StartupKit />} />
           <Route path="/project-leader-kit" element={<ProjectLeaderKit />} />
           <Route path="/hr-manager-kit" element={<HRManagerKit />} />
+          <Route path="/all-in-one" element={<AllInOne />} />
           <Route path="/sales-marketing-kit" element={<SalesMarketingKit />} />
           <Route path="/productivity-kit" element={<ProductivityKit />} />
           
