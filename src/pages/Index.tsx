@@ -62,13 +62,33 @@ const Index = () => {
       comparePrice: "2000 جنيه"
     },
     {
+      title: "Project Leader Toolkit",
+      imageSrc: "/lovable-uploads/project-leader-toolkit-banner.jpg",
+      description: "من الفكرة للتنفيذ — كل أداة تحتاجها علشان تمشي المشروع خطوة بخطوة",
+      buttonText: "اطلب الآن",
+      link: "/project-leader-kit",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42626010775657:1?channel=buy_button",
+      currentPrice: "999 جنيه",
+      comparePrice: "2000 جنيه"
+    },
+    {
+      title: "HR Manager Toolkit",
+      imageSrc: "/lovable-uploads/hr-manager-toolkit-hero-new.jpg",
+      description: "حوّل الفوضى الإدارية لنظام احترافي جاهز — في 10 أدوات بس",
+      buttonText: "اطلب الآن",
+      link: "/hr-manager-kit",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42626019164265:1?channel=buy_button",
+      currentPrice: "999 جنيه",
+      comparePrice: "2000 جنيه"
+    },
+    {
       title: "Productivity Kit",
       imageSrc: "/lovable-uploads/9473f670-3be5-4be6-9b5d-89ff248bbfb7.png",
       description: "أدوات تساعدك على زيادة إنتاجيتك وإدارة وقتك بكفاءة",
       buttonText: "اطلب الآن",
       link: "/productivity-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289428791401:1?channel=buy_button",
-     currentPrice: "999 جنيه",
+      currentPrice: "999 جنيه",
       comparePrice: "2000 جنيه"
     },
     {
@@ -78,7 +98,7 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/sales-marketing-kit",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42289431150697:1?channel=buy_button",
-        currentPrice: "999 جنيه",
+      currentPrice: "999 جنيه",
       comparePrice: "2000 جنيه"
     },
   ];
