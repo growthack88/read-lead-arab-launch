@@ -74,7 +74,7 @@ const HRManagerKit = () => {
             {/* Left Column - Image */}
             <div className="order-1 md:order-2 flex items-stretch">
               <img 
-                src="/lovable-uploads/hr-manager-toolkit-hero.jpg" 
+                src="/lovable-uploads/hr-manager-toolkit-hero-new.jpg" 
                 alt="HR Manager Toolkit" 
                 className="w-full h-full min-h-[400px] md:min-h-full rounded-xl shadow-lg object-cover"
               />
@@ -87,7 +87,7 @@ const HRManagerKit = () => {
       <section className="my-8">
         <div className="container mx-auto px-4">
           <img 
-            src="/lovable-uploads/hr-manager-toolkit-banner.jpg" 
+            src="/lovable-uploads/hr-manager-toolkit-hero.jpg" 
             alt="HR Manager Toolkit Components" 
             className="rounded-lg shadow-md w-full object-contain aspect-[2/1]"
           />
