@@ -17,7 +17,7 @@ const HRManagerKit = () => {
   };
 
   const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
-  const productVariantId = "VARIANT_ID_PLACEHOLDER"; // Update with actual variant ID
+  const productVariantId = "42626019164265";
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
