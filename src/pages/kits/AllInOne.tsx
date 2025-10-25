@@ -237,49 +237,8 @@ const AllInOne = () => {
         </section>
 
         {/* Footer */}
-        <footer className="bg-rtl-dark text-white py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-4 gap-8 mb-8">
-              <div>
-                <Logo />
-                <p className="text-gray-400 mt-4">
-                  نوفر أدوات ومحتوى احترافي لرواد الأعمال والمسوقين
-                </p>
-              </div>
-              
-              <div>
-                <h4 className="font-bold mb-4">روابط سريعة</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link to="/" className="hover:text-white transition-colors">الرئيسية</Link></li>
-                  <li><Link to="/#kits" className="hover:text-white transition-colors">الصناديق</Link></li>
-                  <li><a href="#buy" className="hover:text-white transition-colors">اشتري الآن</a></li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4">الصناديق</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link to="/startup-kit" className="hover:text-white transition-colors">Startup Kit</Link></li>
-                  <li><Link to="/project-leader-kit" className="hover:text-white transition-colors">Project Leader Kit</Link></li>
-                  <li><Link to="/hr-manager-kit" className="hover:text-white transition-colors">HR Manager Kit</Link></li>
-                  <li><Link to="/productivity-kit" className="hover:text-white transition-colors">Productivity Kit</Link></li>
-                  <li><Link to="/sales-marketing-kit" className="hover:text-white transition-colors">Sales & Marketing Kit</Link></li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold mb-4">تواصل معنا</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li>📧 info@rtlvision.com</li>
-                  <li>📱 +20 XXX XXX XXXX</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-              <p>&copy; 2024 RTL Vision. جميع الحقوق محفوظة.</p>
-            </div>
-          </div>
+        <footer className="bg-[#1A1F2C] text-white text-center py-4">
+          <p>© 2025 جميع الحقوق محفوظة Read to Lead</p>
         </footer>
 
         {/* Sticky Purchase Bar */}
