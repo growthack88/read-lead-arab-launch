@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import StartupKit from "./pages/kits/StartupKit";
+import ProjectLeaderKit from "./pages/kits/ProjectLeaderKit";
 import SalesMarketingKit from "./pages/SalesMarketingKit";
 import ProductivityKit from "./pages/ProductivityKit";
 import ProductivityBook from "./pages/ProductivityBook";
@@ -28,6 +29,7 @@ function App() {
           
           {/* Kit Pages */}
           <Route path="/startup-kit" element={<StartupKit />} />
+          <Route path="/project-leader-kit" element={<ProjectLeaderKit />} />
           <Route path="/sales-marketing-kit" element={<SalesMarketingKit />} />
           <Route path="/productivity-kit" element={<ProductivityKit />} />
           
