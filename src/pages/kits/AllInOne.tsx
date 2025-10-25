@@ -158,7 +158,7 @@ const AllInOne = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-rtl-dark text-center mb-12">
                 لماذا تختار الباقة الشاملة؟
               </h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-8" dir="rtl">
                 <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                   <div className="w-12 h-12 bg-rtl-teal/10 rounded-lg flex items-center justify-center mb-4">
                     <span className="text-2xl">💰</span>
