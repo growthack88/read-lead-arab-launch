@@ -7,7 +7,7 @@ import QuantitySelector from "@/components/QuantitySelector";
 
 const AllInOne = () => {
   const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
-  const bundleVariantId = "BUNDLE_VARIANT_ID"; // Replace with actual bundle variant ID
+  const bundleVariantId = "42641996284009";
 
   const allKits = [
     {
@@ -106,9 +106,9 @@ const AllInOne = () => {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <div className="text-center">
-                  <p className="text-5xl font-bold text-rtl-teal">3,995 جنيه</p>
+                  <p className="text-5xl font-bold text-rtl-teal">4,300 جنيه</p>
                   <p className="text-gray-500 line-through text-xl mt-1">10,000 جنيه</p>
-                  <p className="text-green-600 font-semibold mt-2">وفّر 6,005 جنيه (60%)</p>
+                  <p className="text-green-600 font-semibold mt-2">وفّر 5,700 جنيه (57%)</p>
                 </div>
               </div>
               <a 
@@ -163,9 +163,9 @@ const AllInOne = () => {
                   <div className="w-12 h-12 bg-rtl-teal/10 rounded-lg flex items-center justify-center mb-4">
                     <span className="text-2xl">💰</span>
                   </div>
-                  <h3 className="text-xl font-bold text-rtl-dark mb-3">وفّر 60% من السعر</h3>
+                  <h3 className="text-xl font-bold text-rtl-dark mb-3">وفّر 57% من السعر</h3>
                   <p className="text-gray-600">
-                    بدلاً من دفع 10,000 جنيه لشراء كل صندوق على حدة، احصل على الكل بـ 3,995 جنيه فقط
+                    بدلاً من دفع 10,000 جنيه لشراء كل صندوق على حدة، احصل على الكل بـ 4,300 جنيه فقط
                   </p>
                 </div>
 
@@ -216,9 +216,9 @@ const AllInOne = () => {
               
               <div className="mb-8">
                 <div className="inline-block bg-white rounded-lg p-6 shadow-sm">
-                  <p className="text-5xl font-bold text-rtl-teal mb-2">3,995 جنيه</p>
+                  <p className="text-5xl font-bold text-rtl-teal mb-2">4,300 جنيه</p>
                   <p className="text-gray-500 line-through text-2xl mb-2">10,000 جنيه</p>
-                  <p className="text-green-600 font-semibold text-lg">وفّر 6,005 جنيه</p>
+                  <p className="text-green-600 font-semibold text-lg">وفّر 5,700 جنيه</p>
                 </div>
               </div>
 
@@ -226,7 +226,7 @@ const AllInOne = () => {
                 baseCheckoutUrl={shopifyBaseUrl}
                 productVariantId={bundleVariantId}
                 buttonText="اطلب الباقة الشاملة الآن"
-                price="3995"
+                price="4300"
               />
 
               <p className="text-sm text-gray-500 mt-6">
@@ -250,7 +250,7 @@ const AllInOne = () => {
                 <p className="text-sm text-gray-600">5 صناديق بسعر واحد</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl font-bold text-rtl-teal">3,995 جنيه</p>
+                <p className="text-2xl font-bold text-rtl-teal">4,300 جنيه</p>
                 <p className="text-xs text-gray-500 line-through">10,000 جنيه</p>
               </div>
             </div>
