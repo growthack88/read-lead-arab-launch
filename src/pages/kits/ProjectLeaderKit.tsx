@@ -15,7 +15,7 @@ const ProjectLeaderKit = () => {
     });
   };
   const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
-  const productVariantId = "42288739254377"; // You'll need to update this with the actual variant ID
+  const productVariantId = "42626010775657";
 
   return <div className="min-h-screen bg-white" dir="rtl">
       <SEO title="Project Leader Toolkit | دليل القيادة وإدارة المشاريع" description="من الفكرة للتنفيذ — كل أداة تحتاجها علشان تمشي المشروع خطوة بخطوة من Read to Lead." image="/lovable-uploads/project-leader-toolkit-hero.jpg" url="https://land.readtolead.store/project-leader-kit" />
