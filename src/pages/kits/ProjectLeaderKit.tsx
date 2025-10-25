@@ -7,23 +7,18 @@ import { Separator } from "@/components/ui/separator";
 import Logo from "@/components/Logo";
 import SEO from "@/components/SEO";
 import QuantitySelector from "@/components/QuantitySelector";
-
 const ProjectLeaderKit = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
-
   const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
   const productVariantId = "42288739254377"; // You'll need to update this with the actual variant ID
 
-  return (
-    <div className="min-h-screen bg-white" dir="rtl">
-      <SEO 
-        title="Project Leader Toolkit | دليل القيادة وإدارة المشاريع"
-        description="من الفكرة للتنفيذ — كل أداة تحتاجها علشان تمشي المشروع خطوة بخطوة من Read to Lead."
-        image="/lovable-uploads/project-leader-toolkit-hero.jpg"
-        url="https://land.readtolead.store/project-leader-kit"
-      />
+  return <div className="min-h-screen bg-white" dir="rtl">
+      <SEO title="Project Leader Toolkit | دليل القيادة وإدارة المشاريع" description="من الفكرة للتنفيذ — كل أداة تحتاجها علشان تمشي المشروع خطوة بخطوة من Read to Lead." image="/lovable-uploads/project-leader-toolkit-hero.jpg" url="https://land.readtolead.store/project-leader-kit" />
       
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
@@ -70,11 +65,7 @@ const ProjectLeaderKit = () => {
 
             {/* Left Column - Image */}
             <div className="order-1 md:order-2 flex items-stretch">
-              <img
-                src="/lovable-uploads/project-leader-toolkit-hero.jpg"
-                alt="Project Leader Toolkit"
-                className="w-full h-full min-h-[400px] md:min-h-full rounded-xl shadow-lg object-cover"
-              />
+              <img src="/lovable-uploads/project-leader-toolkit-hero.jpg" alt="Project Leader Toolkit" className="w-full h-full min-h-[400px] md:min-h-full rounded-xl shadow-lg object-cover" />
             </div>
           </div>
         </div>
@@ -83,11 +74,7 @@ const ProjectLeaderKit = () => {
       {/* Under-Hero Banner Section */}
       <section className="my-8">
         <div className="container mx-auto px-4">
-          <img 
-            src="/lovable-uploads/project-leader-toolkit-banner.jpg" 
-            alt="Project Leader Toolkit Components" 
-            className="rounded-lg shadow-md w-full object-contain aspect-[2/1]" 
-          />
+          <img src="/lovable-uploads/project-leader-toolkit-banner.jpg" alt="Project Leader Toolkit Components" className="rounded-lg shadow-md w-full object-contain aspect-[2/1]" />
         </div>
       </section>
 
@@ -313,7 +300,7 @@ const ProjectLeaderKit = () => {
               <p className="text-gray-700 leading-relaxed">
                 ابدأ بـ<strong>Creative Brief Template</strong> → حدّد الرسالة → اربطها بـ<strong>OKRs</strong> → وزّع المهام في <strong>WBS</strong> → تابع التنفيذ بـ<strong>Gantt Chart</strong> → راجع النتائج بـ<strong>Improvement Matrix</strong>.
               </p>
-              <p className="mt-4 font-bold text-rtl-teal">في 6 ورق بس، المشروع كله تحت السيطرة.</p>
+              
             </div>
           </div>
         </div>
@@ -336,12 +323,7 @@ const ProjectLeaderKit = () => {
                 <p className="text-gray-600 mb-6">
                   🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين
                 </p>
-                <QuantitySelector
-                  baseCheckoutUrl={shopifyBaseUrl}
-                  productVariantId={productVariantId}
-                  buttonText="🛒 اطلب Project Leader Toolkit الآن"
-                  price="999"
-                />
+                <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="🛒 اطلب Project Leader Toolkit الآن" price="999" />
                 <p className="mt-4 text-gray-600">📦 خطة واحدة هتغيّر طريقة إدارتك لأي مشروع</p>
               </div>
             </div>
@@ -400,20 +382,13 @@ const ProjectLeaderKit = () => {
       {/* Sticky Purchase Bar */}
       <div className="fixed bottom-0 w-full bg-white border-t z-50 px-4 py-3 flex justify-between items-center rtl shadow-md">
         <span className="font-bold text-[#0D9488]">السعر: 999 جنيه</span>
-        <QuantitySelector
-          baseCheckoutUrl={shopifyBaseUrl}
-          productVariantId={productVariantId}
-          buttonText="📦 اطلب الآن"
-          price="999"
-        />
+        <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="📦 اطلب الآن" price="999" />
       </div>
       
       {/* Simple Footer */}
       <footer className="py-6 text-center border-t mb-16">
         <p className="text-gray-600">© جميع الحقوق محفوظة Read to Lead</p>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default ProjectLeaderKit;
