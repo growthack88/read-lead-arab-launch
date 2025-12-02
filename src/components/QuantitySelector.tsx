@@ -53,7 +53,7 @@ const QuantitySelector = ({
       
       <button
         onClick={handlePurchase}
-        className="bg-[#0D9488] text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition flex items-center gap-2"
+        className="bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] font-bold hover:scale-105 transition-all flex items-center gap-2 shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
       >
         <ShoppingCart className="w-5 h-5" />
         {buttonText}

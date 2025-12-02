@@ -63,17 +63,37 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				rtl: {
-					teal: '#0D9488',
+			rtl: {
+					teal: '#169380',
 					yellow: '#FCD34D',
 					purple: '#4F46E5',
-					dark: '#1A1F2C',
+					dark: '#2D3735',
+				},
+				brand: {
+					primary: '#169380',
+					'secondary-dark': '#0F7468',
+					'secondary-light': '#28B9A8',
+					'neutral-light': '#F2F5F4',
+					'neutral-soft': '#D9E4E1',
+					'neutral-dark': '#2D3735',
+					'accent-warm': '#F4C95D',
+					'accent-coral': '#EE6C4D',
+					'accent-blue': '#3A86FF',
 				}
 			},
-			borderRadius: {
+		borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'brand': '14px',
+				'brand-lg': '18px',
+			},
+			fontFamily: {
+				tajawal: ['Tajawal', 'sans-serif'],
+			},
+			boxShadow: {
+				'brand-soft': '0 4px 20px rgba(22, 147, 128, 0.08)',
+				'brand-card': '0 2px 12px rgba(22, 147, 128, 0.06)',
 			},
 			keyframes: {
 				'accordion-down': {
