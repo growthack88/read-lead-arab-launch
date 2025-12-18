@@ -52,6 +52,16 @@ const Index = () => {
   // New kits section data - UPDATED with new Productivity Kit image
   const newKits = [
     {
+      title: "Duckverse - ثلاثية البط",
+      imageSrc: "/lovable-uploads/duckverse-card.png",
+      description: "3 كتب هتغيّر طريقة شغلك بالكامل — من نفسك، لفريقك، لسوقك",
+      buttonText: "اطلب الآن",
+      link: "/duckverse",
+      checkoutLink: "https://si51ve-s6.myshopify.com/cart/42622879105129:1?channel=buy_button",
+      currentPrice: "749 جنيه",
+      comparePrice: "999 جنيه"
+    },
+    {
       title: "Startup Kit",
       imageSrc: "/lovable-uploads/2bcb0011-1478-4447-a8aa-cf255f4c7aa1.png",
       description: "كل الأدوات اللي تساعدك تبدأ شركتك الناشئة بنجاح",
