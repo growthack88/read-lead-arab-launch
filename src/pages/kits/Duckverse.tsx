@@ -82,11 +82,13 @@ const Duckverse = () => {
               </div>
             </div>
 
-            {/* Left Column - Image Placeholder */}
+            {/* Left Column - Image */}
             <div className="order-1 md:order-2">
-              <div className="w-full aspect-square bg-gradient-to-br from-[#169380] to-[#28B9A8] rounded-[18px] shadow-[0_4px_20px_rgba(22,147,128,0.15)] flex items-center justify-center">
-                <span className="text-[120px]">🦆</span>
-              </div>
+              <img 
+                src="/lovable-uploads/duckverse-hero.png" 
+                alt="كتب Duckverse - ثلاثية البط"
+                className="w-full rounded-[18px] shadow-[0_4px_20px_rgba(22,147,128,0.15)]"
+              />
             </div>
           </div>
         </div>
