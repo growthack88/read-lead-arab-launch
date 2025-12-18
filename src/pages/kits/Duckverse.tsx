@@ -7,29 +7,19 @@ import { Separator } from "@/components/ui/separator";
 import Logo from "@/components/Logo";
 import SEO from "@/components/SEO";
 import QuantitySelector from "@/components/QuantitySelector";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const Duckverse = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
-
   const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
   const productVariantId = "DUCKVERSE_VARIANT_ID"; // TODO: Replace with actual variant ID
 
-  return (
-    <div className="min-h-screen bg-[#F2F5F4] font-tajawal" dir="rtl">
-      <SEO 
-        title="كتب Duckverse - ثلاثية البط | Read to Lead"
-        description="3 كتب هتغيّر طريقة شغلك بالكامل - من نفسك، لفريقك، لسوقك. فن التبطيط، بط شيب، بط ماركتنج."
-        image="/assets/duckverse-banner.jpg"
-        url="https://land.readtolead.store/duckverse"
-      />
+  return <div className="min-h-screen bg-[#F2F5F4] font-tajawal" dir="rtl">
+      <SEO title="كتب Duckverse - ثلاثية البط | Read to Lead" description="3 كتب هتغيّر طريقة شغلك بالكامل - من نفسك، لفريقك، لسوقك. فن التبطيط، بط شيب، بط ماركتنج." image="/assets/duckverse-banner.jpg" url="https://land.readtolead.store/duckverse" />
       
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-[0_4px_20px_rgba(22,147,128,0.08)]">
@@ -82,16 +72,10 @@ const Duckverse = () => {
               
               {/* Hero CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a 
-                  href="#pricing"
-                  className="bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)] text-center"
-                >
+                <a href="#pricing" className="bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)] text-center">
                   اطلب الآن
                 </a>
-                <a 
-                  href="#features"
-                  className="bg-transparent border-2 border-[#3A86FF] text-[#3A86FF] px-8 py-4 rounded-[14px] text-lg font-bold hover:bg-[#3A86FF] hover:text-white transition-all text-center"
-                >
+                <a href="#features" className="bg-transparent border-2 border-[#3A86FF] text-[#3A86FF] px-8 py-4 rounded-[14px] text-lg font-bold hover:bg-[#3A86FF] hover:text-white transition-all text-center">
                   تعرف على المحتويات
                 </a>
               </div>
@@ -482,12 +466,7 @@ const Duckverse = () => {
                 <p className="text-[#169380] font-medium">"البط مش بيوعد بحاجة مش هيقدر يعملها. 🦆"</p>
               </div>
               
-              <QuantitySelector
-                baseCheckoutUrl={shopifyBaseUrl}
-                productVariantId={productVariantId}
-                buttonText="🛒 اطلب باكدج Duckverse الآن"
-                price="749"
-              />
+              <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="🛒 اطلب باكدج Duckverse الآن" price="749" />
               
               <p className="mt-4 text-[#2D3735]/60">749 جنيه بس — توصيل خلال 2-4 أيام</p>
             </div>
@@ -527,10 +506,7 @@ const Duckverse = () => {
               ابدأ رحلتك من التبطيط.. إلى القيادة.. إلى التسويق — بهدوء ونتايج قدام عينيك. 🦆
             </p>
 
-            <a 
-              href="#pricing"
-              className="inline-block bg-[#F4C95D] text-[#2D3735] px-10 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
-            >
+            <a href="#pricing" className="inline-block bg-[#F4C95D] text-[#2D3735] px-10 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)]">
               🛒 اطلب باكدج Duckverse الآن
             </a>
           </div>
@@ -596,28 +572,7 @@ const Duckverse = () => {
       </section>
 
       {/* Final Words Section */}
-      <section className="py-16 bg-gradient-to-br from-[#169380] to-[#28B9A8]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              🦆 كلمة أخيرة
-            </h2>
-            
-            <p className="text-xl mb-4">مش لازم تكون نسر عشان تنجح.</p>
-            <p className="text-lg text-white/90 mb-4">البط بيعرف يعوم، يطير، ويمشي على الأرض.</p>
-            <p className="text-lg text-white/90 mb-6">متعدد المهارات. هادي. وبيوصل.</p>
-            
-            <p className="text-[#F4C95D] font-bold text-xl mb-8">من البركة... للمحيط. 🦆</p>
-
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-[18px] inline-block">
-              <p className="text-white/90 mb-1">📘 بقلم: محمود عمر</p>
-              <p className="text-white/90 mb-3">🏢 نشر: Read to Lead</p>
-              <p className="text-[#F4C95D] font-bold">البطّ فاهم. 🦆</p>
-              <p className="text-white mt-2">وانت كمان هتفهم.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <footer className="py-8 bg-[#2D3735]">
@@ -629,15 +584,10 @@ const Duckverse = () => {
 
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-sm shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden z-40">
-        <a 
-          href="#pricing"
-          className="block w-full bg-[#F4C95D] text-[#2D3735] py-4 rounded-[14px] text-lg font-bold text-center shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
-        >
+        <a href="#pricing" className="block w-full bg-[#F4C95D] text-[#2D3735] py-4 rounded-[14px] text-lg font-bold text-center shadow-[0_4px_20px_rgba(244,201,93,0.3)]">
           🛒 اطلب الآن - 749 جنيه
         </a>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Duckverse;
