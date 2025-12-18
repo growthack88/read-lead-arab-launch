@@ -16,7 +16,8 @@ const Duckverse = () => {
     });
   };
   const shopifyBaseUrl = "https://si51ve-s6.myshopify.com/cart";
-  const productVariantId = "DUCKVERSE_VARIANT_ID"; // TODO: Replace with actual variant ID
+  const productVariantId = "42622879105129";
+  const checkoutUrl = "https://si51ve-s6.myshopify.com/cart/42622879105129:1?channel=buy_button";
 
   return <div className="min-h-screen bg-[#F2F5F4] font-tajawal" dir="rtl">
       <SEO title="كتب Duckverse - ثلاثية البط | Read to Lead" description="3 كتب هتغيّر طريقة شغلك بالكامل - من نفسك، لفريقك، لسوقك. فن التبطيط، بط شيب، بط ماركتنج." image="/assets/duckverse-banner.jpg" url="https://land.readtolead.store/duckverse" />
@@ -567,6 +568,20 @@ const Duckverse = () => {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            {/* CTA after FAQ */}
+            <div className="mt-10 text-center">
+              <a 
+                href={checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[#F4C95D] text-[#2D3735] px-10 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                🛒 اطلب باكدج Duckverse الآن - 749 جنيه
+              </a>
+              <p className="mt-3 text-[#2D3735]/60 text-sm">توصيل خلال 2-4 أيام داخل مصر</p>
+            </div>
           </div>
         </div>
       </section>
@@ -582,12 +597,30 @@ const Duckverse = () => {
         </div>
       </footer>
 
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/95 backdrop-blur-sm shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden z-40">
-        <a href="#pricing" className="block w-full bg-[#F4C95D] text-[#2D3735] py-4 rounded-[14px] text-lg font-bold text-center shadow-[0_4px_20px_rgba(244,201,93,0.3)]">
-          🛒 اطلب الآن - 749 جنيه
-        </a>
+      {/* Sticky Checkout Banner - All Devices */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#0F7468] shadow-[0_-4px_20px_rgba(0,0,0,0.15)] z-40">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="hidden sm:flex items-center gap-3 text-white">
+            <span className="text-2xl">🦆</span>
+            <div>
+              <p className="font-bold">باكدج Duckverse الكامل</p>
+              <p className="text-[#F4C95D] font-bold">749 جنيه بس!</p>
+            </div>
+          </div>
+          <a 
+            href={checkoutUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
+          >
+            <ShoppingCart className="w-5 h-5" />
+            اطلب الآن
+          </a>
+        </div>
       </div>
+      
+      {/* Spacer for sticky banner */}
+      <div className="h-20 sm:h-24"></div>
     </div>;
 };
 export default Duckverse;
