@@ -239,33 +239,44 @@ const Duckverse = () => {
 
             {/* Book 2 */}
             <div className="bg-white rounded-[18px] p-6 md:p-8 shadow-[0_2px_12px_rgba(22,147,128,0.06)] mb-6 border-r-4 border-[#F4C95D]">
-              <div className="flex items-start gap-4 mb-4">
-                <span className="text-4xl">📙</span>
+              <div className="grid grid-cols-1 md:grid-cols-[1fr,200px] gap-6">
                 <div>
-                  <h3 className="text-xl font-bold text-[#2D3735]">الكتاب الثاني: بط شيب | Duckship</h3>
-                  <p className="text-[#169380] font-medium mt-1">قُد بذكاء مش بصوت عالي.</p>
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="text-4xl">📙</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#2D3735]">الكتاب الثاني: بط شيب | Duckship</h3>
+                      <p className="text-[#169380] font-medium mt-1">قُد بذكاء مش بصوت عالي.</p>
+                    </div>
+                  </div>
+                  <blockquote className="bg-[#F2F5F4] p-4 rounded-[14px] mb-4 text-[#2D3735]/70 italic">
+                    "القيادة الحقيقية بتخلق فرق بتسبح معاك... مش بتغرق وراك."
+                  </blockquote>
+                  <p className="text-[#2D3735]/70 mb-4">اتعلم إزاي تبني ثقة بدل خوف... وسرب يشتغل معاك مش ضدك.</p>
+                  <h4 className="font-bold text-[#2D3735] mb-3">🎯 هتتعلم:</h4>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex gap-3 text-[#2D3735]/80">
+                      <span className="text-[#169380]">✅</span>
+                      <span><strong>البركة الآمنة</strong> — ازاي تخلق بيئة الناس فيها بتبدع مش بتخاف</span>
+                    </li>
+                    <li className="flex gap-3 text-[#2D3735]/80">
+                      <span className="text-[#169380]">✅</span>
+                      <span><strong>التناغم بدل السيطرة</strong> — القائد الحقيقي بيوجّه مش بيتحكّم</span>
+                    </li>
+                    <li className="flex gap-3 text-[#2D3735]/80">
+                      <span className="text-[#169380]">✅</span>
+                      <span><strong>التدريب بالسباحة مش بالمحاضرات</strong> — فريقك بيتعلم بالعمل مش بالكلام</span>
+                    </li>
+                  </ul>
+                  <p className="text-[#F4C95D] bg-[#0F7468] inline-block px-4 py-2 rounded-[10px] font-bold">💡 النتيجة: فريق بيشتغل بحماس من غير ما تراقبه كل ثانية.</p>
+                </div>
+                <div className="hidden md:flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/duckship-book.png" 
+                    alt="كتاب بط شيب - Duckship"
+                    className="w-full max-w-[180px] rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
-              <blockquote className="bg-[#F2F5F4] p-4 rounded-[14px] mb-4 text-[#2D3735]/70 italic">
-                "القيادة الحقيقية بتخلق فرق بتسبح معاك... مش بتغرق وراك."
-              </blockquote>
-              <p className="text-[#2D3735]/70 mb-4">اتعلم إزاي تبني ثقة بدل خوف... وسرب يشتغل معاك مش ضدك.</p>
-              <h4 className="font-bold text-[#2D3735] mb-3">🎯 هتتعلم:</h4>
-              <ul className="space-y-2 mb-4">
-                <li className="flex gap-3 text-[#2D3735]/80">
-                  <span className="text-[#169380]">✅</span>
-                  <span><strong>البركة الآمنة</strong> — ازاي تخلق بيئة الناس فيها بتبدع مش بتخاف</span>
-                </li>
-                <li className="flex gap-3 text-[#2D3735]/80">
-                  <span className="text-[#169380]">✅</span>
-                  <span><strong>التناغم بدل السيطرة</strong> — القائد الحقيقي بيوجّه مش بيتحكّم</span>
-                </li>
-                <li className="flex gap-3 text-[#2D3735]/80">
-                  <span className="text-[#169380]">✅</span>
-                  <span><strong>التدريب بالسباحة مش بالمحاضرات</strong> — فريقك بيتعلم بالعمل مش بالكلام</span>
-                </li>
-              </ul>
-              <p className="text-[#F4C95D] bg-[#0F7468] inline-block px-4 py-2 rounded-[10px] font-bold">💡 النتيجة: فريق بيشتغل بحماس من غير ما تراقبه كل ثانية.</p>
             </div>
 
             {/* Book 3 */}
