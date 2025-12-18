@@ -292,33 +292,44 @@ const Duckverse = () => {
 
             {/* Book 3 */}
             <div className="bg-white rounded-[18px] p-6 md:p-8 shadow-[0_2px_12px_rgba(22,147,128,0.06)] border-r-4 border-[#3A86FF]">
-              <div className="flex items-start gap-4 mb-4">
-                <span className="text-4xl">📘</span>
+              <div className="grid grid-cols-1 md:grid-cols-[1fr,200px] gap-6">
                 <div>
-                  <h3 className="text-xl font-bold text-[#2D3735]">الكتاب الثالث: بط ماركتنج | Duckting™</h3>
-                  <p className="text-[#169380] font-medium mt-1">سَوّق بذكاء.. من غير صُراخ.</p>
+                  <div className="flex items-start gap-4 mb-4">
+                    <span className="text-4xl">📘</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#2D3735]">الكتاب الثالث: بط ماركتنج | Duckting™</h3>
+                      <p className="text-[#169380] font-medium mt-1">سَوّق بذكاء.. من غير صُراخ.</p>
+                    </div>
+                  </div>
+                  <blockquote className="bg-[#F2F5F4] p-4 rounded-[14px] mb-4 text-[#2D3735]/70 italic">
+                    "التسويق الحقيقي مش إنك تصيح في السوق... إنك تفضل في الذاكرة."
+                  </blockquote>
+                  <p className="text-[#2D3735]/70 mb-4">ابني براند الناس تفتكره، مش حملة تِعدي.</p>
+                  <h4 className="font-bold text-[#2D3735] mb-3">🎯 هتتعلم:</h4>
+                  <ul className="space-y-2 mb-4">
+                    <li className="flex gap-3 text-[#2D3735]/80">
+                      <span className="text-[#169380]">✅</span>
+                      <span><strong>الموقع الذهني</strong> — ازاي تحجز مكان في دماغ عميلك قبل جيبه</span>
+                    </li>
+                    <li className="flex gap-3 text-[#2D3735]/80">
+                      <span className="text-[#169380]">✅</span>
+                      <span><strong>القصة بتبيع مش المواصفات</strong> — الناس بتشتري إحساس مش منتج</span>
+                    </li>
+                    <li className="flex gap-3 text-[#2D3735]/80">
+                      <span className="text-[#169380]">✅</span>
+                      <span><strong>السياق هو الملك</strong> — المحتوى مهم، بس الوقت والمكان أهم</span>
+                    </li>
+                  </ul>
+                  <p className="text-[#F4C95D] bg-[#0F7468] inline-block px-4 py-2 rounded-[10px] font-bold">💡 النتيجة: مبيعات مستقرة من غير ما تلاحق كل ترند.</p>
+                </div>
+                <div className="hidden md:flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/duckting-book.png" 
+                    alt="كتاب بط ماركتنج - Duckting"
+                    className="w-full max-w-[180px] rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
-              <blockquote className="bg-[#F2F5F4] p-4 rounded-[14px] mb-4 text-[#2D3735]/70 italic">
-                "التسويق الحقيقي مش إنك تصيح في السوق... إنك تفضل في الذاكرة."
-              </blockquote>
-              <p className="text-[#2D3735]/70 mb-4">ابني براند الناس تفتكره، مش حملة تِعدي.</p>
-              <h4 className="font-bold text-[#2D3735] mb-3">🎯 هتتعلم:</h4>
-              <ul className="space-y-2 mb-4">
-                <li className="flex gap-3 text-[#2D3735]/80">
-                  <span className="text-[#169380]">✅</span>
-                  <span><strong>الموقع الذهني</strong> — ازاي تحجز مكان في دماغ عميلك قبل جيبه</span>
-                </li>
-                <li className="flex gap-3 text-[#2D3735]/80">
-                  <span className="text-[#169380]">✅</span>
-                  <span><strong>القصة بتبيع مش المواصفات</strong> — الناس بتشتري إحساس مش منتج</span>
-                </li>
-                <li className="flex gap-3 text-[#2D3735]/80">
-                  <span className="text-[#169380]">✅</span>
-                  <span><strong>السياق هو الملك</strong> — المحتوى مهم، بس الوقت والمكان أهم</span>
-                </li>
-              </ul>
-              <p className="text-[#F4C95D] bg-[#0F7468] inline-block px-4 py-2 rounded-[10px] font-bold">💡 النتيجة: مبيعات مستقرة من غير ما تلاحق كل ترند.</p>
             </div>
           </div>
         </div>
