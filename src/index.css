@@ -36,6 +36,14 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Gift Card Theme Colors */
+    --gift-primary: 216 58% 23%;
+    --gift-primary-light: 216 58% 30%;
+    --gift-accent: 43 74% 51%;
+    --gift-accent-light: 43 74% 60%;
+    --gift-dark: 216 58% 15%;
+    --gift-light: 210 40% 98%;
 
     --sidebar-background: 0 0% 98%;
 

@@ -79,6 +79,14 @@ export default {
 					'accent-warm': '#F4C95D',
 					'accent-coral': '#EE6C4D',
 					'accent-blue': '#3A86FF',
+				},
+				gift: {
+					primary: 'hsl(var(--gift-primary))',
+					'primary-light': 'hsl(var(--gift-primary-light))',
+					accent: 'hsl(var(--gift-accent))',
+					'accent-light': 'hsl(var(--gift-accent-light))',
+					dark: 'hsl(var(--gift-dark))',
+					light: 'hsl(var(--gift-light))',
 				}
 			},
 		borderRadius: {
@@ -90,6 +98,7 @@ export default {
 			},
 			fontFamily: {
 				tajawal: ['Tajawal', 'sans-serif'],
+				'ibm-plex-arabic': ['IBM Plex Sans Arabic', 'sans-serif'],
 			},
 			boxShadow: {
 				'brand-soft': '0 4px 20px rgba(22, 147, 128, 0.08)',
