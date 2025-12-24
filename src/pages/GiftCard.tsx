@@ -794,7 +794,7 @@ const StickyMobileCTA = () => (
 // Main Component
 const GiftCard = () => {
   return (
-    <div className="font-ibm-plex-arabic" dir="rtl">
+    <div className="font-tajawal" dir="rtl">
       <SEO 
         title="كارت هدية Read to Lead | هدية تِفضل… مش تِتنسى"
         description="كارت هدية Read to Lead — لأن الشخص اللي يستاهل، يستاهل هدية تبني… مش هدية تتنسى. اختر من E£250 لـ E£5,000"
