@@ -82,11 +82,14 @@ export default {
 				},
 				gift: {
 					primary: 'hsl(var(--gift-primary))',
-					'primary-light': 'hsl(var(--gift-primary-light))',
+					secondary: 'hsl(var(--gift-secondary))',
+					'secondary-light': 'hsl(var(--gift-secondary-light))',
 					accent: 'hsl(var(--gift-accent))',
-					'accent-light': 'hsl(var(--gift-accent-light))',
-					dark: 'hsl(var(--gift-dark))',
-					light: 'hsl(var(--gift-light))',
+					'accent-coral': 'hsl(var(--gift-accent-coral))',
+					'accent-blue': 'hsl(var(--gift-accent-blue))',
+					'neutral-light': 'hsl(var(--gift-neutral-light))',
+					'neutral-soft': 'hsl(var(--gift-neutral-soft))',
+					'neutral-dark': 'hsl(var(--gift-neutral-dark))',
 				}
 			},
 		borderRadius: {

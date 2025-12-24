@@ -37,13 +37,16 @@
 
     --radius: 0.5rem;
     
-    /* Gift Card Theme Colors */
-    --gift-primary: 216 58% 23%;
-    --gift-primary-light: 216 58% 30%;
-    --gift-accent: 43 74% 51%;
-    --gift-accent-light: 43 74% 60%;
-    --gift-dark: 216 58% 15%;
-    --gift-light: 210 40% 98%;
+    /* Gift Card Theme Colors - Professional Palette */
+    --gift-primary: 168 74% 30%;        /* #169380 */
+    --gift-secondary: 168 78% 23%;      /* #0F7468 */
+    --gift-secondary-light: 168 52% 44%; /* #28B9A8 */
+    --gift-accent: 43 88% 66%;          /* #F4C95D */
+    --gift-accent-coral: 14 83% 62%;    /* #EE6C4D */
+    --gift-accent-blue: 217 100% 62%;   /* #3A86FF */
+    --gift-neutral-light: 150 14% 96%;  /* #F2F5F4 */
+    --gift-neutral-soft: 160 14% 87%;   /* #D9E4E1 */
+    --gift-neutral-dark: 168 14% 18%;   /* #2D3735 */
 
     --sidebar-background: 0 0% 98%;
 
