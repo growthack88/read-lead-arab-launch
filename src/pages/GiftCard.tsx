@@ -311,7 +311,15 @@ const EmotionalQuoteSection = () => (
 );
 
 // Audience Tabs Section
-const audienceData = {
+interface AudienceItem {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  content: string;
+  occasions: string;
+  note?: string;
+}
+
+const audienceData: Record<string, AudienceItem> = {
   friends: {
     icon: Users,
     title: "للأصدقاء",
