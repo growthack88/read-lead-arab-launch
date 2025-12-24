@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { Gift, BookOpen, Brain, Rocket, Clock, Check, X, ChevronDown, Users, Briefcase, Building2, GraduationCap, Sparkles } from "lucide-react";
+import { Gift, BookOpen, Brain, Rocket, Clock, Check, X, ChevronDown, Users, Briefcase, Building2, GraduationCap, Sparkles, HelpCircle } from "lucide-react";
 import SEO from "@/components/SEO";
 import {
   Accordion,
@@ -31,84 +31,79 @@ const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 }
+    transition: { staggerChildren: 0.12 }
   }
 };
 
-// Hero Section
+// Hero Section - Dark #0F7468 with gradient from #169380
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gift-dark via-gift-primary to-gift-primary-light overflow-hidden">
+  <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-gift-secondary via-gift-primary to-gift-secondary-light overflow-hidden">
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 right-20 w-72 h-72 bg-gift-accent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-gift-accent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-gift-neutral-light rounded-full blur-3xl"></div>
     </div>
     
     <div className="container mx-auto px-4 py-20 relative z-10">
       <motion.div 
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-3xl mx-auto text-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
       >
-        <motion.p 
-          className="text-gift-accent text-lg md:text-xl mb-4"
-          variants={fadeInUp}
-        >
-          لكل اللي بيدوّر على هدية ليها معنى — مش مجرد شكل
-        </motion.p>
-        
         <motion.h1 
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-gift-neutral-light mb-8 leading-tight"
           variants={fadeInUp}
         >
-          مش هدية… دي <span className="text-gift-accent">بداية جديدة.</span>
+          دي مش هدية… دي <span className="text-gift-accent">بداية.</span>
         </motion.h1>
         
         <motion.p 
-          className="text-xl md:text-2xl text-white/90 mb-6 max-w-3xl mx-auto"
+          className="text-xl md:text-2xl text-gift-neutral-light/80 mb-12 max-w-2xl mx-auto leading-relaxed"
           variants={fadeInUp}
         >
           كارت هدية Read to Lead — لأن الشخص اللي يستاهل، يستاهل هدية تبني… مش هدية تتنسى.
         </motion.p>
         
-        <motion.p 
-          className="text-lg text-white/70 mb-8 max-w-2xl mx-auto"
-          variants={fadeInUp}
-        >
-          سواء صديق، زميل، موظف، أو حتى نفسك… كارت Read to Lead بيفتح الباب لكتب، أدوات، ومحتوى يغيّر التفكير ويبدأ رحلة تطوير حقيقية.
-        </motion.p>
-        
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 text-white/80 mb-10"
-          variants={fadeInUp}
-        >
-          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> يختار اللي يناسبه بالضبط</span>
-          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> يُرسل فورًا كهدية رقمية</span>
-          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> صالح على كل منتجات Read to Lead</span>
-        </motion.div>
-        
-        <motion.div variants={fadeInUp}>
+        <motion.div className="flex flex-col sm:flex-row items-center justify-center gap-4" variants={fadeInUp}>
           <a 
             href="#pricing" 
-            className="inline-flex items-center gap-3 bg-gift-accent hover:bg-gift-accent-light text-gift-dark font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-3 bg-gift-accent hover:bg-gift-accent/90 text-gift-neutral-dark font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-xl"
           >
             <Gift className="w-6 h-6" />
             اختر قيمة الكارت وابدأ
           </a>
-          <p className="text-white/60 mt-4 text-sm">بدون شحن. بدون انتظار. هدية رقمية فورية.</p>
+          <a 
+            href="#how-it-works" 
+            className="inline-flex items-center gap-2 border-2 border-gift-neutral-light/30 text-gift-neutral-light hover:bg-gift-neutral-light/10 font-medium py-4 px-8 rounded-full text-lg transition-all duration-300"
+          >
+            إزاي بتشتغل؟
+          </a>
         </motion.div>
+        
+        <motion.p 
+          className="text-gift-neutral-light/50 mt-6 text-sm"
+          variants={fadeInUp}
+        >
+          بدون شحن. بدون انتظار. هدية رقمية فورية.
+        </motion.p>
       </motion.div>
     </div>
     
     <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <ChevronDown className="w-8 h-8 text-white/50" />
+      <ChevronDown className="w-8 h-8 text-gift-neutral-light/40" />
     </div>
   </section>
 );
 
-// Problem Section
+// Problem Section - Light #F2F5F4 background with cards
+const problemCards = [
+  { text: "شوكولاتة" },
+  { text: "عطر" },
+  { text: "مج مكتوب عليه كلمتين" },
+];
+
 const ProblemSection = () => (
-  <section className="py-20 md:py-32 bg-white">
+  <section className="py-24 md:py-32 bg-gift-neutral-light">
     <div className="container mx-auto px-4">
       <motion.div 
         className="max-w-4xl mx-auto"
@@ -118,31 +113,36 @@ const ProblemSection = () => (
         variants={staggerContainer}
       >
         <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-8 text-center"
+          className="text-3xl md:text-5xl font-bold text-gift-neutral-dark mb-12 text-center"
           variants={fadeInUp}
         >
           ليه معظم الهدايا مش بتفرق؟
         </motion.h2>
         
         <motion.div 
-          className="bg-gray-50 rounded-3xl p-8 md:p-12 mb-8"
-          variants={fadeInUp}
+          className="grid sm:grid-cols-3 gap-4 mb-8"
+          variants={staggerContainer}
         >
-          <p className="text-xl text-gray-700 leading-relaxed mb-6">
-            كلنا اتعودنا على الهدايا التقليدية. شوكولاتة. عطر. مج مكتوب عليه كلمتين.
-          </p>
-          <p className="text-xl text-gray-700 leading-relaxed mb-6">
-            مش وحشين… بس <span className="text-gift-primary font-bold">بيتنسوا.</span>
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            بعد أسبوع، الهدية بتبقى في درج. مفيش أثر. مفيش فرق. مفيش حاجة اتغيّرت.
-            <br />
-            والشخص اللي كنت عايز تقوله "أنا مهتم بيك" — مقدرش يحس بالرسالة.
-          </p>
+          {problemCards.map((card, index) => (
+            <motion.div 
+              key={index}
+              className="bg-gift-neutral-soft rounded-2xl p-6 text-center"
+              variants={fadeInUp}
+            >
+              <p className="text-lg text-gift-neutral-dark font-medium">{card.text}</p>
+            </motion.div>
+          ))}
         </motion.div>
         
+        <motion.p 
+          className="text-xl text-gift-neutral-dark/70 text-center mb-8"
+          variants={fadeInUp}
+        >
+          مش وحشين… بس <span className="text-gift-primary font-bold">بيتنسوا.</span>
+        </motion.p>
+        
         <motion.div 
-          className="bg-gift-dark rounded-3xl p-8 md:p-12 text-white"
+          className="bg-gift-secondary rounded-3xl p-8 md:p-10 text-gift-neutral-light"
           variants={fadeInUp}
         >
           <p className="text-xl font-bold text-gift-accent mb-4">والأصعب؟</p>
@@ -157,73 +157,51 @@ const ProblemSection = () => (
   </section>
 );
 
-// Solution Section
-const SolutionSection = () => (
-  <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+// Emotional Transition Section - Clean white with large whitespace
+const EmotionalTransitionSection = () => (
+  <section className="py-32 md:py-40 bg-white">
     <div className="container mx-auto px-4">
       <motion.div 
-        className="max-w-4xl mx-auto text-center"
+        className="max-w-3xl mx-auto text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
+        variants={fadeInUp}
       >
-        <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-8"
-          variants={fadeInUp}
-        >
-          ماذا لو الهدية كانت <span className="text-gift-accent">بداية</span> مش نهاية؟
-        </motion.h2>
-        
-        <motion.div 
-          className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100"
-          variants={fadeInUp}
-        >
-          <p className="text-xl text-gray-700 leading-relaxed mb-6">
-            كارت هدية Read to Lead مش مجرد مبلغ مالي.
-          </p>
-          <p className="text-2xl text-gift-primary font-bold mb-6">
-            هو رسالة.
-          </p>
-          <p className="text-xl text-gray-700 leading-relaxed mb-8">
-            رسالة بتقول: <span className="text-gift-accent font-bold">"أنا شايفك. أنا مهتم بنموّك. أنا عايزك تبقى أحسن."</span>
-          </p>
-          <div className="h-px w-24 bg-gift-accent mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            الشخص اللي بيستلم الكارت مش بياخد فلوس. بياخد باب مفتوح لكتب تغيّر منظوره، أدوات تساعده يفكّر، ومحتوى يخليه يبدأ سنة جديدة بطاقة مختلفة.
-          </p>
-        </motion.div>
+        <h2 className="text-3xl md:text-5xl font-bold text-gift-neutral-dark leading-tight">
+          ماذا لو الهدية كانت <span className="text-gift-primary">بداية</span>؟
+        </h2>
       </motion.div>
     </div>
   </section>
 );
 
-// Benefits Section
+// Value Translation Section - Grid of 4 cards
 const benefits = [
   {
     icon: BookOpen,
     title: "كتب تغيّر منظور",
-    description: "مش أي كتب. ملخصات وكتب عربية مبنية تفتح العقل وتبني طريقة تفكير جديدة. الشخص اللي بيستلم الهدية بيختار الكتاب اللي يناسب رحلته — مش أنت اللي بتفرض عليه."
+    description: "ملخصات وكتب عربية مبنية تفتح العقل وتبني طريقة تفكير جديدة."
   },
   {
     icon: Brain,
     title: "أدوات تفكير عملية",
-    description: "مش كلام نظري. أدوات، Frameworks، وتمارين تطبيقية يقدر يستخدمها فورًا في شغله أو حياته. النتيجة؟ تفكير أوضح. قرارات أحسن."
+    description: "أدوات، Frameworks، وتمارين تطبيقية يقدر يستخدمها فورًا."
   },
   {
     icon: Rocket,
     title: "دافع للتطوير والنمو",
-    description: "الهدية دي مش بتتحط في درج. بتتحول لساعات من القراءة، insights جديدة، وخطوات حقيقية للأمام. هدية بتستمر أثرها — مش بتتنسى بعد يومين."
+    description: "هدية بتتحول لساعات من القراءة وخطوات حقيقية للأمام."
   },
   {
     icon: Clock,
     title: "بداية سنة جديدة أقوى",
-    description: "التوقيت مثالي. سنة جديدة = قرارات جديدة = نوايا حقيقية للتغيير. كارت Read to Lead بيدي الشخص السبب يبدأ فعلًا — مش بس يتمنى."
+    description: "التوقيت مثالي. سنة جديدة = قرارات جديدة = نوايا للتغيير."
   }
 ];
 
 const BenefitsSection = () => (
-  <section className="py-20 md:py-32 bg-white">
+  <section className="py-24 md:py-32 bg-gift-neutral-light">
     <div className="container mx-auto px-4">
       <motion.div 
         className="max-w-6xl mx-auto"
@@ -233,34 +211,34 @@ const BenefitsSection = () => (
         variants={staggerContainer}
       >
         <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-4 text-center"
+          className="text-3xl md:text-4xl font-bold text-gift-neutral-dark mb-4 text-center"
           variants={fadeInUp}
         >
           أنت مش بتدي فلوس…
         </motion.h2>
         <motion.p 
-          className="text-2xl text-gift-accent font-bold mb-16 text-center"
+          className="text-2xl text-gift-primary font-bold mb-16 text-center"
           variants={fadeInUp}
         >
           أنت بتدي:
         </motion.p>
         
         <motion.div 
-          className="grid md:grid-cols-2 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={staggerContainer}
         >
           {benefits.map((benefit, index) => (
             <motion.div 
               key={index}
-              className="bg-gray-50 rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gift-accent/30"
+              className="bg-gift-neutral-soft rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group"
               variants={fadeInUp}
               whileHover={{ y: -5 }}
             >
-              <div className="w-16 h-16 bg-gift-primary rounded-2xl flex items-center justify-center mb-6">
-                <benefit.icon className="w-8 h-8 text-white" />
+              <div className="w-14 h-14 bg-gift-secondary-light rounded-full flex items-center justify-center mb-5 group-hover:bg-gift-primary transition-colors duration-300">
+                <benefit.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gift-primary mb-4">{benefit.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+              <h3 className="text-xl font-bold text-gift-neutral-dark mb-3 group-hover:text-gift-primary transition-colors duration-300">{benefit.title}</h3>
+              <p className="text-gift-neutral-dark/70 leading-relaxed text-sm">{benefit.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -269,234 +247,19 @@ const BenefitsSection = () => (
   </section>
 );
 
-// Emotional Quote Section
-const EmotionalQuoteSection = () => (
-  <section className="py-24 md:py-32 bg-gift-dark relative overflow-hidden">
-    <div className="absolute inset-0 opacity-20">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gift-accent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gift-primary-light rounded-full blur-3xl"></div>
-    </div>
-    
-    <div className="container mx-auto px-4 relative z-10">
-      <motion.div 
-        className="max-w-4xl mx-auto text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-      >
-        <motion.p 
-          className="text-gift-accent text-xl mb-8"
-          variants={fadeInUp}
-        >
-          ❤️ الرسالة اللي بتوصل مع كل كارت
-        </motion.p>
-        
-        <motion.blockquote 
-          className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight"
-          variants={fadeInUp}
-        >
-          "أنا شايفك. ومهتم بنموّك. ومستقبلك يستاهل الاستثمار ده."
-        </motion.blockquote>
-        
-        <motion.p 
-          className="text-xl text-white/70"
-          variants={fadeInUp}
-        >
-          مش محتاج تقولها بالكلام. الهدية بتقولها عنك.
-        </motion.p>
-      </motion.div>
-    </div>
-  </section>
-);
-
-// Audience Tabs Section
-interface AudienceItem {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  content: string;
-  occasions: string;
-  note?: string;
-}
-
-const audienceData: Record<string, AudienceItem> = {
-  friends: {
-    icon: Users,
-    title: "للأصدقاء",
-    content: `الصديق الحقيقي مش اللي بيجيبلك هدية "لطيفة". هو اللي بيجيبلك هدية تقول: "أنا مهتم بنموّك ومستقبلك."
-
-كارت Read to Lead هو الهدية اللي بتفضل في الذاكرة — لأنها بتفضل في التفكير.`,
-    occasions: "عيد ميلاد، تخرج، خطوبة، بداية مشروع، أو بدون مناسبة — بس عشان الشخص يستاهل."
-  },
-  colleagues: {
-    icon: Briefcase,
-    title: "لزملاء العمل والمديرين",
-    content: `نسيت هدايا الشوكولاتة والـ Gift Baskets التقليدية.
-
-لفتة ذكية ومختلفة بتقول: "أنت شخص بيفكّر، وأنا قدّرت كده." تناسب End of Year، Performance Reviews، أو حتى Thank You بسيط.`,
-    occasions: "أي حد في الفريق بيستحق يتقدّر بطريقة مختلفة."
-  },
-  employees: {
-    icon: Building2,
-    title: "للموظفين والفرق",
-    content: `هدية تعكس ثقافة التطوير والتعلّم في الشركة.
-
-بدل هدايا نمطية، قدّم لفريقك هدية تحفيزية تقول: "احنا شركة بتستثمر في الناس."`,
-    occasions: "End-of-year rewards، Performance bonuses، Onboarding gifts، Team appreciation",
-    note: "💡 للشركات: تواصل معانا لعروض الـ Bulk Orders."
-  },
-  entrepreneurs: {
-    icon: GraduationCap,
-    title: "للطلاب ورواد الأعمال الجدد",
-    content: `أفضل استثمار في شخص بادئ رحلته؟ مش فلوس. مش "نصائح".
-
-هو المعرفة والأدوات اللي تخليه يبني عقلية قيادية من البداية. كارت Read to Lead = دفعة قوية في أول الطريق.`,
-    occasions: ""
-  }
-};
-
-const AudienceSection = () => (
-  <section className="py-20 md:py-32 bg-gray-50">
-    <div className="container mx-auto px-4">
-      <motion.div 
-        className="max-w-5xl mx-auto"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-      >
-        <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-4 text-center"
-          variants={fadeInUp}
-        >
-          🎯 الهدية المثالية لـ:
-        </motion.h2>
-        
-        <motion.div variants={fadeInUp} className="mt-12">
-          <Tabs defaultValue="friends" className="w-full">
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-transparent h-auto mb-8">
-              {Object.entries(audienceData).map(([key, data]) => (
-                <TabsTrigger 
-                  key={key} 
-                  value={key}
-                  className="data-[state=active]:bg-gift-primary data-[state=active]:text-white bg-white border border-gray-200 rounded-xl py-4 px-6 text-gift-primary font-bold transition-all"
-                >
-                  <data.icon className="w-5 h-5 ml-2" />
-                  {data.title}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            
-            {Object.entries(audienceData).map(([key, data]) => (
-              <TabsContent key={key} value={key}>
-                <motion.div 
-                  className="bg-white rounded-3xl p-8 md:p-12 shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 bg-gift-accent/20 rounded-2xl flex items-center justify-center">
-                      <data.icon className="w-7 h-7 text-gift-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gift-primary">{data.title}</h3>
-                  </div>
-                  <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line mb-6">{data.content}</p>
-                  {data.occasions && (
-                    <div className="bg-gray-50 rounded-xl p-4">
-                      <p className="text-gift-primary font-bold mb-2">مثالي لـ:</p>
-                      <p className="text-gray-600">{data.occasions}</p>
-                    </div>
-                  )}
-                  {data.note && (
-                    <p className="mt-4 text-gift-accent font-bold">{data.note}</p>
-                  )}
-                </motion.div>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </motion.div>
-      </motion.div>
-    </div>
-  </section>
-);
-
-// How It Works Section
-const steps = [
-  { number: "1", title: "اختر قيمة الكارت", description: "من E£250 لـ E£5,000 — أنت بتختار القيمة اللي تناسبك." },
-  { number: "2", title: "ادفع أونلاين في ثواني", description: "عملية سهلة وآمنة. بدون تعقيد." },
-  { number: "3", title: "الكارت يُرسل فورًا", description: "هدية رقمية جاهزة — ممكن تبعتها مباشرة للشخص اللي بتهديه." },
-  { number: "4", title: "المُهدى له يبدأ رحلته", description: "يختار الكتب والأدوات اللي تناسبه بالضبط من كل منتجات Read to Lead." }
-];
-
-const HowItWorksSection = () => (
-  <section className="py-20 md:py-32 bg-white">
-    <div className="container mx-auto px-4">
-      <motion.div 
-        className="max-w-5xl mx-auto"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-      >
-        <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-16 text-center"
-          variants={fadeInUp}
-        >
-          🚀 كيف تعمل الهدية؟
-        </motion.h2>
-        
-        <motion.div 
-          className="grid md:grid-cols-4 gap-6"
-          variants={staggerContainer}
-        >
-          {steps.map((step, index) => (
-            <motion.div 
-              key={index}
-              className="relative"
-              variants={fadeInUp}
-            >
-              <div className="bg-gray-50 rounded-3xl p-6 text-center h-full hover:shadow-lg transition-all duration-300 border border-gray-100">
-                <div className="w-16 h-16 bg-gift-primary rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-white">
-                  {step.number}
-                </div>
-                <h3 className="text-xl font-bold text-gift-primary mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
-              </div>
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -left-3 transform -translate-y-1/2">
-                  <div className="w-6 h-0.5 bg-gift-accent"></div>
-                </div>
-              )}
-            </motion.div>
-          ))}
-        </motion.div>
-        
-        <motion.div 
-          className="mt-12 text-center"
-          variants={fadeInUp}
-        >
-          <p className="text-xl text-gray-600 mb-4">بدون شحن. بدون انتظار. بدون تعقيد.</p>
-          <p className="text-gift-primary font-bold">💳 الكارت صالح على كل منتجات Read to Lead — المُهدى له يختار رحلته بنفسه.</p>
-        </motion.div>
-      </motion.div>
-    </div>
-  </section>
-);
-
-// Pricing Section
+// Pricing Section - Dark #0F7468 background
 const pricingTiers = [
-  { value: "250", label: "E£250", description: "لفتة ذكية وبداية خفيفة", ideal: "هدية بسيطة ومعبّرة — أول خطوة" },
-  { value: "500", label: "E£500", description: "هدية محترمة وواضحة", ideal: "زميل، صديق، أو Thank You مميز" },
-  { value: "1000", label: "E£1,000", description: "هدية قوية ومؤثرة", ideal: "مناسبة مهمة — عيد ميلاد، تخرج، ترقية", featured: true },
-  { value: "1500", label: "E£1,500", description: "استثمار حقيقي في شخص", ideal: "شخص قريب جدًا أو موظف متميز" },
-  { value: "2000", label: "E£2,000", description: "هدية قيادية مميزة", ideal: "مدير، شريك، أو شخص مؤثر في حياتك" },
-  { value: "3000", label: "E£3,000", description: "باقة شاملة للتطوير", ideal: "لشخص عايز يبدأ رحلة تعلّم كاملة" },
-  { value: "5000", label: "E£5,000", description: "الهدية الأقوى", ideal: "للشركات، للقادة، أو لشخص يستحق الأفضل", premium: true }
+  { value: "250", label: "E£250", description: "لفتة ذكية وبداية خفيفة", ideal: "هدية بسيطة ومعبّرة" },
+  { value: "500", label: "E£500", description: "هدية محترمة وواضحة", ideal: "زميل أو صديق" },
+  { value: "1000", label: "E£1,000", description: "هدية قوية ومؤثرة", ideal: "مناسبة مهمة", featured: true },
+  { value: "1500", label: "E£1,500", description: "استثمار حقيقي", ideal: "شخص قريب جدًا" },
+  { value: "2000", label: "E£2,000", description: "هدية قيادية مميزة", ideal: "مدير أو شريك" },
+  { value: "3000", label: "E£3,000", description: "باقة شاملة للتطوير", ideal: "رحلة تعلّم كاملة" },
+  { value: "5000", label: "E£5,000", description: "الهدية الأقوى", ideal: "للشركات والقادة" }
 ];
 
 const PricingSection = () => (
-  <section id="pricing" className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+  <section id="pricing" className="py-24 md:py-32 bg-gift-secondary">
     <div className="container mx-auto px-4">
       <motion.div 
         className="max-w-6xl mx-auto"
@@ -506,43 +269,48 @@ const PricingSection = () => (
         variants={staggerContainer}
       >
         <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-4 text-center"
+          className="text-3xl md:text-5xl font-bold text-gift-neutral-light mb-4 text-center"
           variants={fadeInUp}
         >
-          💳 اختر القيمة اللي تناسبك
+          اختر القيمة اللي تناسبك
         </motion.h2>
         <motion.p 
-          className="text-xl text-gray-600 mb-16 text-center"
+          className="text-xl text-gift-neutral-light/70 mb-16 text-center"
           variants={fadeInUp}
         >
           أنت بتختار القيمة… وهم يختاروا الرحلة.
         </motion.p>
         
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
           variants={staggerContainer}
         >
           {pricingTiers.map((tier, index) => (
             <motion.div 
               key={index}
-              className={`rounded-3xl p-6 transition-all duration-300 hover:shadow-xl ${
-                tier.premium 
-                  ? 'bg-gift-dark text-white col-span-full md:col-span-2 lg:col-span-1' 
-                  : tier.featured 
-                    ? 'bg-gift-primary text-white ring-4 ring-gift-accent' 
-                    : 'bg-white border border-gray-200'
+              className={`rounded-2xl p-6 transition-all duration-300 hover:shadow-2xl bg-white ${
+                tier.featured 
+                  ? 'ring-4 ring-gift-accent relative' 
+                  : ''
               }`}
               variants={fadeInUp}
               whileHover={{ y: -5 }}
             >
+              {tier.featured && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gift-accent text-gift-neutral-dark text-xs font-bold px-4 py-1 rounded-full">
+                    الأكثر اختيارًا
+                  </span>
+                </div>
+              )}
               <div className="text-center">
-                <p className={`text-3xl font-bold mb-2 ${tier.premium || tier.featured ? 'text-gift-accent' : 'text-gift-primary'}`}>
+                <p className="text-3xl font-bold text-gift-primary mb-2">
                   {tier.label}
                 </p>
-                <p className={`text-lg font-bold mb-2 ${tier.premium || tier.featured ? 'text-white' : 'text-gray-800'}`}>
+                <p className="text-lg font-bold text-gift-neutral-dark mb-1">
                   {tier.description}
                 </p>
-                <p className={`text-sm mb-6 ${tier.premium || tier.featured ? 'text-white/70' : 'text-gray-500'}`}>
+                <p className="text-sm text-gift-neutral-dark/60 mb-6">
                   {tier.ideal}
                 </p>
                 <a 
@@ -550,9 +318,9 @@ const PricingSection = () => (
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-block w-full py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
-                    tier.premium || tier.featured
-                      ? 'bg-gift-accent text-gift-dark hover:bg-gift-accent-light'
-                      : 'bg-gift-primary text-white hover:bg-gift-primary-light'
+                    tier.featured
+                      ? 'bg-gift-accent text-gift-neutral-dark hover:bg-gift-accent/90'
+                      : 'bg-gift-primary text-white hover:bg-gift-primary/90'
                   }`}
                 >
                   اختر هذا الكارت
@@ -563,11 +331,11 @@ const PricingSection = () => (
         </motion.div>
         
         <motion.div 
-          className="mt-12 bg-gift-accent/10 rounded-2xl p-6 text-center"
+          className="mt-12 bg-gift-neutral-light/10 backdrop-blur-sm rounded-2xl p-6 text-center"
           variants={fadeInUp}
         >
-          <p className="text-gift-primary">
-            💡 <span className="font-bold">ملاحظة مهمة:</span> الكارت صالح على كل منتجات Read to Lead. يعني الشخص اللي بيستلم الهدية هو اللي بيقرر يصرفها إزاي — مش أنت. ده بيخلي الهدية مش بس كريمة… لكن كمان ذكية.
+          <p className="text-gift-neutral-light">
+            💡 <span className="font-bold">ملاحظة:</span> الكارت صالح على كل منتجات Read to Lead — الشخص اللي بيستلم الهدية هو اللي بيقرر.
           </p>
         </motion.div>
       </motion.div>
@@ -575,7 +343,7 @@ const PricingSection = () => (
   </section>
 );
 
-// Urgency Section
+// Urgency Section - Yellow #F4C95D background
 const UrgencySection = () => (
   <section className="py-20 md:py-24 bg-gift-accent">
     <div className="container mx-auto px-4">
@@ -587,47 +355,49 @@ const UrgencySection = () => (
         variants={staggerContainer}
       >
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-gift-dark mb-8"
+          className="text-3xl md:text-4xl font-bold text-gift-neutral-dark mb-8"
           variants={fadeInUp}
         >
-          ⚡ ليه الوقت ده بالذات؟
+          هل الوقت ده مناسب؟
         </motion.h2>
         
         <motion.div 
-          className="flex flex-wrap justify-center gap-6 mb-8"
+          className="flex flex-wrap justify-center gap-4 mb-10"
           variants={staggerContainer}
         >
           {[
-            "بداية سنة جديدة — الناس بتبدأ بقرارات ونوايا للتغيير",
-            "موسم الهدايا — الكل بيدوّر على حاجة مختلفة",
-            "التوقيت المثالي — هدية بداية السنة بتفضل في الذاكرة"
+            "بداية سنة جديدة",
+            "موسم الهدايا",
+            "التوقيت المثالي"
           ].map((point, index) => (
             <motion.div 
               key={index}
-              className="bg-white/30 backdrop-blur-sm rounded-xl px-6 py-3"
+              className="bg-white/40 backdrop-blur-sm rounded-xl px-6 py-3"
               variants={fadeInUp}
             >
-              <p className="text-gift-dark font-medium">{point}</p>
+              <p className="text-gift-neutral-dark font-medium">{point}</p>
             </motion.div>
           ))}
         </motion.div>
         
-        <motion.p 
-          className="text-2xl font-bold text-gift-dark"
+        <motion.a 
+          href="#pricing"
+          className="inline-flex items-center gap-3 bg-gift-secondary hover:bg-gift-secondary/90 text-gift-neutral-light font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-xl"
           variants={fadeInUp}
         >
-          🎁 أفضل وقت تهدي هدية ليها معنى وتأثير؟ <span className="underline decoration-4 decoration-gift-dark">دلوقتي.</span>
-        </motion.p>
+          <Gift className="w-6 h-6" />
+          اشترِ الآن
+        </motion.a>
       </motion.div>
     </div>
   </section>
 );
 
-// FAQ Section
+// FAQ Section - Light #F2F5F4 background
 const faqs = [
   {
     question: "طيب لو الشخص مش بيقرأ كتير؟",
-    answer: "كارت Read to Lead مش بس كتب. فيه أدوات، ملخصات قصيرة، ومحتوى عملي لأي حد عايز يطوّر نفسه — حتى لو مش قارئ تقليدي. والأهم: هو اللي بيختار — يعني هيختار اللي يناسب أسلوبه."
+    answer: "كارت Read to Lead مش بس كتب. فيه أدوات، ملخصات قصيرة، ومحتوى عملي لأي حد عايز يطوّر نفسه — حتى لو مش قارئ تقليدي."
   },
   {
     question: "لو عايز أهدي لأكتر من شخص؟",
@@ -635,20 +405,20 @@ const faqs = [
   },
   {
     question: "الكارت صالح لمدة قد إيه؟",
-    answer: "الكارت ليه صلاحية طويلة — والشخص يقدر يستخدمه في أي وقت يناسبه. مفيش ضغط. مفيش استعجال."
+    answer: "الكارت ليه صلاحية طويلة — والشخص يقدر يستخدمه في أي وقت يناسبه. مفيش ضغط."
   },
   {
     question: "إيه الفرق بين كارت Read to Lead وGift Card عادي؟",
-    answer: "كارت عادي = فلوس. كارت Read to Lead = رسالة. أنت مش بتدي مبلغ مالي. أنت بتدي فرصة للتعلّم، التطوير، وبداية جديدة. ده اللي بيخلي الهدية مختلفة — ومؤثرة."
+    answer: "كارت عادي = فلوس. كارت Read to Lead = رسالة. أنت بتدي فرصة للتعلّم والتطوير وبداية جديدة."
   },
   {
     question: "ممكن أهدي نفسي؟",
-    answer: "أكيد! أحيانًا أفضل هدية هي اللي بتديها لنفسك. كارت Read to Lead = commitment لنفسك إنك تبدأ رحلة تطوير حقيقية."
+    answer: "أكيد! أحيانًا أفضل هدية هي اللي بتديها لنفسك. كارت Read to Lead = commitment لنفسك."
   }
 ];
 
 const FAQSection = () => (
-  <section className="py-20 md:py-32 bg-white">
+  <section className="py-24 md:py-32 bg-gift-neutral-light">
     <div className="container mx-auto px-4">
       <motion.div 
         className="max-w-3xl mx-auto"
@@ -658,24 +428,27 @@ const FAQSection = () => (
         variants={staggerContainer}
       >
         <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold text-gift-neutral-dark mb-12 text-center"
           variants={fadeInUp}
         >
-          ❓ أسئلة مهمة
+          أسئلة مهمة
         </motion.h2>
         
         <motion.div variants={fadeInUp}>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-gray-50 rounded-2xl px-6 border-none"
+                className="bg-white rounded-xl px-6 border border-gift-neutral-soft"
               >
-                <AccordionTrigger className="text-right text-lg font-bold text-gift-primary hover:text-gift-primary-light py-6">
-                  {faq.question}
+                <AccordionTrigger className="text-right text-lg font-bold text-gift-neutral-dark hover:text-gift-primary py-5 [&[data-state=open]]:text-gift-primary">
+                  <span className="flex items-center gap-3">
+                    <HelpCircle className="w-5 h-5 text-gift-accent-blue flex-shrink-0" />
+                    {faq.question}
+                  </span>
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-600 leading-relaxed pb-6">
+                <AccordionContent className="text-gift-neutral-dark/70 leading-relaxed pb-5 pr-8">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -689,7 +462,7 @@ const FAQSection = () => (
 
 // Summary Section
 const SummarySection = () => (
-  <section className="py-20 md:py-32 bg-gray-50">
+  <section className="py-24 md:py-32 bg-white">
     <div className="container mx-auto px-4">
       <motion.div 
         className="max-w-5xl mx-auto"
@@ -699,10 +472,10 @@ const SummarySection = () => (
         variants={staggerContainer}
       >
         <motion.h2 
-          className="text-3xl md:text-5xl font-bold text-gift-primary mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold text-gift-neutral-dark mb-12 text-center"
           variants={fadeInUp}
         >
-          🧠 في النهاية…
+          في النهاية…
         </motion.h2>
         
         <motion.div 
@@ -710,14 +483,14 @@ const SummarySection = () => (
           variants={staggerContainer}
         >
           <motion.div 
-            className="bg-white rounded-3xl p-8 border border-gray-200"
+            className="bg-gift-neutral-light rounded-2xl p-8 border border-gift-neutral-soft"
             variants={fadeInUp}
           >
-            <h3 className="text-2xl font-bold text-gray-400 mb-6">كارت Read to Lead مش:</h3>
+            <h3 className="text-xl font-bold text-gift-neutral-dark/50 mb-6">كارت Read to Lead مش:</h3>
             <ul className="space-y-4">
               {["هدية شكل", "اختيار سريع وخلاص", "حاجة هتتنسى بعد أسبوع"].map((item, index) => (
-                <li key={index} className="flex items-center gap-3 text-lg text-gray-500">
-                  <X className="w-6 h-6 text-red-400" />
+                <li key={index} className="flex items-center gap-3 text-lg text-gift-neutral-dark/60">
+                  <X className="w-5 h-5 text-gift-accent-coral flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -725,14 +498,14 @@ const SummarySection = () => (
           </motion.div>
           
           <motion.div 
-            className="bg-gift-primary rounded-3xl p-8 text-white"
+            className="bg-gift-primary rounded-2xl p-8 text-white"
             variants={fadeInUp}
           >
-            <h3 className="text-2xl font-bold text-gift-accent mb-6">كارت Read to Lead هو:</h3>
+            <h3 className="text-xl font-bold text-gift-accent mb-6">كارت Read to Lead هو:</h3>
             <ul className="space-y-4">
               {["رسالة من القلب", "تأثير يفضل", "بداية جديدة لشخص يستاهل"].map((item, index) => (
                 <li key={index} className="flex items-center gap-3 text-lg">
-                  <Check className="w-6 h-6 text-gift-accent" />
+                  <Check className="w-5 h-5 text-gift-accent flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -753,7 +526,7 @@ const SummarySection = () => (
 
 // Final CTA Section
 const FinalCTASection = () => (
-  <section className="py-20 md:py-32 bg-gradient-to-br from-gift-primary via-gift-primary-light to-gift-dark">
+  <section className="py-24 md:py-32 bg-gradient-to-br from-gift-secondary via-gift-primary to-gift-secondary-light">
     <div className="container mx-auto px-4">
       <motion.div 
         className="max-w-3xl mx-auto text-center"
@@ -763,7 +536,7 @@ const FinalCTASection = () => (
         variants={staggerContainer}
       >
         <motion.p 
-          className="text-xl text-white/80 mb-6"
+          className="text-xl text-gift-neutral-light/80 mb-6"
           variants={fadeInUp}
         >
           جاهز تهدي هدية ليها قيمة حقيقية؟
@@ -771,7 +544,7 @@ const FinalCTASection = () => (
         
         <motion.a 
           href="#pricing"
-          className="inline-flex items-center gap-3 bg-gift-accent hover:bg-gift-accent-light text-gift-dark font-bold py-5 px-12 rounded-full text-2xl transition-all duration-300 hover:scale-105 shadow-2xl"
+          className="inline-flex items-center gap-3 bg-gift-accent hover:bg-gift-accent/90 text-gift-neutral-dark font-bold py-5 px-12 rounded-full text-2xl transition-all duration-300 hover:scale-105 shadow-2xl"
           variants={fadeInUp}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
@@ -781,13 +554,75 @@ const FinalCTASection = () => (
         </motion.a>
         
         <motion.div 
-          className="flex flex-wrap justify-center gap-6 mt-10 text-white/70"
+          className="flex flex-wrap justify-center gap-6 mt-10 text-gift-neutral-light/70"
           variants={fadeInUp}
         >
           <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> هدية رقمية فورية</span>
-          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> صالح على كل منتجات Read to Lead</span>
-          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> المُهدى له يختار رحلته بنفسه</span>
+          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> صالح على كل المنتجات</span>
+          <span className="flex items-center gap-2"><Check className="w-5 h-5 text-gift-accent" /> المُهدى له يختار رحلته</span>
         </motion.div>
+      </motion.div>
+    </div>
+  </section>
+);
+
+// How It Works Section
+const steps = [
+  { number: "1", title: "اختر قيمة الكارت", description: "من E£250 لـ E£5,000" },
+  { number: "2", title: "ادفع أونلاين", description: "عملية سهلة وآمنة" },
+  { number: "3", title: "الكارت يُرسل فورًا", description: "هدية رقمية جاهزة" },
+  { number: "4", title: "يبدأ رحلته", description: "يختار اللي يناسبه" }
+];
+
+const HowItWorksSection = () => (
+  <section id="how-it-works" className="py-24 md:py-32 bg-white">
+    <div className="container mx-auto px-4">
+      <motion.div 
+        className="max-w-5xl mx-auto"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={staggerContainer}
+      >
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold text-gift-neutral-dark mb-16 text-center"
+          variants={fadeInUp}
+        >
+          كيف تعمل الهدية؟
+        </motion.h2>
+        
+        <motion.div 
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={staggerContainer}
+        >
+          {steps.map((step, index) => (
+            <motion.div 
+              key={index}
+              className="relative"
+              variants={fadeInUp}
+            >
+              <div className="bg-gift-neutral-light rounded-2xl p-6 text-center h-full hover:shadow-lg transition-all duration-300 border border-gift-neutral-soft">
+                <div className="w-14 h-14 bg-gift-primary rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
+                  {step.number}
+                </div>
+                <h3 className="text-lg font-bold text-gift-neutral-dark mb-2">{step.title}</h3>
+                <p className="text-gift-neutral-dark/60 text-sm">{step.description}</p>
+              </div>
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -left-3 transform -translate-y-1/2">
+                  <div className="w-6 h-0.5 bg-gift-primary/30"></div>
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
+        
+        <motion.p 
+          className="text-center mt-10 text-gift-neutral-dark/70"
+          variants={fadeInUp}
+        >
+          💳 الكارت صالح على كل منتجات Read to Lead — المُهدى له يختار رحلته بنفسه.
+        </motion.p>
       </motion.div>
     </div>
   </section>
@@ -795,15 +630,15 @@ const FinalCTASection = () => (
 
 // Sticky Mobile CTA
 const StickyMobileCTA = () => (
-  <div className="fixed bottom-0 left-0 right-0 bg-gift-dark/95 backdrop-blur-md border-t border-gift-primary-light/20 p-4 z-50 md:hidden">
+  <div className="fixed bottom-0 left-0 right-0 bg-gift-secondary/95 backdrop-blur-md border-t border-gift-primary/20 p-4 z-50 md:hidden">
     <div className="flex items-center justify-between gap-4">
-      <div className="text-white">
+      <div className="text-gift-neutral-light">
         <p className="text-sm opacity-80">🎁 كارت هدية Read to Lead</p>
         <p className="text-gift-accent font-bold">ابدأ من E£250</p>
       </div>
       <a 
         href="#pricing"
-        className="bg-gift-accent hover:bg-gift-accent-light text-gift-dark font-bold py-3 px-6 rounded-xl transition-all duration-300 whitespace-nowrap"
+        className="bg-gift-accent hover:bg-gift-accent/90 text-gift-neutral-dark font-bold py-3 px-6 rounded-xl transition-all duration-300 whitespace-nowrap"
       >
         اشترِ الآن
       </a>
@@ -818,15 +653,12 @@ const GiftCard = () => {
       <SEO 
         title="كارت هدية Read to Lead | هدية تِفضل… مش تِتنسى"
         description="كارت هدية Read to Lead — لأن الشخص اللي يستاهل، يستاهل هدية تبني… مش هدية تتنسى. اختر من E£250 لـ E£5,000"
-        url="https://land.readtolead.store/gift-card"
       />
       
       <HeroSection />
       <ProblemSection />
-      <SolutionSection />
+      <EmotionalTransitionSection />
       <BenefitsSection />
-      <EmotionalQuoteSection />
-      <AudienceSection />
       <HowItWorksSection />
       <PricingSection />
       <UrgencySection />
@@ -834,9 +666,6 @@ const GiftCard = () => {
       <SummarySection />
       <FinalCTASection />
       <StickyMobileCTA />
-      
-      {/* Add padding at bottom for sticky CTA on mobile */}
-      <div className="h-24 md:hidden"></div>
     </div>
   );
 };
