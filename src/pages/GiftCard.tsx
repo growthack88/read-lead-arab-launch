@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, Variants } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 import { Gift, BookOpen, Brain, Rocket, Clock, Check, X, ChevronDown, Users, Briefcase, Building2, GraduationCap, Sparkles, HelpCircle } from "lucide-react";
 import SEO from "@/components/SEO";
 import {
@@ -35,12 +35,157 @@ const staggerContainer: Variants = {
   }
 };
 
+// Confetti particle component
+const ConfettiParticle = ({ delay, x, color }: { delay: number; x: number; color: string }) => (
+  <motion.div
+    className="absolute w-3 h-3 rounded-sm"
+    style={{ backgroundColor: color, left: `${x}%` }}
+    initial={{ y: -20, opacity: 1, rotate: 0, scale: 1 }}
+    animate={{ 
+      y: '100vh', 
+      opacity: [1, 1, 0], 
+      rotate: [0, 360, 720],
+      scale: [1, 0.8, 0.5]
+    }}
+    transition={{ 
+      duration: 4, 
+      delay, 
+      ease: "easeIn"
+    }}
+  />
+);
+
+// Floating gift component
+const FloatingGift = ({ delay, x, size }: { delay: number; x: number; size: number }) => (
+  <motion.div
+    className="absolute text-gift-accent"
+    style={{ left: `${x}%` }}
+    initial={{ y: -50, opacity: 0, scale: 0 }}
+    animate={{ 
+      y: ['0%', '120vh'],
+      opacity: [0, 1, 1, 0],
+      scale: [0.5, 1, 1, 0.5],
+      rotate: [0, 15, -15, 0]
+    }}
+    transition={{ 
+      duration: 5,
+      delay,
+      ease: "easeInOut"
+    }}
+  >
+    <Gift size={size} />
+  </motion.div>
+);
+
+// Celebration overlay component
+const CelebrationOverlay = () => {
+  const [showCelebration, setShowCelebration] = useState(true);
+  
+  const confettiColors = ['#F4C95D', '#169380', '#28B9A8', '#EE6C4D', '#3A86FF', '#F2F5F4'];
+  const confettiParticles = Array.from({ length: 50 }, (_, i) => ({
+    id: i,
+    delay: Math.random() * 0.5,
+    x: Math.random() * 100,
+    color: confettiColors[Math.floor(Math.random() * confettiColors.length)]
+  }));
+  
+  const floatingGifts = Array.from({ length: 12 }, (_, i) => ({
+    id: i,
+    delay: Math.random() * 1.5,
+    x: Math.random() * 100,
+    size: 24 + Math.random() * 24
+  }));
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCelebration(false), 4500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <AnimatePresence>
+      {showCelebration && (
+        <motion.div 
+          className="fixed inset-0 pointer-events-none z-50 overflow-hidden"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Confetti particles */}
+          {confettiParticles.map((particle) => (
+            <ConfettiParticle 
+              key={particle.id} 
+              delay={particle.delay} 
+              x={particle.x} 
+              color={particle.color}
+            />
+          ))}
+          
+          {/* Floating gifts */}
+          {floatingGifts.map((gift) => (
+            <FloatingGift 
+              key={gift.id} 
+              delay={gift.delay} 
+              x={gift.x} 
+              size={gift.size}
+            />
+          ))}
+          
+          {/* Center sparkle burst */}
+          <motion.div 
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            initial={{ scale: 0, opacity: 1 }}
+            animate={{ scale: [0, 2, 3], opacity: [1, 0.8, 0] }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            <Sparkles className="w-32 h-32 text-gift-accent" />
+          </motion.div>
+          
+          {/* Radial burst effect */}
+          <motion.div
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-gift-accent/20"
+            initial={{ width: 0, height: 0, opacity: 0.8 }}
+            animate={{ width: '200vw', height: '200vw', opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 // Hero Section - Dark #0F7468 with gradient from #169380
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-gift-secondary via-gift-primary to-gift-secondary-light overflow-hidden">
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 right-20 w-72 h-72 bg-gift-accent rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-gift-neutral-light rounded-full blur-3xl"></div>
+    </div>
+    
+    {/* Animated floating gifts in background */}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute text-gift-accent/20"
+          style={{ 
+            left: `${15 + i * 15}%`, 
+            top: `${20 + (i % 3) * 25}%` 
+          }}
+          animate={{ 
+            y: [0, -20, 0],
+            rotate: [0, 5, -5, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 4 + i * 0.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: i * 0.3
+          }}
+        >
+          <Gift size={40 + i * 8} />
+        </motion.div>
+      ))}
     </div>
     
     <div className="container mx-auto px-4 py-20 relative z-10">
@@ -654,6 +799,9 @@ const GiftCard = () => {
         title="كارت هدية Read to Lead | هدية تِفضل… مش تِتنسى"
         description="كارت هدية Read to Lead — لأن الشخص اللي يستاهل، يستاهل هدية تبني… مش هدية تتنسى. اختر من E£250 لـ E£5,000"
       />
+      
+      {/* Celebration animation on page load */}
+      <CelebrationOverlay />
       
       <HeroSection />
       <ProblemSection />
