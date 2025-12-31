@@ -15,7 +15,7 @@ import {
 
 const ProductivityKit = () => {
   const baseCheckoutUrl = "https://si51ve-s6.myshopify.com/cart";
-  const productVariantId = "42289428791401";
+  const productVariantId = "42772076593257";
 
   return (
     <div className="min-h-screen bg-white pb-20" dir="rtl">
