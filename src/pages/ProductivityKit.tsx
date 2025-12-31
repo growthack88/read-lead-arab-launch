@@ -44,28 +44,50 @@ const ProductivityKit = () => {
 
       {/* Main Content */}
       <main>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-white to-gray-50 py-16 md:py-20">
+        {/* Hero Section - Redesigned with horizontal layout */}
+        <section className="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16 lg:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col md:flex-row-reverse items-center gap-8">
-                <div className="flex-1 text-right">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark mb-4 text-center">
+            <div className="max-w-6xl mx-auto">
+              {/* Desktop: 2-column layout | Mobile: stacked */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                
+                {/* Text Content - Right side on desktop (RTL) */}
+                <div className="order-2 lg:order-1 text-right space-y-6">
+                  {/* Product Name Badge */}
+                  <div className="inline-block bg-rtl-teal/10 text-rtl-teal px-4 py-2 rounded-full text-sm font-medium">
+                    Productivity Operating System Kit
+                  </div>
+                  
+                  {/* Headline */}
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark leading-tight">
                     السنة الجديدة مش محتاجة أهداف أكتر
                     <br />
                     <span className="text-rtl-teal">محتاجة طريقة أحسن تمشي بيها</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-gray-600 mb-4 text-right">
-                    Productivity Operating System Kit — كيت إنتاجية مصممة تساعدك تخطط للسنة بتاعتك بوضوح، وتحوّل الأهداف الكبيرة لخطوات يومية تمشي عليها.
-                  </p>
-                  <p className="text-base text-gray-600 mb-8 text-right">
-                    Productivity OS من Read to Lead هو كيت متكاملة بتحوّل التخطيط من نوايا… لنظام إنتاجية تعيش بيه طول السنة.
-                  </p>
-                  <p className="text-sm text-gray-500 mb-4 text-right">
-                    🚚 شحن خلال ٢–٤ أيام داخل مصر | 💳 الدفع عند الاستلام أو أونلاين
+                  
+                  {/* Subheadline */}
+                  <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    كيت إنتاجية مصممة تساعدك تخطط للسنة بتاعتك بوضوح، وتحوّل الأهداف الكبيرة لخطوات يومية تمشي عليها.
                   </p>
                   
-                  <div className="text-center md:text-right">
+                  <p className="text-base text-gray-500">
+                    Productivity OS من Read to Lead — نظام إنتاجية تعيش بيه طول السنة.
+                  </p>
+                  
+                  {/* Price & Info Block */}
+                  <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-3xl font-bold text-rtl-teal">999 جنيه</span>
+                      <span className="text-gray-400 line-through text-lg">2000 جنيه</span>
+                    </div>
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                      <span>🚚 شحن خلال ٢–٤ أيام</span>
+                      <span>💳 الدفع عند الاستلام أو أونلاين</span>
+                    </div>
+                  </div>
+                  
+                  {/* CTA */}
+                  <div>
                     <QuantitySelector 
                       baseCheckoutUrl={baseCheckoutUrl}
                       productVariantId={productVariantId}
@@ -74,15 +96,19 @@ const ProductivityKit = () => {
                     />
                   </div>
                 </div>
-                <div className="flex-1">
-                  <div className="w-full max-w-4xl mx-auto">
+                
+                {/* Hero Image - Left side on desktop (RTL), horizontal banner */}
+                <div className="order-1 lg:order-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-rtl-teal/5 rounded-2xl transform rotate-1"></div>
                     <img 
-                      src="/lovable-uploads/a3f8304d-2ca7-4b26-9282-b9178b10ca5d.png" 
-                      alt="Productivity Operating System Kit" 
-                      className="w-full h-auto rounded-xl shadow-lg object-contain"
+                      src="/lovable-uploads/productivity-kit-hero.jpg" 
+                      alt="Productivity Operating System Kit - نظام إنتاجية متكامل" 
+                      className="relative w-full h-auto rounded-2xl shadow-xl object-cover"
                     />
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
