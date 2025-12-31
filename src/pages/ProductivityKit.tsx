@@ -51,20 +51,25 @@ const ProductivityKit = () => {
               <div className="flex flex-col md:flex-row-reverse items-center gap-8">
                 <div className="flex-1 text-right">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark mb-4 text-center">
-                    Productivity Kit | مجموعة الإنتاجية وتطوير الذات
+                    السنة الجديدة مش محتاجة أهداف أكتر
+                    <br />
+                    <span className="text-rtl-teal">محتاجة طريقة أحسن تمشي بيها</span>
                   </h1>
                   <p className="text-lg md:text-xl text-gray-600 mb-4 text-right">
-                    كل الأدوات والكتب اللي تساعدك ترتّب يومك، تحقّق أهدافك، وتشتغل على نفسك بطريقة ذكية ومنظّمة.
+                    Productivity Operating System Kit — كيت إنتاجية مصممة تساعدك تخطط للسنة بتاعتك بوضوح، وتحوّل الأهداف الكبيرة لخطوات يومية تمشي عليها.
                   </p>
                   <p className="text-base text-gray-600 mb-8 text-right">
-                    📦 Productivity Kit هي مجموعة أدوات متكاملة بتساعدك على تحقيق أفضل أداء شخصي ومهني من خلال أدوات تنظيم الوقت وتحديد الأهداف وتحسين الإنتاجية. مثالية للموظفين، القادة، وأصحاب المشاريع اللي حابين يقللوا التشتت، ويحققوا توازن بين الشغل والحياة.
+                    Productivity OS من Read to Lead هو كيت متكاملة بتحوّل التخطيط من نوايا… لنظام إنتاجية تعيش بيه طول السنة.
+                  </p>
+                  <p className="text-sm text-gray-500 mb-4 text-right">
+                    🚚 شحن خلال ٢–٤ أيام داخل مصر | 💳 الدفع عند الاستلام أو أونلاين
                   </p>
                   
                   <div className="text-center md:text-right">
                     <QuantitySelector 
                       baseCheckoutUrl={baseCheckoutUrl}
                       productVariantId={productVariantId}
-                      buttonText="احصل علي الباقة الان"
+                      buttonText="اطلب الكيت دلوقتي"
                       price="999"
                     />
                   </div>
@@ -73,7 +78,7 @@ const ProductivityKit = () => {
                   <div className="w-full max-w-4xl mx-auto">
                     <img 
                       src="/lovable-uploads/a3f8304d-2ca7-4b26-9282-b9178b10ca5d.png" 
-                      alt="Productivity Kit صورة المنتج" 
+                      alt="Productivity Operating System Kit" 
                       className="w-full h-auto rounded-xl shadow-lg object-contain"
                     />
                   </div>
@@ -88,42 +93,29 @@ const ProductivityKit = () => {
           <Separator className="bg-gray-200" />
         </div>
 
-        {/* What's Inside Section */}
+        {/* Target Audience Section */}
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
-                ✨ إيه اللي هتلاقيه جوّه الكيت؟
+                🎯 الكيت دي مناسبة لمين؟
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4 justify-end">
-                      <div className="text-right">
-                        <h3 className="font-bold text-xl mb-2">📈 Productivity & Growth Toolkit</h3>
-                        <p>تتبع الوقت، أهداف SMART، خارطة طريق استراتيجية، خطة أسبوعية</p>
-                      </div>
-                    </div>
+                    <ul className="space-y-4 text-right">
+                      <li>✅ أي شخص بيبدأ سنة جديدة وعايز تخطيط مختلف</li>
+                      <li>✅ اللي جرّب يكتب أهداف كتير ومكمّلش</li>
+                      <li>✅ موظفين وفريلانسرز عايزين ينظموا وقتهم</li>
+                    </ul>
                   </CardContent>
                 </Card>
                 <Card className="hover-scale shadow-md border-rtl-teal/10">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4 justify-end">
-                      <div className="text-right">
-                        <h3 className="font-bold text-xl mb-2">📘 كتاب الإنتاجية</h3>
-                        <p>مفاهيم إدارة الوقت، ترتيب الأولويات، وتحقيق الإنجاز</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card className="hover-scale shadow-md border-rtl-teal/10">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4 justify-end">
-                      <div className="text-right">
-                        <h3 className="font-bold text-xl mb-2">📕 كتاب تطوير الذات</h3>
-                        <p>مهارات شخصية وعملية بخطوات عملية ومدروسة</p>
-                      </div>
-                    </div>
+                    <ul className="space-y-4 text-right">
+                      <li>✅ Founders / Creators / Marketers محتاجين إنتاجية ثابتة</li>
+                      <li>✅ أي حد مشغول طول الوقت والتقدم بطيء</li>
+                    </ul>
                   </CardContent>
                 </Card>
               </div>
@@ -142,29 +134,181 @@ const ProductivityKit = () => {
             <div className="max-w-4xl mx-auto">
               <section dir="rtl" className="text-right my-8">
                 <h2 className="text-center text-2xl md:text-3xl font-bold mb-6 text-rtl-dark">🧠 إزاي الكيت هتفيدك؟</h2>
+                <p className="text-lg text-gray-600 mb-6 text-center">نظام إنتاجية كامل — مش أدوات منفصلة</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Benefits */}
                   <div>
                     <ul className="list-none space-y-4 pr-4">
-                      <li>✅ هيساعدك تشتغل على أولوياتك وتقلل التشتت</li>
-                      <li>✅ هتحقق توازن حقيقي بين شغلك وحياتك</li>
-                      <li>✅ هتطوّر نفسك وتحسن مستواك المهني</li>
-                      <li>✅ هتنجز أكتر بأقل مجهود</li>
+                      <li>✅ تخطيط سنوي واضح بدل أهداف عشوائية</li>
+                      <li>✅ تحويل الأهداف الكبيرة لخطوات يومية</li>
+                      <li>✅ إدارة الوقت والطاقة بوعي</li>
                     </ul>
                   </div>
-                  
-                  {/* Audience */}
                   <div>
-                    <h3 className="text-lg font-semibold mb-2 text-rtl-dark">🎯 المجموعة دي مناسبة لمين؟</h3>
-                    <ul className="list-disc space-y-4 pr-4">
-                      <li>الموظفين والمديرين</li>
-                      <li>أصحاب المشاريع ورواد الأعمال</li>
-                      <li>الطلاب اللي بيوازنوا بين الدراسة والحياة</li>
-                      <li>أي شخص بيدوّر على طريقة يرتّب بيها يومه ويشتغل بذكاء</li>
+                    <ul className="list-none space-y-4 pr-4">
+                      <li>✅ بناء عادات صغيرة تكمل طول السنة</li>
+                      <li>✅ قياس حقيقي للتقدم بدل وهم الإنجاز</li>
                     </ul>
                   </div>
                 </div>
+                <p className="text-lg font-medium text-rtl-dark mt-8 text-center">
+                  بدل ما تبدأ كل سنة من الصفر — معاك نظام جاهز تشتغل بيه من أول يوم
+                </p>
               </section>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* What's Inside Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
+                📦 إيه اللي هتلاقيه جوّا الكيت؟
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <h3 className="font-bold text-xl mb-3">📘 كتاب الإنتاجية ببساطة</h3>
+                      <ul className="space-y-2 text-gray-600 text-sm">
+                        <li>• إعادة تعريف الإنتاجية: مش تعمل أكتر، تعمل الصح</li>
+                        <li>• الفرق بين الانشغال والإنتاج الحقيقي</li>
+                        <li>• اختيار الأولويات بوعي</li>
+                        <li>• إدارة الطاقة قبل الوقت</li>
+                        <li>• تخطيط سنة أقل زحمة وأكتر قيمة</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <h3 className="font-bold text-xl mb-3">📓 Productivity Journal</h3>
+                      <p className="text-gray-600 text-sm mb-2">Operating System يومي / أسبوعي / سنوي:</p>
+                      <ul className="space-y-2 text-gray-600 text-sm">
+                        <li>• تخطيط يومك بوضوح</li>
+                        <li>• مراجعة أسبوعك</li>
+                        <li>• متابعة التركيز</li>
+                        <li>• رؤية الصورة الكبيرة للسنة</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <h3 className="font-bold text-xl mb-3">📒 Notebook</h3>
+                      <p className="text-gray-600 text-sm">مساحة تفريغ ذهني</p>
+                      <p className="text-gray-600 text-sm mt-2">تفريغ أفكار = تركيز أعلى</p>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <h3 className="font-bold text-xl mb-3">📋 Productivity Toolkits</h3>
+                      <ul className="space-y-2 text-gray-600 text-sm">
+                        <li>• تحليل مشاكل الإنتاجية</li>
+                        <li>• ترتيب الأولويات</li>
+                        <li>• تحويل اللخبطة لخطة</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <h3 className="font-bold text-xl mb-3">📊 Habit Tracker – Quick Guide</h3>
+                      <ul className="space-y-2 text-gray-600 text-sm">
+                        <li>• بناء الاستمرارية</li>
+                        <li>• تقليل التسويف</li>
+                        <li>• متابعة التقدم</li>
+                        <li>• تحويل الأهداف لعادات</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <div className="text-right">
+                      <h3 className="font-bold text-xl mb-3">🎁 إضافات</h3>
+                      <ul className="space-y-2 text-gray-600 text-sm">
+                        <li>• <strong>Postcard:</strong> رسالة ثابتة تفكّرك ليه بدأت وعايز توصل لإيه</li>
+                        <li>• <strong>Stickers Sheet:</strong> تشجيع بصري بسيط يكمل الرحلة</li>
+                        <li>• <strong>2 Bookmarks:</strong> ربط دائم بالنظام أثناء القراءة والتخطيط</li>
+                      </ul>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* Why Different Section */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
+                ✨ ليه Productivity OS مختلف؟
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <ul className="space-y-4 text-right">
+                      <li>✅ نظام متكامل وكل جزء مكمل للتاني</li>
+                      <li>✅ عملي مش تنظيري</li>
+                      <li>✅ مناسب لتخطيط السنة + تنفيذ يومي</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+                <Card className="hover-scale shadow-md border-rtl-teal/10">
+                  <CardContent className="p-6">
+                    <ul className="space-y-4 text-right">
+                      <li>✅ مش حماس مؤقت</li>
+                      <li>✅ مطبوع بخامات مريحة للاستخدام الحقيقي</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Divider */}
+        <div className="container mx-auto px-4 py-6">
+          <Separator className="bg-gray-200" />
+        </div>
+
+        {/* How It Works / Example Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center">
+                💡 مثال بسيط
+              </h2>
+              <div className="bg-white rounded-xl p-8 shadow-md">
+                <ol className="space-y-4 text-right list-decimal list-inside text-lg">
+                  <li>ابدأ بتحديد رؤيتك في الجورنال</li>
+                  <li>اقرأ فصل يظبط أولوياتك</li>
+                  <li>قسّم الهدف لعادات يومية</li>
+                  <li>تابعها بالـ Habit Tracker</li>
+                  <li>راجع تقدمك أسبوعيًا</li>
+                </ol>
+                <p className="text-lg font-medium text-rtl-dark mt-8 text-center">
+                  بدل ما السنة تعدّي — إنت اللي تمشيها بنظام
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -182,9 +326,19 @@ const ProductivityKit = () => {
                 💸 السعر والمزايا
               </h2>
               <div className="bg-rtl-teal/10 rounded-xl p-8 text-center">
+                <p className="text-lg mb-4 text-gray-600">كيت مطبوعة كاملة تشمل:</p>
+                <ul className="text-right max-w-md mx-auto space-y-2 mb-6">
+                  <li>📘 كتاب الإنتاجية ببساطة</li>
+                  <li>📓 Productivity Journal</li>
+                  <li>📋 Toolkits</li>
+                  <li>📊 Habit Tracker</li>
+                  <li>📒 Notebook</li>
+                  <li>💌 Postcard</li>
+                  <li>🎨 Stickers</li>
+                  <li>🔖 2 Bookmarks</li>
+                </ul>
                 <h3 className="text-3xl font-bold mb-4 text-rtl-dark">السعر: 999 جنيه</h3>
-                <p className="text-xl mb-2">السعر السابق: <span className="line-through text-gray-500">2000 جنيه</span></p>
-                <p className="text-xl mb-2">🚚 شحن خلال ٢-٤ أيام | 💳 الدفع عند الاستلام أو أونلاين</p>
+                <p className="text-lg mb-2">🚚 شحن خلال ٢–٤ أيام | 💳 الدفع عند الاستلام أو أونلاين</p>
               </div>
             </div>
           </div>
@@ -194,104 +348,14 @@ const ProductivityKit = () => {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 مستعد تبدأ رحلتك في الإنتاجية؟</h2>
+              <h2 className="text-3xl font-bold mb-8 text-rtl-dark">🟢 جاهز تبدأ سنة بإنتاجية مختلفة؟</h2>
               <QuantitySelector 
                 baseCheckoutUrl={baseCheckoutUrl}
                 productVariantId={productVariantId}
-                buttonText="🛒 اطلب Productivity Kit الآن"
+                buttonText="🛒 اطلب Productivity Operating System Kit دلوقتي"
                 price="999"
               />
-              <p className="text-lg font-medium mt-6 text-rtl-dark">ابدأ بإدارة وقتك وتطوير نفسك من النهاردة</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Book List Section - Productivity Books */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center flex items-center justify-center gap-3">
-                <Book className="h-6 w-6 text-rtl-teal" />
-                <span>📚 كتب زيادة الانتاجية</span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* Single column with all books */}
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
-                    <li className="border-b pb-2">1. 10 أيام للقراءة السريعة – معهد برينستون، أبي ماركس بيلي</li>
-                    <li className="border-b pb-2">2. 18 دقيقة – بيتر بريغمان</li>
-                    <li className="border-b pb-2">3. التروس الخمسة – كوبيشك وكوكرام</li>
-                    <li className="border-b pb-2">4. أن تكون جاهلاً – مارك هيرست</li>
-                    <li className="border-b pb-2">5. ممل ورائع – مانوش زومورودي</li>
-                    <li className="border-b pb-2">6. عمليات التنفس – مايكل تاونسند ويليامز</li>
-                    <li className="border-b pb-2">7. لا تفعل شيئًا – سيليست هيدلي</li>
-                    <li className="border-b pb-2">8. لحظات من التوقف المؤقت – روبرت بوينتون</li>
-                    <li className="border-b pb-2">9. قم بعملك – ستيفن بريسفيلد</li>
-                    <li>10. أسقط الكرة – تيفاني دوفو</li>
-                  </ul>
-                </div>
-                
-                {/* Second column with remaining books */}
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
-                    <li className="border-b pb-2">11. تقليل الجهد – غريغ ماكيون</li>
-                    <li className="border-b pb-2">12. حرية التركيز – مايكل هايت</li>
-                    <li className="border-b pb-2">13. جيمبا كايزن – ماساكي ايماي</li>
-                    <li className="border-b pb-2">14. احصل على حياة – ريك هيوز</li>
-                    <li className="border-b pb-2">15. عادات عالية الأداء – بريندون بيرشارد</li>
-                    <li className="border-b pb-2">16. أنا أعرف كيف تقومين بهذا – لورا فاندركام</li>
-                    <li className="border-b pb-2">17. تعلم مثل المحترفين – باربرا أوكلي، أولاف شيوي</li>
-                    <li className="border-b pb-2">18. اصنع الوقت – جيك ناب، جون زيراتسكي</li>
-                    <li className="border-b pb-2">19. الضوضاء – جوزيف ماكورماك</li>
-                    <li>20. على مدار الساعة – لورا فاندركام</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* NEW Book List Section - Self Development Books */}
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-rtl-dark text-center flex items-center justify-center gap-3">
-                <Book className="h-6 w-6 text-rtl-purple" />
-                <span>📚 كتب تطوير الذات</span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {/* First column with books 1-10 */}
-                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
-                    <li className="border-b pb-2">1. كيفية اتخاذ القرار - آني ديوك</li>
-                    <li className="border-b pb-2">2. العادات الجيدة والعادات السيئة - ويندي وود</li>
-                    <li className="border-b pb-2">3. العامل الحفاز - تشاندرامولي فينكاتيسان</li>
-                    <li className="border-b pb-2">4. الوصول إلى نعم مع نفسك - ويليام أوري</li>
-                    <li className="border-b pb-2">5. 59 ثانية - ريتشارد وايزمان</li>
-                    <li className="border-b pb-2">6. قواعد الدماغ - جون ميدينا</li>
-                    <li className="border-b pb-2">7. كُل، تحرّك، ونام - توم راث</li>
-                    <li className="border-b pb-2">8. الإبلاغ عن الهراء - كارل بيرغستروم، جيفن جي ويست</li>
-                    <li className="border-b pb-2">9. الأهداف - زيغ زيغلر</li>
-                    <li>10. مغيرو اللعبة - ديف اسبري</li>
-                  </ul>
-                </div>
-                
-                {/* Second column with books 11-20 */}
-                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                  <ul dir="rtl" className="space-y-1 pr-4 text-right">
-                    <li className="border-b pb-2">11. كيف لا تكون صبيا - روبرت ويب</li>
-                    <li className="border-b pb-2">12. كيف تجعل الأشخاص يحبونك في 90 ثانية أو أقل - نيكولاس بوثمان</li>
-                    <li className="border-b pb-2">13. قواعد نابليون هيل الذهبية - نابليون هيل</li>
-                    <li className="border-b pb-2">14. الفتيات الأذكياء يخطئون أيضاً - بيلا زانيسكو</li>
-                    <li className="border-b pb-2">15. ابتسم أو تموت - باربرا إرينريك</li>
-                    <li className="border-b pb-2">16. ولدت لتفوز - زيغ زيجلار، توم زيجلار</li>
-                    <li className="border-b pb-2">17. مفارقة الشمبانزي - ستيف بيترز</li>
-                    <li className="border-b pb-2">18. أول 20 ساعة - جوش كوفمان</li>
-                    <li className="border-b pb-2">19. كود البطل - ويليام إتش مكرافن</li>
-                    <li>20. فن اللامبالاة - مارك مانسون</li>
-                  </ul>
-                </div>
-              </div>
+              <p className="text-lg font-medium mt-6 text-rtl-dark">وخلي الإنتاجية نظام حقيقي يومي عندك</p>
             </div>
           </div>
         </section>
@@ -306,80 +370,74 @@ const ProductivityKit = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <section dir="rtl" className="text-right max-w-6xl mx-auto mt-12 space-y-6 border-t pt-8">
-                <h2 className="text-xl font-bold text-center mb-6">❓ الأسئلة الشائعة – Productivity Kit</h2>
+                <h2 className="text-xl font-bold text-center mb-6">❓ الأسئلة الشائعة</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                   {/* Column 1 */}
                   <div className="space-y-4 h-full">
                     <div className="space-y-1">
-                      <p className="font-semibold">١. إيه هو Productivity Kit؟</p>
-                      <p>هو مجموعة أدوات عملية مصممة علشان تساعدك تنظم وقتك، تحدد أهدافك، وتزيد إنتاجيتك سواء في الشغل أو في حياتك اليومية.</p>
+                      <p className="font-semibold">١. إيه هو Productivity Operating System Kit؟</p>
+                      <p>كيت إنتاجية متكاملة لتحويل التخطيط لنظام يومي مستمر طول السنة.</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٢. مين اللي ممكن يستفيد منها؟</p>
-                      <p>أي شخص عايز يكون أكتر تنظيمًا وكفاءة، سواء كان موظف، مدير، رائد أعمال، أو حتى طالب.</p>
+                      <p className="font-semibold">٢. مناسبة لمين؟</p>
+                      <p>موظفين، فريلانسرز، أصحاب مشاريع، Creators، Marketers، وأي حد عايز إنتاجية حقيقية.</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٣. إيه اللي موجود جوا الكيت؟</p>
-                      <p>📌 أدوات تنظيم:</p>
+                      <p className="font-semibold">٣. إيه اللي جوّا الكيت؟</p>
                       <ul className="list-none space-y-1 pr-4">
-                        <li>• خطة الأسبوع</li>
-                        <li>• نموذج SMART</li>
-                        <li>• تتبع الوقت</li>
-                        <li>• خارطة طريق للنمو</li>
+                        <li>• كتاب الإنتاجية ببساطة</li>
+                        <li>• Productivity Journal</li>
+                        <li>• Toolkits</li>
+                        <li>• Habit Tracker</li>
+                        <li>• Notebook</li>
+                        <li>• Postcard + Stickers + 2 Bookmarks</li>
                       </ul>
-                      <p>📚 كتابين:</p>
-                      <ul className="list-none space-y-1 pr-4">
-                        <li>• عن الإنتاجية</li>
-                        <li>• عن تطوير الذات</li>
-                      </ul>
-                      <p>📖 + ملخصات لأكتر من 40 كتاب عالمي</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٤. هل لازم أكون مشغول جدًا علشان أحتاج الكيت؟</p>
-                      <p>لأ، الكيت معمول لأي شخص عايز يستخدم وقته بشكل أذكى ويعيش حياته بإنتاجية أعلى.</p>
+                      <p className="font-semibold">٤. هل للناس المشغولة بس؟</p>
+                      <p>لأ. لأي حد عايز يشتغل بذكاء مش بزحمة.</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٥. هل في شرح لطريقة استخدام الأدوات؟</p>
-                      <p>أيوه، كل أداة معاها دليل مبسط تقدر تطبقه فورًا.</p>
+                      <p className="font-semibold">٥. هل في شرح؟</p>
+                      <p>أيوه. كل أداة بسيطة وواضحة وجاهزة للاستخدام فورًا.</p>
                     </div>
                   </div>
 
                   {/* Column 2 */}
                   <div className="space-y-4 h-full">
                     <div className="space-y-1">
-                      <p className="font-semibold">٦. إزاي الكيت ممكن يغير يومي؟</p>
+                      <p className="font-semibold">٦. هتغيّر إنتاجيتي إزاي؟</p>
                       <ul className="list-disc pr-4 space-y-1">
-                        <li>تفهم وقتك بيروح فين</li>
-                        <li>تشتغل على الأولويات</li>
-                        <li>تقلل التشتت</li>
-                        <li>تلاقي توازن حقيقي</li>
-                        <li>تتطور ذاتيًا ومهنيًا</li>
+                        <li>تخطيط أوضح</li>
+                        <li>أولويات حقيقية</li>
+                        <li>تقليل التشتت</li>
+                        <li>عادات صغيرة بتعمل فرق</li>
                       </ul>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٧. الكتب كاملة ولا ملخصة؟</p>
-                      <p>فيها كتابين كاملين ل ملخصات مركّزة لأكتر من ٤٠ كتاب عالمي.</p>
+                      <p className="font-semibold">٧. لازم أستخدم كل حاجة؟</p>
+                      <p>لأ. النظام مرن.</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٨. هل تنفع أستخدم الكيت مع فريقي؟</p>
-                      <p>أكيد! تنفع لاجتماعات، تدريبات، ومراجعات أداء.</p>
+                      <p className="font-semibold">٨. ينفع للشغل أو الفرق؟</p>
+                      <p>أيوه. للتخطيط الشخصي واجتماعات الفرق.</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">٩. هو منتج رقمي ولا بيوصل لحد البيت؟</p>
-                      <p>منتج فعلي ملموس، بيوصل لحد بابك.</p>
+                      <p className="font-semibold">٩. المنتج مطبوع ولا رقمي؟</p>
+                      <p>مطبوع بالكامل.</p>
                     </div>
 
                     <div className="space-y-1">
-                      <p className="font-semibold">١٠. إزاي أطلب الكيت؟</p>
-                      <p>من موقعنا أو تواصل معانا على السوشيال ميديا، والتوصيل خلال أيام.</p>
+                      <p className="font-semibold">١٠. إزاي أطلب؟</p>
+                      <p>من الموقع، والتوصيل خلال أيام داخل مصر.</p>
                     </div>
                   </div>
                 </div>
@@ -391,7 +449,7 @@ const ProductivityKit = () => {
             <QuantitySelector 
               baseCheckoutUrl={baseCheckoutUrl}
               productVariantId={productVariantId}
-              buttonText="🛒 اطلب Productivity Kit الآن"
+              buttonText="🛒 اطلب Productivity Operating System Kit دلوقتي"
               price="999"
             />
           </div>
