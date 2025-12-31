@@ -60,10 +60,17 @@ const ProductivityKit = () => {
                   
                   {/* Headline */}
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-rtl-dark leading-tight">
+                    نظام تشغيل الإنتاجية
+                    <br />
+                    <span className="text-rtl-teal">ProductivityOS</span>
+                  </h1>
+                  
+                  {/* Tagline */}
+                  <p className="text-xl md:text-2xl font-medium text-gray-700">
                     السنة الجديدة مش محتاجة أهداف أكتر
                     <br />
                     <span className="text-rtl-teal">محتاجة طريقة أحسن تمشي بيها</span>
-                  </h1>
+                  </p>
                   
                   {/* Subheadline */}
                   <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
