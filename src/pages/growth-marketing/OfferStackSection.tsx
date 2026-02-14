@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const CHECKOUT_URL = "https://si51ve-s6.myshopify.com/cart/42772076593257:1?channel=buy_button";
+const CHECKOUT_URL = "https://si51ve-s6.myshopify.com/cart/42908397895785:1?channel=buy_button";
 
 const items = [
   { label: "📘 كتاب Building Growth Machine (مطبوع + رقمي)", value: "999 ج.م" },
