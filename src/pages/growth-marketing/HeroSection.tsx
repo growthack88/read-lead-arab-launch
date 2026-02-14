@@ -48,20 +48,11 @@ const HeroSection = () => {
           <div className="relative flex justify-center items-center min-h-[400px]">
             <div className="relative w-64 h-80">
               {/* Book 3 - back */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/80 to-amber-600/80 rounded-xl border border-white/10 transform rotate-6 translate-x-6 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
-                <span className="text-3xl mb-2">📙</span>
-                <span className="text-white font-bold text-sm">التسويق ببساطة</span>
-              </div>
+              <img src="/lovable-uploads/simply-marketing-cover.webp" alt="التسويق ببساطة" className="absolute inset-0 w-full h-full object-cover rounded-xl border border-white/10 transform rotate-6 translate-x-6 shadow-2xl" />
               {/* Book 2 - middle */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/80 to-emerald-600/80 rounded-xl border border-white/10 transform rotate-2 translate-x-2 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
-                <span className="text-3xl mb-2">📗</span>
-                <span className="text-white font-bold text-sm">GrowthDNA</span>
-              </div>
+              <img src="/lovable-uploads/growthdna-cover.jpg" alt="GrowthDNA" className="absolute inset-0 w-full h-full object-cover rounded-xl border border-white/10 transform rotate-2 translate-x-2 shadow-2xl" />
               {/* Book 1 - front */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/80 to-blue-600/80 rounded-xl border border-white/10 shadow-2xl flex flex-col items-center justify-center p-6 text-center transform -rotate-2 -translate-x-2">
-                <span className="text-3xl mb-2">📘</span>
-                <span className="text-white font-bold text-sm">Building Growth Machine</span>
-              </div>
+              <img src="/lovable-uploads/gm-cover.jpg" alt="Building Growth Machine" className="absolute inset-0 w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl transform -rotate-2 -translate-x-2" />
             </div>
             {/* Tools card */}
             <div className="absolute -bottom-4 bg-purple-500/20 border border-purple-500/20 rounded-xl px-6 py-3 text-white text-sm font-medium backdrop-blur-sm">
