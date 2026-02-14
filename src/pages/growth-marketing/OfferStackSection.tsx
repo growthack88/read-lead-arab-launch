@@ -4,12 +4,12 @@ const CHECKOUT_URL = "https://si51ve-s6.myshopify.com/cart/42772076593257:1?chan
 
 const items = [
   { label: "📘 كتاب Building Growth Machine (مطبوع + رقمي)", value: "999 ج.م" },
-  { label: "🎁 بونصات BGM (5 فيديوهات + 5 Blueprints + AI Prompts)", value: "مجاناً", free: true },
+  { label: "🎁 بونص BGM (5 فيديوهات + 5 Blueprints + AI Prompts)", value: "مجاناً", free: true },
   { label: "📗 كتاب GrowthDNA (مطبوع + رقمي)", value: "999 ج.م" },
-  { label: "🎁 بونصات GrowthDNA (Assessment + 7 أدلة + 10 Playbooks + خطة 90 يوم)", value: "مجاناً", free: true },
+  { label: "🎁 بونص GrowthDNA (Assessment + 7 أدلة + 10 Playbooks + خطة 90 يوم)", value: "مجاناً", free: true },
   { label: "📙 كتاب التسويق ببساطة (مطبوع + رقمي)", value: "500 ج.م" },
   { label: "📊 Marketing Strategy Toolkit — 9 أدوات مطبوعة", value: "999 ج.م" },
-  { label: "🤖 بونصات رقمية إضافية", value: "1,000 ج.م" },
+  { label: "🤖 بونص رقمي إضافي", value: "1,000 ج.م" },
 ];
 
 const OfferStackSection = () => {
