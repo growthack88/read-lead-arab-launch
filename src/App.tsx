@@ -16,6 +16,7 @@ import LeadershipBook from "./pages/books/LeadershipBook";
 import MarketingBook from "./pages/MarketingBook";
 import SelfDevelopmentBook from "./pages/SelfDevelopmentBook";
 import GiftCard from "./pages/GiftCard";
+import GrowthMarketing from "./pages/GrowthMarketing";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "./components/ui/toaster";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -40,6 +41,7 @@ function App() {
           <Route path="/sales-marketing-kit" element={<SalesMarketingKit />} />
           <Route path="/productivity-kit" element={<ProductivityKit />} />
           <Route path="/gift-card" element={<GiftCard />} />
+          <Route path="/growth-marketing" element={<GrowthMarketing />} />
           
           {/* Book Pages */}
           <Route path="/productivity-book" element={<ProductivityBook />} />

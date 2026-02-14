@@ -1,0 +1,77 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const CHECKOUT_URL = "https://si51ve-s6.myshopify.com/cart/42772076593257:1?channel=buy_button";
+
+const HeroSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
+  return (
+    <section className="relative py-20 md:py-28 overflow-hidden" ref={ref}>
+      {/* Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.08),transparent_60%)] pointer-events-none" />
+
+      <div className={`container max-w-6xl mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Text */}
+          <div className="space-y-6">
+            <span className="inline-block text-sm border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 rounded-full px-4 py-1.5">
+              لكل ماركتير، صاحب بيزنس، أو حد لسه بيبدأ في التسويق
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
+              كل اللي محتاجه عشان تبني ماكينة نمو حقيقية — في{" "}
+              <span className="bg-gradient-to-l from-emerald-400 to-blue-400 bg-clip-text text-transparent">بوكس واحد</span>
+            </h1>
+            <p className="text-xl text-neutral-300">3 كتب مطبوعة + نسخ رقمية + بونصات لكل كتاب + 9 أدوات تسويق مطبوعة</p>
+            <p className="text-lg text-neutral-400">من الاستراتيجية... للتنفيذ... للنمو — كله في إيدك</p>
+
+            <div className="flex items-center gap-4">
+              <span className="text-2xl text-red-400 line-through">5,497 ج.م</span>
+              <span className="text-4xl font-bold text-emerald-400">1,499 ج.م</span>
+            </div>
+
+            <a
+              href={CHECKOUT_URL}
+              className="inline-block bg-gradient-to-l from-emerald-500 to-emerald-600 text-white font-bold text-lg px-10 py-4 rounded-xl hover:scale-105 transition-transform shadow-lg shadow-emerald-500/20"
+            >
+              🛒 اطلب البوكس دلوقتي
+            </a>
+
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-400">
+              <span>✅ كتب مطبوعة + نسخ رقمية</span>
+              <span>✅ أدوات مطبوعة في البوكس</span>
+              <span>✅ بونصات رقمية — وصول فوري</span>
+              <span>✅ شحن لحد باب البيت</span>
+            </div>
+          </div>
+
+          {/* Visual - 3D Book Mockup */}
+          <div className="relative flex justify-center items-center min-h-[400px]">
+            <div className="relative w-64 h-80">
+              {/* Book 3 - back */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/80 to-amber-600/80 rounded-xl border border-white/10 transform rotate-6 translate-x-6 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
+                <span className="text-3xl mb-2">📙</span>
+                <span className="text-white font-bold text-sm">التسويق ببساطة</span>
+              </div>
+              {/* Book 2 - middle */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/80 to-emerald-600/80 rounded-xl border border-white/10 transform rotate-2 translate-x-2 shadow-2xl flex flex-col items-center justify-center p-6 text-center">
+                <span className="text-3xl mb-2">📗</span>
+                <span className="text-white font-bold text-sm">GrowthDNA</span>
+              </div>
+              {/* Book 1 - front */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/80 to-blue-600/80 rounded-xl border border-white/10 shadow-2xl flex flex-col items-center justify-center p-6 text-center transform -rotate-2 -translate-x-2">
+                <span className="text-3xl mb-2">📘</span>
+                <span className="text-white font-bold text-sm">Building Growth Machine</span>
+              </div>
+            </div>
+            {/* Tools card */}
+            <div className="absolute -bottom-4 bg-purple-500/20 border border-purple-500/20 rounded-xl px-6 py-3 text-white text-sm font-medium backdrop-blur-sm">
+              📊 + 9 أدوات مطبوعة
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
