@@ -12,7 +12,7 @@ import TransformationSection from "./growth-marketing/TransformationSection";
 import TestimonialsSection from "./growth-marketing/TestimonialsSection";
 import OfferStackSection from "./growth-marketing/OfferStackSection";
 import HowItWorksSection from "./growth-marketing/HowItWorksSection";
-import AuthorSection from "./growth-marketing/AuthorSection";
+
 import FAQSection from "./growth-marketing/FAQSection";
 import FinalCTASection from "./growth-marketing/FinalCTASection";
 import Footer from "./growth-marketing/Footer";
@@ -37,7 +37,7 @@ const GrowthMarketing = () => {
       <TestimonialsSection />
       <OfferStackSection />
       <HowItWorksSection />
-      <AuthorSection />
+      
       <FAQSection />
       <FinalCTASection />
       <Footer />
