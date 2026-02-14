@@ -8,7 +8,7 @@ const BooksSection = () => {
       <div className="container max-w-5xl mx-auto px-4 space-y-12">
         <div className="space-y-4">
           <p className="text-sm uppercase tracking-wider text-neutral-500">WHAT'S INSIDE</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">البوكس من جوه: 3 كتب + بونصاتهم + 9 أدوات مطبوعة</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">البوكس من جوه: 3 كتب + البونص بتاعهم + 9 أدوات مطبوعة</h2>
         </div>
 
         {/* Book 1 - BGM */}

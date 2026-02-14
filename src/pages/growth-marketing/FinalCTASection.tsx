@@ -37,7 +37,7 @@ const FinalCTASection = () => {
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutral-400">
           <span>✅ 3 كتب مطبوعة + نسخ رقمية</span>
           <span>✅ 9 أدوات مطبوعة في البوكس</span>
-          <span>✅ بونصات رقمية — وصول فوري</span>
+          <span>✅ بونص رقمي — وصول فوري</span>
           <span>✅ شحن لحد باب البيت</span>
         </div>
       </div>

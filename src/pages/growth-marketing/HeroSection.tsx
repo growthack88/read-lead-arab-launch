@@ -21,7 +21,7 @@ const HeroSection = () => {
               كل اللي محتاجه عشان تبني ماكينة نمو حقيقية — في{" "}
               <span className="bg-gradient-to-l from-emerald-400 to-blue-400 bg-clip-text text-transparent">بوكس واحد</span>
             </h1>
-            <p className="text-xl text-neutral-300">3 كتب مطبوعة + نسخ رقمية + بونصات لكل كتاب + 9 أدوات تسويق مطبوعة</p>
+            <p className="text-xl text-neutral-300">3 كتب مطبوعة + نسخ رقمية + بونص لكل كتاب + 9 أدوات تسويق مطبوعة</p>
             <p className="text-lg text-neutral-400">من الاستراتيجية... للتنفيذ... للنمو — كله في إيدك</p>
 
             <div className="flex items-center gap-4">
@@ -39,7 +39,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-neutral-400">
               <span>✅ كتب مطبوعة + نسخ رقمية</span>
               <span>✅ أدوات مطبوعة في البوكس</span>
-              <span>✅ بونصات رقمية — وصول فوري</span>
+              <span>✅ بونص رقمي — وصول فوري</span>
               <span>✅ شحن لحد باب البيت</span>
             </div>
           </div>
