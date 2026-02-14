@@ -2,7 +2,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
   { n: "1", title: "اطلب البوكس", desc: "اضغط على زرار الطلب واختار طريقة الدفع" },
-  { n: "2", title: "البونصات توصلك فوراً", desc: "Blueprints, Assessment, AI Prompts, الفيديوهات — على الإيميل في ثواني" },
+  { n: "2", title: "البونصات توصلك بعد الاستلام", desc: "Blueprints, Assessment, AI Prompts, الفيديوهات — على الإيميل بعد ما تستلم البوكس" },
   { n: "3", title: "البوكس يوصلك لحد البيت", desc: "3 كتب مطبوعة + 9 أدوات مطبوعة — في بوكس واحد بالشحن" },
 ];
 
