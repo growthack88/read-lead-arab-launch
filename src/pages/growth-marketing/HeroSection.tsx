@@ -44,20 +44,9 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Visual - 3D Book Mockup */}
-          <div className="relative flex justify-center items-center min-h-[400px]">
-            <div className="relative w-64 h-80">
-              {/* Book 3 - back */}
-              <img src="/lovable-uploads/simply-marketing-cover.webp" alt="التسويق ببساطة" className="absolute inset-0 w-full h-full object-cover rounded-xl border border-white/10 transform rotate-6 translate-x-6 shadow-2xl" />
-              {/* Book 2 - middle */}
-              <img src="/lovable-uploads/growthdna-cover.jpg" alt="GrowthDNA" className="absolute inset-0 w-full h-full object-cover rounded-xl border border-white/10 transform rotate-2 translate-x-2 shadow-2xl" />
-              {/* Book 1 - front */}
-              <img src="/lovable-uploads/gm-cover.jpg" alt="Building Growth Machine" className="absolute inset-0 w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl transform -rotate-2 -translate-x-2" />
-            </div>
-            {/* Tools card */}
-            <div className="absolute -bottom-4 bg-purple-500/20 border border-purple-500/20 rounded-xl px-6 py-3 text-white text-sm font-medium backdrop-blur-sm">
-              📊 + 9 أدوات مطبوعة
-            </div>
+          {/* Visual - Box Hero Image */}
+          <div className="relative flex justify-center items-center">
+            <img src="/lovable-uploads/growth-box-hero.jpg" alt="Growth Marketing Lead Box" className="w-full max-w-lg rounded-2xl shadow-2xl border border-white/10" />
           </div>
         </div>
       </div>
