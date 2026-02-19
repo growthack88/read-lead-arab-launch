@@ -1,5 +1,6 @@
 
 import React from "react";
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -13,6 +14,11 @@ const MarketingBook = () => {
   
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO
+        title="كتاب التسويق الحديث | Read to Lead"
+        description="خلاصة 20 كتاب في التسويق من سيث غودين وكوتلر — استراتيجيات بناء الماركة، المحتوى، وزيادة المبيعات بلغة عربية سهلة."
+        canonicalUrl="https://land.readtolead.store/marketing-book"
+      />
       {/* Header */}
       <Header />
 

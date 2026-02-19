@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "@/components/SEO";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -11,6 +12,11 @@ const CareerBook = () => {
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <SEO
+        title="كتاب إدارة حياتك المهنية | Read to Lead"
+        description="خلاصة 20 كتاب عالمي لتطوير مسارك الوظيفي — مهارات المقابلات، التفاوض على الراتب، وبناء شبكة علاقات مهنية قوية."
+        canonicalUrl="https://land.readtolead.store/career-book"
+      />
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <div className="container mx-auto px-4">

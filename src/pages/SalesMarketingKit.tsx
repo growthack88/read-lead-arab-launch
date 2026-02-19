@@ -1,5 +1,6 @@
 
 import React from "react";
+import SEO from "@/components/SEO";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,6 +21,11 @@ const SalesMarketingKit = () => {
 
   return (
     <div className="min-h-screen bg-white pb-20" dir="rtl">
+      <SEO
+        title="Sales & Marketing Kit | كيت التسويق والمبيعات"
+        description="أدوات تسويقية وبيعية احترافية + كتابين عمليين. نماذج جاهزة لخطط التسويق، رحلة العميل، وتتبع الإيرادات — بـ 999 جنيه فقط."
+        canonicalUrl="https://land.readtolead.store/sales-marketing-kit"
+      />
       {/* Header */}
       <header className="py-4 border-b sticky top-0 bg-white/80 backdrop-blur-sm z-10">
         <div className="container mx-auto px-4">
