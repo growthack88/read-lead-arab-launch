@@ -65,9 +65,9 @@ const AllInOne = () => {
   return (
     <>
       <SEO
-        title="الباقة الشاملة - جميع الصناديق التطبيقية | RTL Vision"
-        description="احصل على جميع الصناديق التطبيقية الخمسة في باقة واحدة شاملة بسعر مخفض. كل ما تحتاجه لإدارة أعمالك باحترافية."
-        image="/lovable-uploads/2bcb0011-1478-4447-a8aa-cf255f4c7aa1.png"
+        title="الباقة الشاملة — 5 كيتات في سعر واحد | Read to Lead"
+        description="وفّر 57% — احصل على Startup Kit، Project Leader، HR Manager، Productivity، وSales Kit كلهم مع بعض بـ 4,300 جنيه بدل 10,000."
+        canonicalUrl="https://land.readtolead.store/all-in-one"
       />
 
       <div className="min-h-screen bg-[#F2F5F4] font-tajawal" dir="rtl">

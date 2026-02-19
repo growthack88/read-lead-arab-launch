@@ -1,5 +1,6 @@
 
 import React from "react";
+import SEO from "@/components/SEO";
 import Logo from "@/components/Logo";
 import HeroSection from "@/components/HeroSection";
 import ProductCard from "@/components/ProductCard";
@@ -199,6 +200,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Read to Lead | كتب وكيتات تعليمية لتطوير مسارك"
+        description="اكتشف أفضل الكيتات والكتب العربية لتطوير مهاراتك في التسويق، القيادة، الإنتاجية، وريادة الأعمال. شحن سريع داخل مصر."
+        canonicalUrl="https://land.readtolead.store/"
+        ogType="website"
+      />
       {/* Enhanced Header with better navigation */}
       <header className="py-4 border-b sticky top-0 bg-white/95 backdrop-blur-sm z-10 shadow-sm">
         <div className="container mx-auto px-4">

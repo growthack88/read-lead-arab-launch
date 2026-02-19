@@ -796,8 +796,9 @@ const GiftCard = () => {
   return (
     <div className="font-tajawal" dir="rtl">
       <SEO 
-        title="كارت هدية Read to Lead | هدية تِفضل… مش تِتنسى"
-        description="كارت هدية Read to Lead — لأن الشخص اللي يستاهل، يستاهل هدية تبني… مش هدية تتنسى. اختر من E£250 لـ E£5,000"
+        title="كارت هدية Read to Lead | هدية تِبقى مش تِتنسى"
+        description="هدية رقمية فورية بدون شحن — يختار المستلم كتبه وكيتاته من Read to Lead. من E£250 لـ E£5,000."
+        canonicalUrl="https://land.readtolead.store/gift-card"
       />
       
       {/* Celebration animation on page load */}
