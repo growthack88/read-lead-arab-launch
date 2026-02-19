@@ -1,17 +1,16 @@
-
 import React from "react";
-
-// Define the type for Facebook Pixel
-declare global {
-  interface Window {
-    fbq?: any;
-    _fbq?: any;
-  }
-}
+import { Helmet } from "react-helmet-async";
 
 interface SEOProps {
   title: string;
   description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  twitterCard?: string;
+  // Legacy prop aliases for backward compatibility
   image?: string;
   url?: string;
   type?: string;
@@ -20,71 +19,48 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  image = "/assets/home-og.jpg",
-  url = "https://land.readtolead.store/",
-  type = "product"
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogType,
+  canonicalUrl,
+  twitterCard = "summary_large_image",
+  // Legacy aliases
+  image,
+  url,
+  type,
 }) => {
-  React.useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta tags
-    const metaTags = {
-      "description": description,
-      "keywords": "Read to Lead, كتب, كيتات تعليمية, تطوير الذات, التسويق, الإنتاجية, ريادة أعمال",
-      "author": "Read to Lead",
-      "og:title": title,
-      "og:description": description,
-      "og:image": image,
-      "og:url": url,
-      "og:type": type,
-      "og:locale": "ar_AR",
-      "twitter:card": "summary_large_image",
-      "twitter:title": title,
-      "twitter:description": description,
-      "twitter:image": image
-    };
-    
-    // Update existing meta tags or create new ones
-    Object.entries(metaTags).forEach(([name, content]) => {
-      let element = document.querySelector(`meta[name="${name}"]`) || 
-                    document.querySelector(`meta[property="${name}"]`);
-      
-      if (!element) {
-        element = document.createElement('meta');
-        if (name.startsWith('og:')) {
-          element.setAttribute('property', name);
-        } else {
-          element.setAttribute('name', name);
-        }
-        document.head.appendChild(element);
-      }
-      
-      element.setAttribute('content', content);
-    });
-    
-    // Update canonical link
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', url);
-    
-    // Track PageView with Facebook Pixel
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'PageView');
-    }
-    
-    // Cleanup function to restore original title
-    const originalTitle = document.title;
-    return () => {
-      document.title = originalTitle;
-    };
-  }, [title, description, image, url, type]);
-  
-  return null; // This component doesn't render anything
+  const resolvedOgImage = ogImage ?? image ?? "https://land.readtolead.store/assets/home-og.jpg";
+  const resolvedOgType = ogType ?? type ?? "website";
+  const resolvedCanonicalUrl = canonicalUrl ?? url;
+  const resolvedOgTitle = ogTitle ?? title;
+  const resolvedOgDescription = ogDescription ?? description;
+
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content="Read to Lead, كتب, كيتات تعليمية, تطوير الذات, التسويق, الإنتاجية, ريادة أعمال" />
+      <meta name="author" content="Read to Lead" />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={resolvedOgTitle} />
+      <meta property="og:description" content={resolvedOgDescription} />
+      <meta property="og:image" content={resolvedOgImage} />
+      <meta property="og:type" content={resolvedOgType} />
+      <meta property="og:locale" content="ar_AR" />
+      {resolvedCanonicalUrl && <meta property="og:url" content={resolvedCanonicalUrl} />}
+
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={resolvedOgTitle} />
+      <meta name="twitter:description" content={resolvedOgDescription} />
+      <meta name="twitter:image" content={resolvedOgImage} />
+
+      {/* Canonical */}
+      {resolvedCanonicalUrl && <link rel="canonical" href={resolvedCanonicalUrl} />}
+    </Helmet>
+  );
 };
 
 export default SEO;
