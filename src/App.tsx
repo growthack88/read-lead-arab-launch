@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import StartupKit from "./pages/kits/StartupKit";
 import ProjectLeaderKit from "./pages/kits/ProjectLeaderKit";
@@ -26,6 +27,7 @@ function App() {
   const queryClient = new QueryClient();
 
   return (
+    <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <ScrollToTop />
@@ -59,6 +61,7 @@ function App() {
       </BrowserRouter>
       <Toaster />
     </QueryClientProvider>
+    </HelmetProvider>
   );
 }
 
