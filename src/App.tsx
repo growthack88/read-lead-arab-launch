@@ -18,6 +18,7 @@ import MarketingBook from "./pages/MarketingBook";
 import SelfDevelopmentBook from "./pages/SelfDevelopmentBook";
 import GiftCard from "./pages/GiftCard";
 import GrowthMarketing from "./pages/GrowthMarketing";
+import RTLVisionV2 from "./pages/RTLVisionV2";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "./components/ui/toaster";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -29,10 +30,13 @@ function App() {
   return (
     <HelmetProvider>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename="/read-lead-arab-launch">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          
+          {/* Vision V2 */}
+          <Route path="/vision" element={<RTLVisionV2 />} />
           
           {/* Kit Pages */}
           <Route path="/startup-kit" element={<StartupKit />} />
