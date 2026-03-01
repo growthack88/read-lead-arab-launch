@@ -558,7 +558,7 @@ const StartupKitPro = () => {
                 <div className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-[10px] font-bold mb-2 ${c.gold ? "bg-[#F4C95D] text-[#2D3735]" : "bg-[#169380] text-white"}`}>
                   {c.step}
                 </div>
-                <p className={`text-xs font-bold mb-1.5 ${c.gold ? "text-[#F4C95D]" : "text-[#169380]"}`}>{c.label}</p>
+                
                 <p className="text-xs text-[#2D3735]/75 leading-relaxed mb-2">"{c.quote}"</p>
                 <p className="text-xs font-bold text-[#169380]">— {c.name}</p>
                 <p className="text-[10px] text-[#2D3735]/50 font-['Space_Grotesk']" dir="ltr">{c.role}</p>
