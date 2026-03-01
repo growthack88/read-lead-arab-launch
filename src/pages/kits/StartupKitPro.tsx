@@ -50,6 +50,44 @@ const FAQItem = ({ q, a }: { q: string; a: string }) => {
   );
 };
 
+/* ─── Timeline card ─── */
+interface TimelineItemData {
+  step: string; label: string; tag: string; quote: string;
+  name: string; role: string; borderColor: string; pillBg: string;
+  pillText: string; icon: string; iconColor: string; delay: string;
+  special: boolean; gradient?: boolean;
+}
+
+const TimelineCard = ({ t }: { t: TimelineItemData }) => {
+  const { ref, cls } = useReveal();
+  return (
+    <div ref={ref} className={`relative md:pr-16 mb-12 last:mb-0 transition-all duration-700 ${cls}`} style={{ transitionDelay: t.delay }}>
+      <div className="hidden md:flex absolute right-[13px] top-6 w-[22px] h-[22px] rounded-full bg-[#169380] border-[3px] border-white shadow-md z-10 items-center justify-center">
+        {t.special && <span className="w-2 h-2 rounded-full bg-[#F4C95D]" />}
+      </div>
+      <div className="mb-3">
+        <span className={`inline-flex items-center gap-1.5 ${t.pillBg} ${t.pillText} text-xs font-bold px-3 py-1 rounded-full`}>
+          {t.step} · {t.label}
+        </span>
+      </div>
+      <p className="text-sm italic text-[#169380]/60 mb-3">{t.tag}</p>
+      <div className={`relative bg-white border-r-4 ${t.borderColor} rounded-[18px] p-6 space-y-4 ${t.special ? "shadow-[0_4px_20px_rgba(244,201,93,0.15)]" : "shadow-[0_2px_12px_rgba(0,0,0,0.04)]"}`}>
+        {t.gradient && (
+          <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-[#169380] to-[#F4C95D] rounded-r-[18px]" />
+        )}
+        <p className="text-[#2D3735]/80 leading-relaxed text-[15px]">"{t.quote}"</p>
+        <div>
+          <p className="font-bold text-[#169380]">— {t.name}</p>
+          <p className="text-xs text-[#2D3735]/50 font-['Space_Grotesk']" dir="ltr">{t.role}</p>
+        </div>
+      </div>
+      <div className={`mt-3 text-center transition-opacity duration-500 ${cls}`} style={{ transitionDelay: `calc(${t.delay} + 0.3s)` }}>
+        <span className={`${t.iconColor} text-lg`}>{t.icon}</span>
+      </div>
+    </div>
+  );
+};
+
 const StartupKitPro = () => {
   return (
     <div dir="rtl" className="font-tajawal bg-white text-[#2D3735] min-h-screen">
@@ -528,20 +566,72 @@ const StartupKitPro = () => {
         </div>
       </Section>
 
-      {/* ══════════ 13. TESTIMONIALS ══════════ */}
-      <Section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 space-y-8 max-w-4xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-[#169380]">❤️ ماذا يقول عملاؤنا؟</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              { quote: "كنت حائراً من أين أبدأ… المجموعة نظّمت لي كل شيء، وشعرت فعلاً أنني بدأت بالطريقة الصحيحة.", name: "أحمد" },
-              { quote: "النماذج والكتاب معاً ساعداني على فهم السوق وكتابة خطة عمل لأول مرة في حياتي!", name: "رنا" },
-            ].map((t) => (
-              <div key={t.name} className="bg-[#F2F5F4] rounded-[18px] p-6 space-y-4">
-                <p className="text-[#2D3735]/80 italic leading-relaxed">"{t.quote}"</p>
-                <p className="font-bold text-[#169380]">— {t.name}</p>
-              </div>
+      {/* ══════════ 13. TESTIMONIAL ROADMAP ══════════ */}
+      <Section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-3xl">
+          {/* Header */}
+          <div className="text-center space-y-3 mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#169380]">❤️ رحلة حقيقية — من التردد إلى الانطلاق</h2>
+            <p className="text-[#2D3735]/70 leading-relaxed">خمس تجارب حقيقية تحكي المسار الذي يمرّ به كل مؤسس قبل أن يبدأ فعلاً.</p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical line — desktop only */}
+            <div className="hidden md:block absolute right-[24px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#169380] to-[#F4C95D]" />
+
+            {([
+              {
+                step: "١", label: "نقطة الانطلاق", tag: "💡 \"عندي فكرة بس مش عارف أبدأ\"",
+                quote: "كانت عندي فكرة مشروع منذ أشهر ولم أكن أعرف من أين أبدأ. كل شيء كان مختلطاً إلى أن استخدمت النماذج وبدأت أرتّب الخطوات واحدة تلو الأخرى.",
+                name: "كريم حسن", role: "Founder — Idea Stage Startup",
+                borderColor: "border-[#169380]", pillBg: "bg-[#169380]", pillText: "text-white",
+                icon: "✅", iconColor: "text-[#169380]", delay: "0.1s", special: false,
+              },
+              {
+                step: "٢", label: "إثبات العملية", tag: "⚙️ \"الطريقة اشتغلت فعلاً\"",
+                quote: "استخدمت الـ Business Model Canvas من المجموعة وكتبت أول خطة عمل حقيقية بدلاً من مجرد أفكار. الموضوع جعلني أفهم السوق قبل أن أبدأ.",
+                name: "أحمد سامي", role: "Early Startup Builder",
+                borderColor: "border-[#169380]", pillBg: "bg-[#169380]", pillText: "text-white",
+                icon: "✅", iconColor: "text-[#169380]", delay: "0.2s", special: false,
+              },
+              {
+                step: "٣", label: "لست وحدك", tag: "👥 \"ناس من مجالات مختلفة استفادوا\"",
+                quote: "أنا مستقلة وكنت أعمل بعشوائية. المجموعة ساعدتني على تحديد niche واضح وبدأت أتعامل مع عملي كمشروع تجاري حقيقي وليس مجرد عمل يومي.",
+                name: "رنا خالد", role: "Freelance Designer",
+                borderColor: "border-[#169380]", pillBg: "bg-[#169380]", pillText: "text-white",
+                icon: "✅", iconColor: "text-[#169380]", delay: "0.3s", special: false,
+              },
+              {
+                step: "٤", label: "كسر حاجز التردد", tag: "⭐ \"طيّب لو اشتريت ولم يكن مفيداً؟\"",
+                quote: "كنت متردداً في الشراء في البداية، لكن فكرة أدوات الـ SaaS المجانية لمدة 6 أشهر جعلت التجربة بدون مخاطرة تقريباً. وفعلاً بدأت العمل على المشروع فوراً.",
+                name: "محمد عادل", role: "First-time Founder — MVP Stage",
+                borderColor: "border-[#F4C95D]", pillBg: "bg-[#F4C95D]", pillText: "text-[#2D3735]",
+                icon: "⭐", iconColor: "text-[#F4C95D]", delay: "0.4s", special: true,
+              },
+              {
+                step: "٥", label: "النتيجة", tag: "🚀 \"النتيجة الحقيقية بعد أسبوعين فقط\"",
+                quote: "بعد أسبوعين فقط أصبح لديّ خريطة طريق واضحة لإطلاق المشروع، بدلاً من تأجيل البداية لأشهر.",
+                name: "يوسف علي", role: "Startup Builder — Pre-Launch",
+                borderColor: "border-[#169380]", pillBg: "bg-gradient-to-l from-[#169380] to-[#F4C95D]", pillText: "text-white",
+                icon: "🚀", iconColor: "text-[#169380]", delay: "0.5s", special: false, gradient: true,
+              },
+            ] as Array<TimelineItemData>).map((t) => (
+              <TimelineCard key={t.step} t={t} />
             ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16 space-y-5">
+            <p className="text-xl font-bold text-[#2D3735]">هل أنت مستعد لبدء رحلتك؟</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="#pricing" className="bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] font-bold hover:scale-105 transition-all shadow-[0_4px_20px_rgba(244,201,93,0.3)]">
+                🚀 اطلب الباقة الكاملة
+              </a>
+              <a href="https://startupkitpro.lovable.app/demo" target="_blank" rel="noopener noreferrer" className="border-2 border-[#169380] text-[#169380] px-8 py-4 rounded-[14px] font-bold hover:bg-[#169380]/10 transition-all">
+                💻 جرّب المنصة التجريبية
+              </a>
+            </div>
           </div>
         </div>
       </Section>
