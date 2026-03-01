@@ -331,7 +331,7 @@ const StartupKitPro = () => {
                 <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                 <span className="w-3 h-3 rounded-full bg-[#28C840]" />
               </div>
-              <div className="flex-1 bg-white/10 rounded-md px-3 py-1 text-xs text-white/50 font-['Space_Grotesk'] text-center" dir="ltr">startupkitpro.lovable.app</div>
+              <div className="flex-1 bg-white/10 rounded-md px-3 py-1 text-xs text-white/50 font-['Space_Grotesk'] text-center" dir="ltr">startupkit.pro</div>
             </div>
             <div className="bg-[#1A1A2E] rounded-b-[18px] p-8 text-center">
               <h3 className="text-xl md:text-2xl font-bold mb-8">5 أقسام. 67 أداة. نظام واحد متكامل.</h3>
