@@ -319,7 +319,7 @@ const StartupKitPro = () => {
         <div className="container mx-auto px-4 space-y-12">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
             <span className="font-['Space_Grotesk'] text-xs uppercase tracking-widest text-[#F4C95D] font-bold">StartupKit Pro — Deep Dive</span>
-            <h2 className="text-2xl md:text-4xl font-bold">المنصة الرقمية التي تحوّل كتابك إلى خطة عمل حقيقية</h2>
+            <h2 className="text-2xl md:text-4xl font-bold">المنصة الرقمية التي تحوّل شركتك من مجرد فكرة إلى خطة عمل حقيقية</h2>
             <p className="text-white/70">ليست مجرد نماذج جاهزة — بل منصة متكاملة تتصل فيها كل أداة بالأخرى تلقائياً.</p>
           </div>
 
