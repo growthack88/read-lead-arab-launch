@@ -155,8 +155,18 @@ const StartupKitPro = () => {
                   <span className="font-['Space_Grotesk'] text-xs uppercase tracking-wider text-[#169380] font-bold">SAAS — 6 MONTHS FREE</span>
                 </div>
                 <h3 className="font-bold text-lg">StartupKit Pro</h3>
-                <p className="text-sm text-[#2D3735]/70">67 أداة رقمية — من Business Model Canvas إلى Investor Pitch Deck</p>
-                <span className="inline-block bg-[#169380]/10 text-[#169380] text-xs font-bold px-3 py-1 rounded-full">🎁 6 أشهر مجاناً — قيمته $49</span>
+                <p className="text-sm text-[#2D3735]/70">67 أداة رقمية متكاملة — من Business Model Canvas إلى Investor Pitch Deck</p>
+                
+                {/* Highlighted callout box */}
+                <div className="bg-[#169380]/10 border border-[#169380]/20 rounded-[12px] p-3 mt-3">
+                  <p className="font-bold text-[#0F7468] text-sm">🚀 ابدأ مشروعك بدون أي أدوات مدفوعة لمدة 6 أشهر كاملة</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <span className="inline-flex items-center gap-1 bg-white/80 border border-[#169380]/10 rounded-full px-3 py-1 text-xs font-medium text-[#2D3735]/70">❌ لا subscriptions</span>
+                    <span className="inline-flex items-center gap-1 bg-white/80 border border-[#169380]/10 rounded-full px-3 py-1 text-xs font-medium text-[#2D3735]/70">❌ لا tools costs</span>
+                  </div>
+                </div>
+                
+                <span className="inline-block bg-[#169380]/10 text-[#169380] text-xs font-bold px-3 py-1 rounded-full mt-2">🎁 6 أشهر مجاناً — قيمته $49</span>
               </div>
             </div>
           </div>
