@@ -543,27 +543,25 @@ const StartupKitPro = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-[#169380] text-center mb-10">❤️ رحلة حقيقية — من التردد إلى الانطلاق</h2>
 
           {/* Progress bar with dots — desktop only */}
-          <div className="hidden md:flex items-center max-w-5xl mx-auto mb-8 px-8">
-            {testimonialCards.map((c, i) => (
-              <React.Fragment key={c.step}>
-                <div className={`w-4 h-4 rounded-full shrink-0 ${c.gold ? "bg-[#F4C95D]" : "bg-[#169380]"}`} />
-                {i < testimonialCards.length - 1 && <div className="flex-1 h-[2px] bg-[#169380]/10" />}
-              </React.Fragment>
+          <div className="hidden md:flex items-center justify-between max-w-5xl mx-auto mb-8 px-8 relative">
+            <div className="absolute inset-x-8 top-1/2 h-[2px] bg-[#169380]/15 -translate-y-1/2" />
+            {testimonialCards.map((c) => (
+              <div key={c.step} className={`w-3 h-3 rounded-full shrink-0 relative z-10 ${c.gold ? "bg-[#F4C95D]" : "bg-[#169380]"}`} />
             ))}
           </div>
 
-          {/* Cards — grid on desktop, horizontal scroll on mobile */}
-          <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:grid md:grid-cols-5 md:overflow-visible md:pb-0">
+          {/* Cards — horizontal scroll on all sizes */}
+          <div className="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-4 px-4" style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}>
             {testimonialCards.map((c) => (
-              <div key={c.step} className={`min-w-[280px] snap-center relative rounded-[16px] p-5 ${c.gold ? "bg-[#F4C95D]/10 border-2 border-[#F4C95D]/30" : "bg-[#F2F5F4] border border-[#169380]/[0.08]"}`}>
-                {/* Step pill */}
-                <div className={`absolute -top-4 -right-2 w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold ${c.gold ? "bg-[#F4C95D] text-[#2D3735]" : "bg-[#169380] text-white"}`}>
+              <div key={c.step} className={`min-w-[250px] max-w-[280px] flex-shrink-0 snap-center rounded-[16px] p-4 ${c.gold ? "bg-[#F4C95D]/10 border-2 border-[#F4C95D]/30" : "bg-[#F2F5F4] border border-[#169380]/[0.08]"}`}>
+                {/* Step pill — inline */}
+                <div className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-[10px] font-bold mb-2 ${c.gold ? "bg-[#F4C95D] text-[#2D3735]" : "bg-[#169380] text-white"}`}>
                   {c.step}
                 </div>
-                <p className={`text-xs font-bold mb-2 ${c.gold ? "text-[#F4C95D]" : "text-[#169380]"}`}>{c.label}</p>
-                <p className="text-sm text-[#2D3735]/75 leading-relaxed mb-3">"{c.quote}"</p>
-                <p className="text-sm font-bold text-[#169380]">— {c.name}</p>
-                <p className="text-xs text-[#2D3735]/50 font-['Space_Grotesk']" dir="ltr">{c.role}</p>
+                <p className={`text-xs font-bold mb-1.5 ${c.gold ? "text-[#F4C95D]" : "text-[#169380]"}`}>{c.label}</p>
+                <p className="text-xs text-[#2D3735]/75 leading-relaxed mb-2">"{c.quote}"</p>
+                <p className="text-xs font-bold text-[#169380]">— {c.name}</p>
+                <p className="text-[10px] text-[#2D3735]/50 font-['Space_Grotesk']" dir="ltr">{c.role}</p>
               </div>
             ))}
           </div>
