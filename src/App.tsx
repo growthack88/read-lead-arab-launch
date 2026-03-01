@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import StartupKit from "./pages/kits/StartupKit";
+import StartupKitPro from "./pages/kits/StartupKitPro";
 import ProjectLeaderKit from "./pages/kits/ProjectLeaderKit";
 import HRManagerKit from "./pages/kits/HRManagerKit";
 import AllInOne from "./pages/kits/AllInOne";
@@ -40,6 +41,7 @@ function App() {
           
           {/* Kit Pages */}
           <Route path="/startup-kit" element={<StartupKit />} />
+          <Route path="/startupkitpro" element={<StartupKitPro />} />
           <Route path="/project-leader-kit" element={<ProjectLeaderKit />} />
           <Route path="/hr-manager-kit" element={<HRManagerKit />} />
           <Route path="/all-in-one" element={<AllInOne />} />
