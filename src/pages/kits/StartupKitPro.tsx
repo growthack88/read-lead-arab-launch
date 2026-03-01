@@ -79,7 +79,7 @@ const StartupKitPro = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* text — right on desktop */}
-            <div className="space-y-6 order-2 md:order-1">
+            <div className="space-y-6 order-1">
               {/* badge */}
               <span className="inline-flex items-center gap-2 bg-white border border-[#169380]/20 rounded-full px-4 py-1.5 text-sm">
                 <span className="w-2 h-2 rounded-full bg-[#169380] animate-pulse" />
@@ -129,7 +129,7 @@ const StartupKitPro = () => {
             </div>
 
             {/* visual — left on desktop */}
-            <div className="order-1 md:order-2 flex flex-col items-center gap-0 relative">
+            <div className="order-2 flex flex-col items-center gap-0 relative">
               {/* card 1 */}
               <div className="bg-white border-2 border-[rgba(244,201,93,0.25)] rounded-[18px] p-6 w-full max-w-sm space-y-3">
                 <div className="flex items-center gap-3">
