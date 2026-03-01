@@ -30,7 +30,7 @@ function App() {
   return (
     <HelmetProvider>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename="/read-lead-arab-launch">
+      <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
