@@ -9,6 +9,7 @@ import HRManagerKit from "./pages/kits/HRManagerKit";
 import AllInOne from "./pages/kits/AllInOne";
 import Duckverse from "./pages/kits/Duckverse";
 import SalesMarketingKit from "./pages/SalesMarketingKit";
+import SalesMarketingKitBundle from "./pages/SalesMarketingKitBundle";
 import ProductivityKit from "./pages/ProductivityKit";
 import ProductivityBook from "./pages/ProductivityBook";
 import SalesBook from "./pages/SalesBook";
@@ -47,6 +48,7 @@ function App() {
           <Route path="/all-in-one" element={<AllInOne />} />
           <Route path="/duckverse" element={<Duckverse />} />
           <Route path="/sales-marketing-kit" element={<SalesMarketingKit />} />
+          <Route path="/sales-marketing-bundle" element={<SalesMarketingKitBundle />} />
           <Route path="/productivity-kit" element={<ProductivityKit />} />
           <Route path="/gift-card" element={<GiftCard />} />
           <Route path="/growth-marketing" element={<GrowthMarketing />} />
