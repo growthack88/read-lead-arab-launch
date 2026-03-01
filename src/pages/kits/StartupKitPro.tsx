@@ -125,6 +125,9 @@ const StartupKitPro = () => {
                 <a href="#inside" className="border-2 border-[#3A86FF] text-[#3A86FF] px-8 py-4 rounded-[14px] font-bold hover:bg-[#3A86FF]/10 transition-all">
                   تعرّف على المحتويات
                 </a>
+                <a href="https://startupkitpro.lovable.app/demo" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto text-center border-2 border-[#169380] text-[#169380] px-8 py-4 rounded-[14px] font-bold hover:bg-[#169380] hover:text-white hover:scale-105 transition-all">
+                  💻 جرّب المنصة الرقمية مجاناً
+                </a>
               </div>
             </div>
 
@@ -211,6 +214,24 @@ const StartupKitPro = () => {
                 <p className="text-sm text-[#2D3735]/70 leading-relaxed">{c.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ══════════ EXPLORE APP BANNER ══════════ */}
+      <Section className="py-16 bg-gradient-to-l from-[#0F7468] to-[#169380] text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold">🖥️ استكشف المنصة الرقمية بنفسك</h2>
+            <p className="text-white/80 leading-relaxed">شاهد الأدوات الـ 67 وجرّب النسخة التجريبية قبل الشراء.<br />المنصة متاحة بالعربية والإنجليزية — بالكامل.</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="https://startupkitpro.lovable.app/demo" target="_blank" rel="noopener noreferrer" className="bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] font-bold hover:scale-105 transition-all shadow-[0_4px_20px_rgba(244,201,93,0.3)] animate-[pulse_3s_ease-in-out_infinite]">
+                🚀 جرّب النسخة التجريبية
+              </a>
+              <a href="https://startupkitpro.lovable.app" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-4 rounded-[14px] font-bold hover:bg-white hover:text-[#0F7468] hover:scale-105 transition-all">
+                📖 تصفّح المنصة الكاملة
+              </a>
+            </div>
           </div>
         </div>
       </Section>
@@ -345,6 +366,19 @@ const StartupKitPro = () => {
                   </div>
                 ))}
               </div>
+
+              {/* CTA row inside browser */}
+              <div className="mt-10 pt-8 border-t border-white/5 space-y-4">
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a href="https://startupkitpro.lovable.app/demo" target="_blank" rel="noopener noreferrer" className="bg-[#F4C95D] text-[#2D3735] px-8 py-4 rounded-[14px] font-bold hover:scale-105 transition-all shadow-[0_4px_20px_rgba(244,201,93,0.3)]">
+                    🚀 جرّب النسخة التجريبية الآن
+                  </a>
+                  <a href="https://startupkitpro.lovable.app" target="_blank" rel="noopener noreferrer" className="border-2 border-white text-white px-8 py-4 rounded-[14px] font-bold hover:bg-white hover:text-[#2D3735] hover:scale-105 transition-all">
+                    🔗 افتح المنصة الكاملة
+                  </a>
+                </div>
+                <p className="text-white/40 text-xs text-center">المنصة متاحة للتصفّح — لا يلزم تسجيل حساب للنسخة التجريبية</p>
+              </div>
             </div>
           </div>
         </div>
@@ -398,6 +432,9 @@ const StartupKitPro = () => {
             <p className="text-[#2D3735]/70">أنت تدفع فقط:</p>
             <p className="text-4xl font-extrabold text-[#169380]">999 جنيه</p>
             <p className="text-sm text-[#2D3735]/60">أي توفير يتجاوز 74% من القيمة الحقيقية</p>
+            <a href="https://startupkitpro.lovable.app/demo" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[#169380] font-medium text-sm underline hover:no-underline">
+              👀 شاهد ما الذي ستحصل عليه رقمياً — جرّب المنصة التجريبية
+            </a>
           </div>
         </div>
       </Section>
@@ -543,6 +580,9 @@ const StartupKitPro = () => {
               <span className="text-lg font-extrabold text-[#169380]">999 جنيه</span>
               <span className="text-xs text-[#2D3735]/40 line-through mr-2">3,899+ جنيه</span>
             </div>
+            <a href="https://startupkitpro.lovable.app/demo" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block text-[#169380] font-medium text-sm hover:underline whitespace-nowrap">
+              جرّب المنصة ←
+            </a>
             <a href="#pricing" className="bg-[#F4C95D] text-[#2D3735] px-6 py-3 rounded-[14px] font-bold hover:scale-105 transition-all shadow-[0_4px_20px_rgba(244,201,93,0.3)] whitespace-nowrap text-sm">
               📦 اطلب الآن
             </a>
