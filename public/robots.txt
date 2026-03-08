@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://read-lead-arab-launch.lovable.app/sitemap.xml
