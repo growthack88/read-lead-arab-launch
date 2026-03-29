@@ -463,10 +463,10 @@ const Duckverse = () => {
               {/* Price Block */}
               <div className="bg-[#0F7468] rounded-[18px] p-8 mb-6">
                 <div className="flex flex-col items-center gap-3">
-                  <span className="text-xl line-through text-white/50">السعر العادي: 999 جنيه</span>
-                  <span className="text-5xl md:text-6xl font-bold text-[#F4C95D]">749 جنيه بس!</span>
+                  <span className="text-xl line-through text-white/50">السعر العادي: 1500 جنيه</span>
+                  <span className="text-5xl md:text-6xl font-bold text-[#F4C95D]">999 جنيه بس!</span>
                   <span className="inline-block bg-[#EE6C4D] text-white px-4 py-1.5 rounded-full text-sm font-bold mt-2">
-                    وفّرت 250 جنيه
+                    وفّرت 501 جنيه
                   </span>
                 </div>
               </div>
@@ -502,9 +502,9 @@ const Duckverse = () => {
                 <p className="text-[#169380] font-medium">"البط مش بيوعد بحاجة مش هيقدر يعملها. 🦆"</p>
               </div>
               
-              <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="🛒 اطلب باكدج Duckverse الآن" price="749" />
+              <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="🛒 اطلب باكدج Duckverse الآن" price="999" />
               
-              <p className="mt-4 text-[#2D3735]/60">749 جنيه بس — توصيل خلال 2-4 أيام</p>
+              <p className="mt-4 text-[#2D3735]/60">999 جنيه بس — توصيل خلال 2-4 أيام</p>
             </div>
           </div>
         </div>
@@ -613,7 +613,7 @@ const Duckverse = () => {
                 className="inline-flex items-center gap-3 bg-[#F4C95D] text-[#2D3735] px-10 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
               >
                 <ShoppingCart className="w-5 h-5" />
-                🛒 اطلب باكدج Duckverse الآن - 749 جنيه
+                🛒 اطلب باكدج Duckverse الآن - 999 جنيه
               </a>
               <p className="mt-3 text-[#2D3735]/60 text-sm">توصيل خلال 2-4 أيام داخل مصر</p>
             </div>
@@ -639,7 +639,7 @@ const Duckverse = () => {
             <span className="text-2xl">🦆</span>
             <div>
               <p className="font-bold">باكدج Duckverse الكامل</p>
-              <p className="text-[#F4C95D] font-bold">749 جنيه بس!</p>
+              <p className="text-[#F4C95D] font-bold">999 جنيه بس!</p>
             </div>
           </div>
           <a 
