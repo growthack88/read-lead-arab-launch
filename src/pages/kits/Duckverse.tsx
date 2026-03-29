@@ -639,7 +639,7 @@ const Duckverse = () => {
             <span className="text-2xl">🦆</span>
             <div>
               <p className="font-bold">باكدج Duckverse الكامل</p>
-              <p className="text-[#F4C95D] font-bold">749 جنيه بس!</p>
+              <p className="text-[#F4C95D] font-bold">999 جنيه بس!</p>
             </div>
           </div>
           <a 

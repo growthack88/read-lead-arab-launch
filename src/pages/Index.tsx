@@ -59,8 +59,8 @@ const Index = () => {
       buttonText: "اطلب الآن",
       link: "/duckverse",
       checkoutLink: "https://si51ve-s6.myshopify.com/cart/42622879105129:1?channel=buy_button",
-      currentPrice: "749 جنيه",
-      comparePrice: "999 جنيه"
+      currentPrice: "999 جنيه",
+      comparePrice: "1500 جنيه"
     },
     {
       title: "Startup Kit",
