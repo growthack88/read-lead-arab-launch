@@ -502,9 +502,9 @@ const Duckverse = () => {
                 <p className="text-[#169380] font-medium">"البط مش بيوعد بحاجة مش هيقدر يعملها. 🦆"</p>
               </div>
               
-              <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="🛒 اطلب باكدج Duckverse الآن" price="749" />
+              <QuantitySelector baseCheckoutUrl={shopifyBaseUrl} productVariantId={productVariantId} buttonText="🛒 اطلب باكدج Duckverse الآن" price="999" />
               
-              <p className="mt-4 text-[#2D3735]/60">749 جنيه بس — توصيل خلال 2-4 أيام</p>
+              <p className="mt-4 text-[#2D3735]/60">999 جنيه بس — توصيل خلال 2-4 أيام</p>
             </div>
           </div>
         </div>
