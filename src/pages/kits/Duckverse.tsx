@@ -463,10 +463,10 @@ const Duckverse = () => {
               {/* Price Block */}
               <div className="bg-[#0F7468] rounded-[18px] p-8 mb-6">
                 <div className="flex flex-col items-center gap-3">
-                  <span className="text-xl line-through text-white/50">السعر العادي: 999 جنيه</span>
-                  <span className="text-5xl md:text-6xl font-bold text-[#F4C95D]">749 جنيه بس!</span>
+                  <span className="text-xl line-through text-white/50">السعر العادي: 1500 جنيه</span>
+                  <span className="text-5xl md:text-6xl font-bold text-[#F4C95D]">999 جنيه بس!</span>
                   <span className="inline-block bg-[#EE6C4D] text-white px-4 py-1.5 rounded-full text-sm font-bold mt-2">
-                    وفّرت 250 جنيه
+                    وفّرت 501 جنيه
                   </span>
                 </div>
               </div>
