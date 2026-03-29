@@ -613,7 +613,7 @@ const Duckverse = () => {
                 className="inline-flex items-center gap-3 bg-[#F4C95D] text-[#2D3735] px-10 py-4 rounded-[14px] text-lg font-bold hover:bg-[#F4C95D]/90 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(244,201,93,0.3)]"
               >
                 <ShoppingCart className="w-5 h-5" />
-                🛒 اطلب باكدج Duckverse الآن - 749 جنيه
+                🛒 اطلب باكدج Duckverse الآن - 999 جنيه
               </a>
               <p className="mt-3 text-[#2D3735]/60 text-sm">توصيل خلال 2-4 أيام داخل مصر</p>
             </div>
