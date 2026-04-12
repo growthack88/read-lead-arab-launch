@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
+import OnlineHome from "./pages/OnlineHome";
 import StartupKit from "./pages/kits/StartupKit";
 import StartupKitPro from "./pages/kits/StartupKitPro";
 import ProjectLeaderKit from "./pages/kits/ProjectLeaderKit";
@@ -37,6 +38,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           
+          {/* readtolead.online homepage */}
+          <Route path="/online" element={<OnlineHome />} />
+          
           {/* Vision V2 */}
           <Route path="/vision" element={<RTLVisionV2 />} />
           
@@ -61,7 +65,7 @@ function App() {
           <Route path="/marketing-book" element={<MarketingBook />} />
           <Route path="/self-development-book" element={<SelfDevelopmentBook />} />
           <Route path="/entrepreneurship-book" element={<EntrepreneurshipBook />} />
-          <Route path="/institutional-success-book" element={<LeadershipBook />} /> {/* Alias for backward compatibility */}
+          <Route path="/institutional-success-book" element={<LeadershipBook />} />
           
           {/* Catch All */}
           <Route path="*" element={<NotFound />} />
