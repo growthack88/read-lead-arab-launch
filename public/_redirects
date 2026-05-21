@@ -1,0 +1,26 @@
+# Read to Lead - legacy landing -> new site (readtolead.online)
+# Real HTTP 301s. Active when this domain is served via Netlify / Cloudflare Pages.
+# On Lovable native hosting this file is ignored; the SPA redirects client-side.
+# Specific rules first; catch-all last (first match wins).
+
+/growth-marketing            https://readtolead.online/growth?utm_source=old_landing&utm_medium=redirect          301
+/startup-kit                 https://readtolead.online/startupkit?utm_source=old_landing&utm_medium=redirect      301
+/startupkitpro               https://readtolead.online/startupkit?utm_source=old_landing&utm_medium=redirect      301
+/all-in-one                  https://readtolead.online/allaccess?utm_source=old_landing&utm_medium=redirect       301
+/duckverse                   https://readtolead.online/duckverse?utm_source=old_landing&utm_medium=redirect       301
+/sales-marketing-kit         https://readtolead.online/marketing?utm_source=old_landing&utm_medium=redirect       301
+/sales-marketing-bundle      https://readtolead.online/marketing?utm_source=old_landing&utm_medium=redirect       301
+/productivity-kit            https://readtolead.online/productivitykit?utm_source=old_landing&utm_medium=redirect  301
+/project-leader-kit          https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/hr-manager-kit              https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/gift-card                   https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/vision                      https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/productivity-book           https://readtolead.online/productivitykit?utm_source=old_landing&utm_medium=redirect  301
+/sales-book                  https://readtolead.online/marketing?utm_source=old_landing&utm_medium=redirect       301
+/marketing-book              https://readtolead.online/marketing?utm_source=old_landing&utm_medium=redirect       301
+/entrepreneurship-book       https://readtolead.online/startupkit?utm_source=old_landing&utm_medium=redirect      301
+/career-book                 https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/leadership-book             https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/self-development-book       https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/institutional-success-book  https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
+/*                           https://readtolead.online/?utm_source=old_landing&utm_medium=redirect                301
